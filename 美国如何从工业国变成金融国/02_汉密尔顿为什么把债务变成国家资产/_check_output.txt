@@ -1,0 +1,33 @@
+﻿powershell : Set-Location : 无法处理参数，因为参数“path”的值为空。请将参数“path”的值更改为非空值。
+所在位置 C:\Users\27649\AppData\Local\Temp\ps-script-e3f13d7f-e9f6-41b7-9d3a-2b94aeea505f.ps1:81 字符: 1
++ powershell -NoProfile -ExecutionPolicy Bypass -File "C:\Users\27649\D ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Set-Location : ...“path”的值更改为非空值。:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+所在位置 C:\Users\27649\Documents\myproject\Content\美国如何从工业国变成金融国\02_汉密尔顿为什么把债务变成国家资产\_che
+ck.ps1:14 字符: 1
++ Set-Location $dirAbs
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Set-Location]，PSArgumentNullException
+    + FullyQualifiedErrorId : ArgumentNull,Microsoft.PowerShell.Commands.SetLocationCommand
+ 
+CWD: C:\Users\27649\Documents\myproject\Content
+FILE: .\03_鑽夌\鑽夌.md
+EXISTS: False
+Get-Content : 找不到路径“.\03_鑽夌\鑽夌.md”，因为该路径不存在。
+所在位置 C:\Users\27649\Documents\myproject\Content\美国如何从工业国变成金融国\02_汉密尔顿为什么把债务变成国家资产\_che
+ck.ps1:21 字符: 12
++ $content = Get-Content -LiteralPath $file -Raw -Encoding UTF8
++            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\03_鑽夌\鑽夌.md:String) [Get-Content], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetContentCommand
+ 
+TOTAL_NO_SPACE: 0
+TOTAL_WITH_SPACE: 0
+PARAGRAPH_COUNT: 0
+MAX_LEN: 0 (idx=-1)
+OVER_60: 0
+OVER_80: 0
+OVER_100: 0
+---PARAGRAPHS_OVER_60---
