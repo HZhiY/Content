@@ -1,6 +1,8 @@
 # 标准 subagent 启动模板库
 
 > 用途：说明本项目可直接复制使用的隔离式临时 subagent 模板如何组织、命名和复用。具体 subagent 文件统一放在 `_工作流/03_subagents/`。
+>
+> **开一篇新文章怎么按顺序调用这些 agent**：见 [`02_单篇文章从0到HTML成稿执行手册.md`](02_单篇文章从0到HTML成稿执行手册.md)。
 
 ---
 
@@ -104,10 +106,10 @@ content-html-producer.md
 | `director` | 方向统筹、取舍、洞察组合编排 | 方向把控 |
 | `guide` | 生成本文专属写作指导 | 文风卡 |
 | `planner` | 生成方案或结构施工图 | 大纲、插图方案 |
-| `reviewer` | 对已有产物做审阅，输出修改意见 | 大纲审阅、读者审读、主编修改建议 |
+| `reviewer` | 对已有产物做审阅，输出修改意见 | 大纲审阅、读者审读、内容密度审读、主编修改建议 |
 | `writer` | 写正文或修订稿 | 草稿、修订稿 |
-| `checker` | 发布前检查 | 发布检查 |
-| `strategist` | 策略分析与候选生成 | 标题分析卡、标题审查卡 |
+| `checker` | 发布前检查 | 发布检查（内容闭环）、成稿终审（格式） |
+| `strategist` | 策略分析与候选生成 | 标题生态搜索、标题方案 |
 | `producer` | 生成最终格式化交付物 | HTML 终稿 |
 
 ### 旧名 → 新名对照
@@ -157,15 +159,53 @@ _工作流/03_subagents/
 | 14 | `_工作流/03_subagents/03-outline-review.md` | 大纲审阅 | 审阅大纲并判断是否进入草稿、修订或退回上游 | 已完成 |
 | 15 | `_工作流/03_subagents/03-reader-criteria.md` | 读者标准 | 基于已通过大纲、方向把控和文风卡生成 `03_文风与大纲/读者审稿卡.md` | 已完成 |
 | 16 | `_工作流/03_subagents/04-draft-write.md` | 草稿写作 | 严格按已通过大纲、读者审稿卡、文风卡和事实边界生成第一版草稿 | 已完成 |
-| 17 | `_工作流/03_subagents/05-reader-review.md` | 读者审读 | 生成 `05_审阅/读者审读 vN.md` | 已完成 |
-| 18 | `_工作流/03_subagents/05-editor-review.md` | 主编审稿 | 生成 `05_审阅/主编修改建议 vN.md` | 已完成 |
-| 19 | `_工作流/03_subagents/06-draft-revise.md` | 草稿修订 | 生成 `06_修订与发布/修订稿 vN.md` | 已完成 |
-| 20 | `_工作流/03_subagents/06-release-check.md` | 发布检查 | 生成 `06_修订与发布/发布检查.md`，判断是否允许进入标题、插图和 HTML 阶段 | 已完成 |
-| 21 | `_工作流/03_subagents/07-title-write.md` | 标题文案 | 基于标题方法论配置、发布检查和最终修订稿生成 `07_传播终审与标题/标题方案.md` | 已完成 |
-| 22 | `_工作流/03_subagents/08-illustration-plan.md` | 插图规划 | 生成插图方案和 prompts.json | 待设计 |
-| 23 | `_工作流/03_subagents/09-html-build.md` | HTML 构建 | 生成终稿 HTML | 待设计 |
+| 17 | `_工作流/03_subagents/05-free-review.md` | 自由审稿 | 零上下文盲审大纲/草稿/修订稿，纯自由文本 | 已完成 |
+| 18 | `_工作流/03_subagents/05-reader-review.md` | 读者审读 | 生成 `05_审阅/读者审读 vN.md` 或 `读者审读 阶段B vN.md` | 已完成 |
+| 19 | `_工作流/03_subagents/05-density-edit.md` | 内容密度审读 | 生成 `05_审阅/内容密度审读 vN.md` 或 `内容密度审读 阶段B vN.md` | 已完成 |
+| 20 | `_工作流/03_subagents/05-editor-review.md` | 主编审稿 | 综合三读后生成主编修改建议；每轮必查成稿卫生 | 已完成 |
+| 21 | `_工作流/03_subagents/06-draft-revise.md` | 草稿修订 | 生成 `06_修订与发布/修订稿 vN.md` | 已完成 |
+| 22 | `_工作流/03_subagents/06-release-check.md` | 发布检查（内容闭环） | 主编内容冻结后生成 `发布检查.md` | 已完成 |
+| 23 | `_工作流/03_subagents/06-format-final-check.md` | 成稿终审（格式） | HTML 前生成 `成稿终审.md`，仅格式/卫生 | 已完成 |
+| 24 | `_工作流/03_subagents/07-title-ecosystem.md` | 标题生态 | 生成 `07_传播终审与标题/标题生态搜索.md` | 已完成 |
+| 25 | `_工作流/03_subagents/07-title-write.md` | 标题文案 | 生成 `07_传播终审与标题/标题方案.md` | 已完成 |
+| 26 | `_工作流/03_subagents/08-illustration-plan.md` | 插图规划 | 生成插图方案和 prompts.json | 已完成 |
+| 27 | `_工作流/03_subagents/09-html-build.md` | HTML 构建 | 成稿终审通过后生成 `09_终稿/【文章编号】_终稿.html` | 已完成 |
 
 ## 复制使用方式
+
+**维护规则**：修改 subagent 时先改 `_工作流/03_subagents/`，再整文件复制到 `.cursor/agents/`；禁止只改 wrapper 不改正文。
+
+### `_工作流/03_subagents/` → `.cursor/agents/` 对照
+
+| 工作流模板 | .cursor/agents |
+|---|---|
+| `00-project-setup.md` | `project-setup.md` |
+| `01-source-research.md` | `source-research.md` |
+| `01-evidence-ledger.md` | `evidence-ledger.md` |
+| `01-fact-check.md` | `fact-check.md` |
+| `02-ecosystem-scan.md` | `ecosystem-scan.md` |
+| `02-insight-select.md` | `insight-select.md` |
+| `02-communication-criteria.md` | `communication-criteria.md` |
+| `02-communication-analyze.md` | `communication-analyze.md` |
+| `02-structure-criteria.md` | `structure-criteria.md` |
+| `02-structure-analyze.md` | `structure-analyze.md` |
+| `02-direction-decide.md` | `direction-decide.md` |
+| `03-style-guide.md` | `style-guide.md` |
+| `03-outline-plan.md` | `outline-plan.md` |
+| `03-outline-review.md` | `outline-review.md` |
+| `03-reader-criteria.md` | `reader-criteria.md` |
+| `04-draft-write.md` | `draft-write.md` |
+| `05-free-review.md` | `free-review.md` |
+| `05-reader-review.md` | `reader-review.md` |
+| `05-density-edit.md` | `density-edit.md` |
+| `05-editor-review.md` | `editor-review.md` |
+| `06-draft-revise.md` | `draft-revise.md` |
+| `06-release-check.md` | `release-check.md` |
+| `06-format-final-check.md` | `format-final-check.md` |
+| `07-title-ecosystem.md` | `title-ecosystem.md` |
+| `07-title-write.md` | `title-write.md` |
+| `08-illustration-plan.md` | `illustration-plan.md` |
+| `09-html-build.md` | `html-build.md` |
 
 如果要在新项目中使用这些 subagent：
 
@@ -175,17 +215,7 @@ _工作流/03_subagents/
 .cursor/agents/
 ```
 
-2. 复制需要的 `.md` 文件，例如：
-
-```text
-_工作流/03_subagents/content-project-architect.md
-```
-
-到：
-
-```text
-.cursor/agents/content-project-architect.md
-```
+2. 从 `_工作流/03_subagents/` **整文件复制**对应模板到 `.cursor/agents/`，按上表改名（保留 frontmatter，正文完整内嵌，不使用引用式 wrapper）。
 
 3. 根据新项目需要，检查 frontmatter 中的 `model` 字段。
 

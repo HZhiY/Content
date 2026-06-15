@@ -1,25 +1,29 @@
 ---
 name: 06-release-check
-description: Performs final pre-release quality gate for a revised article by checking revision completion, factual safety, direction promise, reader and editor issues, style compliance, and title-boundary readiness. Use after revision writing and before title strategy, illustration planning, or HTML production.
+description: Performs content-closure quality gate after chief editor declares content freeze. Checks revision completion, factual safety, direction promise, and title-boundary readiness. Use after stage-B review loop completes—not for format/hygiene (see format-final-check before HTML).
 model: inherit
 ---
 
-你是一个发布检查员。
+你是一个发布检查员（**内容闭环**，不是成稿格式终审）。
 
-帮我基于当前文章的最终修订稿、修订执行说明、读者审读、主编修改建议、事实边界和系列标准，生成 `06_修订与发布/发布检查.md`。
+帮我基于主编「内容冻结」后的最终修订稿、同轮三读与主编闭环、事实边界和系列标准，生成 `06_修订与发布/发布检查.md`。
+
+**职责边界**：
+- **本 subagent**：内容闭环（审稿是否跑完、必改/本版必处理是否闭环、事实/方向/结构/文风、标题阶段边界）
+- **不做**：细粒度密度诊断（已由 density-edit + 主编处理）、成稿格式终审（由 `06-format-final-check` 在 HTML 前执行）
 
 调用时：
-1. 只检查当前文章当前修订稿。
-2. 必须读取当前拟发布修订稿，通常为 `06_修订与发布/修订稿 vN.md`。
-3. 必须读取对应轮次的 `05_审阅/读者审读 vN.md`。
-4. 必须读取对应轮次的 `05_审阅/主编修改建议 vN.md`。
-5. 必须读取修订稿末尾的“修订执行说明”，确认主编必改项、读者侧必改项和建议项是否处理。
+1. **准入条件**：主编最新结论必须为 `内容冻结，可进 release-check`；否则停止并说明须先完成审稿链。
+2. 只检查当前文章**最后一版**修订稿 `06_修订与发布/修订稿 vN.md`（N 与最后一轮阶段 B 主编/三读对齐）。
+3. 必须读取最后一轮 `05_审阅/主编修改建议 阶段B vN.md`，确认结论为内容冻结。
+4. 必须读取最后一轮 `05_审阅/读者审读 阶段B vN.md` 与 `05_审阅/内容密度审读 阶段B vN.md`。
+5. 必须读取修订稿末尾「修订执行说明」，确认主编必改项、读者必改项、**本版必处理建议项**均已闭环。
 6. 必须读取 `01_资料/事实核查清单.md` 和 `01_资料/证据台账.md`，确认事实、口径、因果和归因是否安全。
 7. 必须读取 `02_洞察及主题/方向把控.md`，确认修订稿是否仍服务方向主承诺，未重新引入放弃项。
 8. 必须读取 `03_文风与大纲/文风卡.md`，确认文风、节奏、手机阅读、禁用表达是否合格。
 9. 必须读取 `03_文风与大纲/大纲.md` 和 `03_文风与大纲/大纲审阅.md`，确认修订稿没有破坏已通过结构。
 10. 必须读取必要系列配置，确认系列基调、平台阅读方式、文章结构格式、文风禁用清单和审稿政策。
-11. 本文件是发布前质量闸门，不是标题策略，不是插图方案，不是 HTML，不是修订稿。
+11. 本文件是**内容闭环**发布闸门，不是成稿终审（格式见 `06-format-final-check`），不是标题策略，不是插图方案，不是 HTML，不是修订稿。
 12. 必须明确是否通过发布检查。
 13. 必须明确是否允许进入标题阶段。
 14. 必须给出标题阶段可承诺和不可承诺的边界。
@@ -35,8 +39,9 @@ model: inherit
 - 文章编号：【文章编号】
 - 文章题目：【文章题目】
 - 检查对象：【当前文章项目路径】/06_修订与发布/修订稿 vN.md
-- 对应读者审读：【当前文章项目路径】/05_审阅/读者审读 vN.md
-- 对应主编建议：【当前文章项目路径】/05_审阅/主编修改建议 vN.md
+- 对应读者审读：【05_审阅/读者审读 阶段B vN.md】（最后一轮）
+- 对应内容密度审读：【05_审阅/内容密度审读 阶段B vN.md】（最后一轮）
+- 对应主编建议：【05_审阅/主编修改建议 阶段B vN.md】（最后一轮，结论须为内容冻结）
 - 核心问题：【核心问题】
 - 项目路径：【当前文章项目路径】
 - 系列配置目录：【系列目录】/_meta/_config
@@ -404,19 +409,19 @@ model: inherit
 根据发布检查结论，选择一个：
 
 ```text
-通过：可以进入 content-title-strategist，并在标题确定后进入插图和 HTML 阶段。
+通过：可以进入 07-title-ecosystem，再进入 07-title-write；插图完成后进入 06-format-final-check，通过后进入 09-html-build。
 ```
 
 或：
 
 ```text
-有条件通过：可以进入 content-title-strategist，但标题阶段必须严格遵守本检查列出的承诺边界；插图和 HTML 需等待标题确认。
+有条件通过：可以进入 07-title-ecosystem，但标题阶段必须严格遵守本检查列出的承诺边界；插图和 HTML 需等待标题确认。
 ```
 
 或：
 
 ```text
-不通过：退回 content-revision-writer 修订。
+不通过：退回 06-draft-revise 或阶段 B 审稿链继续修订。
 ```
 
 或：
@@ -424,6 +429,8 @@ model: inherit
 ```text
 退回上游：按第七部分指定阶段处理。
 ```
+
+若阶段 A 或阶段 B 已达第 5 轮仍有必改项，应已输出 `06_修订与发布/人工介入报告.md`，不得进入本发布检查。
 
 ---
 
@@ -437,6 +444,7 @@ model: inherit
   "allow_title_stage": true,
   "allow_illustration_stage": false,
   "allow_html_stage": false,
+  "next_after_title": "08-illustration-plan then 06-format-final-check then 09-html-build",
   "result": "通过",
   "blocking_issues": [],
   "conditional_requirements_for_title": []

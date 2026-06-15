@@ -49,7 +49,7 @@ model: inherit
 4. 生成 总计划.md。
 5. 生成 00_目录结构.md。
 6. 列出进入资料研究阶段前的待补信息。
-7. 只建议下一步进入 `content-researcher`。
+7. 只建议下一步进入 `01-source-research`。
 
 ## 输出
 
@@ -92,27 +92,27 @@ model: inherit
 │   ├── 文风卡.md
 │   ├── 大纲.md
 │   ├── 大纲审阅.md
-│   └── 读者审稿卡.md
+│   ├── 读者审稿卡.md
+│   └── 自由审读_大纲.md
 ├── 04_草稿/
 │   └── 草稿.md
 ├── 05_审阅/
-│   ├── 读者审读 v1.md
-│   ├── 主编修改建议 v1.md
-│   ├── 读者审读 v2.md
-│   ├── 主编修改建议 v2.md
-│   ├── 读者审读 v3.md
-│   └── 主编修改建议 v3.md
+│   ├── 读者审读 vN.md                 ← 阶段 A，N=1..5（按需生成）
+│   ├── 内容密度审读 vN.md             ← 阶段 A，N=1..5（按需生成）
+│   ├── 主编修改建议 vN.md
+│   ├── 读者审读 阶段B vN.md           ← 阶段 B，N=1..5（按需生成）
+│   ├── 内容密度审读 阶段B vN.md       ← 阶段 B，N=1..5（按需生成）
+│   ├── 主编修改建议 阶段B vN.md
+│   ├── 自由审读_草稿.md
+│   └── 自由审读_修订稿 阶段B vN.md    ← 阶段 B 每版修订稿各一次
 ├── 06_修订与发布/
-│   ├── 修订稿 v1.md
-│   ├── 修订稿 v2.md
-│   ├── 修订稿 v3.md
-│   ├── 发布检查.md
-│   └── 三轮失败报告.md
+│   ├── 修订稿 vN.md                   ← 阶段 B，N=1..5（按需生成）
+│   ├── 发布检查.md                    ← 内容闭环（主编内容冻结后）
+│   ├── 成稿终审.md                    ← 格式终审（HTML 前）
+│   └── 人工介入报告.md
 ├── 07_传播终审与标题/
 │   ├── 标题生态搜索.md
-│   ├── 传播学终审.md
-│   ├── 标题分析卡.md
-│   └── 标题审查卡.md
+│   └── 标题方案.md
 ├── 08_插图/
 │   ├── 插图方案.md
 │   ├── prompts.json
@@ -171,7 +171,18 @@ README.md 必须包含：
 1. 完整目录结构；
 2. 每个文件职责；
 3. 文件使用规则；
-4. 阶段推进顺序。
+4. 阶段推进顺序（须写清完整链路，至少包含）：
+
+```text
+project-setup → source-research → evidence-ledger → fact-check
+→ ecosystem-scan → insight-select → communication/structure 链 → direction-decide
+→ style-guide → reader-criteria → outline-plan → free-review → outline-review
+→ draft-write
+→ [每轮审稿] free-review + reader-review + density-edit → editor-review → draft-revise
+→ release-check（内容闭环，须主编「内容冻结」）
+→ title-ecosystem → title-write → illustration-plan
+→ format-final-check（成稿终审）→ html-build
+```
 
 ## 6. 待补信息
 
@@ -180,7 +191,7 @@ README.md 必须包含：
 ## 7. 下一步建议
 
 ```text
-content-researcher
+01-source-research
 ```
 
 ## 质量自检

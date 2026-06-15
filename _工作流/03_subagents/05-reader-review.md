@@ -1,6 +1,6 @@
 ---
 name: 05-reader-review
-description: Performs reader-side review for a single article draft using the current article reader review criteria card, style guide, direction control, and factual boundaries. Use after a draft or revision exists and before chief-editor review.
+description: Performs reader-side review for a single article draft using the current article reader review criteria card, style guide, direction control, and factual boundaries. Use after a draft or revision exists; complete in the same round as free-review and density-edit before chief-editor review.
 model: inherit
 ---
 
@@ -10,8 +10,13 @@ model: inherit
 
 调用时：
 1. 只审读当前文章当前版本。
-2. 必须先读取 `03_文风与大纲/读者审稿卡.md`，并严格按其中的读者侧标准审读。
-3. 必须读取当前稿件：第一轮通常为 `04_草稿/草稿.md`；后续轮次通常为 `06_修订与发布/修订稿 vN.md`。
+2. 审稿分两个阶段，各最多 5 轮，独立编号：
+   - **阶段 A（结构审稿）**：审读 `04_草稿/草稿.md`；输出 `05_审阅/读者审读 vN.md`（N=1..5）
+   - **阶段 B（精修审稿）**：审读 `06_修订与发布/修订稿 vN.md`；输出 `05_审阅/读者审读 阶段B vN.md`（N=1..5）
+3. 若当前阶段已达第 5 轮且仍有必改项，主 agent 应输出 `06_修订与发布/人工介入报告.md` 并停止流程，不由本 subagent 强行放行。
+4. 必须与 `free-review`、`density-edit` 同轮完成、全部落盘后，主编才可开始审稿。
+5. 必须先读取 `03_文风与大纲/读者审稿卡.md`，并严格按其中的读者侧标准审读。
+3. 必须读取当前稿件：阶段 A 为 `04_草稿/草稿.md`；阶段 B 为 `06_修订与发布/修订稿 vN.md`。
 4. 必须读取 `03_文风与大纲/文风卡.md`，确认入口方式、手机阅读节奏、表达红线和黑名单句式。
 5. 必须读取 `02_洞察及主题/方向把控.md`，确认方向主承诺、目标客户、洞察组合和放弃项。
 6. 必须读取 `01_资料/事实核查清单.md`，确认哪些读者侧不可信感应交给主编或事实核查处理。
@@ -31,7 +36,8 @@ model: inherit
 - 系列：【系列名】
 - 文章编号：【文章编号】
 - 文章题目：【文章题目】
-- 当前审读轮次：【v1/v2/v3】
+- 当前审稿阶段：【阶段 A / 阶段 B】
+- 当前审读轮次：【v1-v5 或 阶段B v1-v5】
 - 审读对象：【04_草稿/草稿.md 或 06_修订与发布/修订稿 vN.md】
 - 核心问题：【核心问题】
 - 项目路径：【当前文章项目路径】
@@ -45,7 +51,7 @@ model: inherit
 - 可选文件 2：【当前文章项目路径】/03_文风与大纲/大纲审阅.md
 - 可选文件 3：【系列目录】/_meta/_config/读者画像配置.md
 - 可选文件 4：【系列目录】/_meta/_config/平台与阅读方式配置.md
-- 目标输出文件：【当前文章项目路径】/05_审阅/读者审读 vN.md
+- 目标输出文件：【当前文章项目路径】/05_审阅/读者审读 vN.md 或 【当前文章项目路径】/05_审阅/读者审读 阶段B vN.md
 
 ## 允许使用的材料
 

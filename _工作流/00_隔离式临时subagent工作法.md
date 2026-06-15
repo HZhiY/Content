@@ -1,6 +1,8 @@
 # 隔离式临时 subagent 工作法
 
 > 用途：规范系列文章生产中的临时 subagent 使用方式，减少不同文章、不同阶段、不同历史上下文之间的干扰。
+>
+> **逐步执行一篇新文章（从 0 到 HTML）**：见 [`02_单篇文章从0到HTML成稿执行手册.md`](02_单篇文章从0到HTML成稿执行手册.md)——用户只需给标题并说「按 02 执行」。
 
 ---
 
@@ -63,26 +65,31 @@
 
 以下阶段必须使用新的临时 subagent：
 
-1. 资料研究（`content-researcher`）
-2. 证据台账（`content-evidence-ledger`）
-3. 事实核查（`content-fact-checker`）
-4. 外部内容生态分析（`content-content-ecosystem-analyst`）
-5. 洞察初选（`content-insight-selector`）
-6. 传播学标准与分析（`content-communication-criteria` / `content-communication-analyst`）
-7. 结构命题标准与分析（`content-structure-criteria` / `content-structure-analyst`）
-8. 方向把控（`content-direction-director`）
-9. 文风卡（`content-style-guide`）
-10. 读者审稿卡（`content-reader-criteria`）
-11. 大纲（`content-outline-planner`）
-12. 大纲审阅（`content-outline-reviewer`）
-13. 草稿（`content-draft-writer`）
-14. 读者审读（`content-reader-reviewer`）
-15. 主编审稿（`content-chief-editor`）
-16. 修订（`content-revision-writer`）
-17. 发布检查（`content-release-checker`）
-18. 标题策略（`content-title-strategist`）
-19. 插图方案（`content-illustration-planner`）
-20. HTML 终稿（`content-html-producer`）
+1. 资料研究（`01-source-research`）
+2. 证据台账（`01-evidence-ledger`）
+3. 事实核查（`01-fact-check`）
+4. 外部内容生态分析（`02-ecosystem-scan`）
+5. 洞察初选（`02-insight-select`）
+6. 传播学标准与分析（`02-communication-criteria` / `02-communication-analyze`）
+7. 结构命题标准与分析（`02-structure-criteria` / `02-structure-analyze`）
+8. 方向把控（`02-direction-decide`）
+9. 文风卡（`03-style-guide`）
+10. 读者审稿卡（`03-reader-criteria`）
+11. 大纲（`03-outline-plan`）
+12. 自由审读（`05-free-review`）
+13. 大纲审阅（`03-outline-review`）
+14. 草稿（`04-draft-write`）
+15. 自由审读（`05-free-review`）
+16. 读者审读（`05-reader-review`）
+17. 内容密度审读（`05-density-edit`）
+18. 主编审稿（`05-editor-review`）
+19. 修订（`06-draft-revise`）
+20. 发布检查（`06-release-check`，内容闭环）
+21. 标题生态（`07-title-ecosystem`）
+22. 标题方案（`07-title-write`）
+23. 插图方案（`08-illustration-plan`）
+24. 成稿终审（`06-format-final-check`）
+25. HTML 终稿（`09-html-build`）
 
 其中，资料研究、洞察初选、方向把控、草稿、审稿、标题六类任务尤其需要隔离。
 
@@ -92,29 +99,33 @@
 
 | 阶段 | subagent 文件 | 临时角色 | 输入材料 | 输出文件 |
 |---|---|---|---|---|
-| 项目初始化 | `content-project-architect` | 项目架构员 | 用户选题、系列信息 | README.md、总计划.md、00_目录结构.md |
-| 资料研究 | `content-researcher` | 资料研究员 | README.md、总计划.md | 01_资料/资料.md |
-| 证据台账 | `content-evidence-ledger` | 证据台账员 | 资料.md | 01_资料/证据台账.md |
-| 事实核查 | `content-fact-checker` | 事实核查员 | 资料.md、证据台账.md | 01_资料/事实核查清单.md |
-| 外部内容生态分析 | `content-content-ecosystem-analyst` | 外部内容生态分析员 | README.md、总计划.md、搜索结果 | 02_洞察及主题/外部内容搜索.md |
-| 洞察初选 | `content-insight-selector` | 洞察初选员 | 资料、证据台账、外部内容搜索 | 02_洞察及主题/洞察及主题初选.md |
-| 传播学标准 | `content-communication-criteria` | 传播学标准生成员 | 系列传播配置、README、总计划、事实核查清单 | 02_洞察及主题/传播学审查卡.md |
-| 传播学分析 | `content-communication-analyst` | 传播学分析员 | 传播学审查卡、外部内容搜索、洞察及主题初选、事实核查清单 | 02_洞察及主题/传播学分析卡.md |
-| 结构命题标准 | `content-structure-criteria` | 结构命题标准生成员 | 系列结构命题配置、README、总计划、事实核查清单 | 02_洞察及主题/结构命题审查卡.md |
-| 结构命题分析 | `content-structure-analyst` | 结构命题分析员 | 结构命题审查卡、洞察及主题初选、事实核查清单 | 02_洞察及主题/结构命题分析卡.md |
-| 方向把控 | `content-direction-director` | 方向把控员 | 传播学分析卡、结构命题分析卡、事实核查清单、README、总计划、系列基调、读者画像、审稿政策 | 02_洞察及主题/方向把控.md |
-| 文风卡 | `content-style-guide` | 文风指导编辑 | 方向把控、传播学分析卡、结构命题分析卡、事实核查清单、系列基调、平台与阅读方式、读者画像、文风禁用清单 | 03_文风与大纲/文风卡.md |
-| 读者审稿卡 | `content-reader-criteria` | 读者审读标准生成员 | 方向把控、文风卡、读者画像、平台与阅读方式、事实核查清单 | 03_文风与大纲/读者审稿卡.md |
-| 大纲 | `content-outline-planner` | 大纲策划编辑 | 方向把控、文风卡、文章结构与格式配置、事实核查清单、传播学分析卡、结构命题分析卡 | 03_文风与大纲/大纲.md |
-| 大纲审阅 | `content-outline-reviewer` | 大纲审阅主编 | 大纲、方向把控、文风卡、文章结构与格式配置、事实核查清单 | 03_文风与大纲/大纲审阅.md |
-| 草稿 | `content-draft-writer` | 作者 | 大纲、大纲审阅、文风卡、事实核查清单、资料、证据台账、方向把控、文章结构与格式配置 | 04_草稿/草稿.md |
-| 读者审读 | `content-reader-reviewer` | 读者审读员 | 当前稿、读者审稿卡、文风卡 | 05_审阅/读者审读 vN.md |
-| 主编审稿 | `content-chief-editor` | 主编 | 当前稿、主编审稿卡、证据台账 | 05_审阅/主编修改建议 vN.md |
-| 修订 | `content-revision-writer` | 修订作者 | 当前稿、读者审读、主编建议 | 06_修订与发布/修订稿 vN.md |
-| 发布检查 | `content-release-checker` | 发布检查员 | 修订稿、审稿意见、证据台账 | 06_修订与发布/发布检查.md |
-| 标题 | `content-title-strategist` | 标题策略编辑 | 修订稿、发布检查、标题搜索 | 07_传播终审与标题/标题分析卡.md |
-| 插图 | `content-illustration-planner` | 插图策划编辑 | 修订稿、最终标题 | 08_插图/插图方案.md、prompts.json |
-| HTML | `content-html-producer` | 排版工程师 | 修订稿、标题、图片 | 09_终稿/终稿.html |
+| 项目初始化 | `00-project-setup` | 项目架构员 | 用户选题、系列信息 | README.md、总计划.md、00_目录结构.md |
+| 资料研究 | `01-source-research` | 资料研究员 | README.md、总计划.md | 01_资料/资料.md |
+| 证据台账 | `01-evidence-ledger` | 证据台账员 | 资料.md | 01_资料/证据台账.md |
+| 事实核查 | `01-fact-check` | 事实核查员 | 资料.md、证据台账.md | 01_资料/事实核查清单.md |
+| 外部内容生态分析 | `02-ecosystem-scan` | 外部内容生态分析员 | README.md、总计划.md、搜索结果 | 02_洞察及主题/外部内容搜索.md |
+| 洞察初选 | `02-insight-select` | 洞察初选员 | 资料、证据台账、外部内容搜索 | 02_洞察及主题/洞察及主题初选.md |
+| 传播学标准 | `02-communication-criteria` | 传播学标准生成员 | 系列传播配置、README、总计划、事实核查清单 | 02_洞察及主题/传播学审查卡.md |
+| 传播学分析 | `02-communication-analyze` | 传播学分析员 | 传播学审查卡、外部内容搜索、洞察及主题初选、事实核查清单 | 02_洞察及主题/传播学分析卡.md |
+| 结构命题标准 | `02-structure-criteria` | 结构命题标准生成员 | 系列结构命题配置、README、总计划、事实核查清单 | 02_洞察及主题/结构命题审查卡.md |
+| 结构命题分析 | `02-structure-analyze` | 结构命题分析员 | 结构命题审查卡、洞察及主题初选、事实核查清单 | 02_洞察及主题/结构命题分析卡.md |
+| 方向把控 | `02-direction-decide` | 方向把控员 | 传播学分析卡、结构命题分析卡、事实核查清单、README、总计划、系列基调、读者画像、审稿政策 | 02_洞察及主题/方向把控.md |
+| 文风卡 | `03-style-guide` | 文风指导编辑 | 方向把控、传播学分析卡、结构命题分析卡、事实核查清单、系列基调、平台与阅读方式、读者画像、文风禁用清单 | 03_文风与大纲/文风卡.md |
+| 读者审稿卡 | `03-reader-criteria` | 读者审读标准生成员 | 方向把控、文风卡、读者画像、平台与阅读方式、事实核查清单 | 03_文风与大纲/读者审稿卡.md |
+| 大纲 | `03-outline-plan` | 大纲策划编辑 | 方向把控、文风卡、文章结构与格式配置、事实核查清单、传播学分析卡、结构命题分析卡 | 03_文风与大纲/大纲.md |
+| 自由审读 | `05-free-review` | 自由审稿人 | **仅**当前被审对象正文（零上下文、零格式） | 自由审读_大纲.md / 自由审读_草稿.md / 自由审读_修订稿 阶段B vN.md |
+| 大纲审阅 | `03-outline-review` | 大纲审阅主编 | 大纲、自由审读_大纲、方向把控、文风卡、文章结构与格式配置、事实核查清单 | 03_文风与大纲/大纲审阅.md |
+| 草稿 | `04-draft-write` | 作者 | 大纲、大纲审阅、文风卡、事实核查清单、资料、证据台账、方向把控、文章结构与格式配置 | 04_草稿/草稿.md |
+| 读者审读 | `05-reader-review` | 读者审读员 | 当前稿、读者审稿卡、文风卡 | 05_审阅/读者审读 vN.md 或 读者审读 阶段B vN.md |
+| 内容密度审读 | `05-density-edit` | 内容密度编辑 | 当前稿、方向把控、大纲、文风卡、事实核查清单、读者审稿卡 | 05_审阅/内容密度审读 vN.md 或 内容密度审读 阶段B vN.md |
+| 主编审稿 | `05-editor-review` | 主编 | 当前稿、同轮三读产物、证据台账、方向把控、文风卡、大纲 | 05_审阅/主编修改建议 vN.md 或 主编修改建议 阶段B vN.md |
+| 修订 | `06-draft-revise` | 修订作者 | 当前稿、读者/密度/主编审读（主编采纳项） | 06_修订与发布/修订稿 vN.md |
+| 发布检查 | `06-release-check` | 发布检查员（内容闭环） | 最后一版修订稿、最后一轮三读+主编、证据台账；须主编「内容冻结」 | 06_修订与发布/发布检查.md |
+| 标题生态 | `07-title-ecosystem` | 标题生态分析员 | README、总计划、方向把控、传播学分析卡、标题方法论配置 | 07_传播终审与标题/标题生态搜索.md |
+| 标题方案 | `07-title-write` | 标题策略编辑 | 标题生态搜索、发布检查、修订稿、方向把控、文风卡、事实核查清单 | 07_传播终审与标题/标题方案.md |
+| 插图 | `08-illustration-plan` | 插图策划编辑 | 修订稿、标题方案、文风卡、方向把控、发布检查 | 08_插图/插图方案.md、prompts.json |
+| 成稿终审 | `06-format-final-check` | 成稿终审员（格式） | 修订稿、标题方案、插图方案、发布检查 | 06_修订与发布/成稿终审.md |
+| HTML | `09-html-build` | 排版工程师 | 修订稿、标题方案、成稿终审、插图路径 | 09_终稿/【文章编号】_终稿.html |
 
 ---
 
@@ -136,23 +147,52 @@
 
 ### 4. 审稿闸门
 
-每轮修订后必须检查读者必改项和主编必改项是否清零。
+审稿分两个阶段，每阶段独立编号，各最多 5 轮：
 
-### 5. 三轮失败机制
+- **阶段 A（结构审稿）**：对象 `04_草稿/草稿.md`；文件 `读者审读 vN` / `内容密度审读 vN` / `主编修改建议 vN`（N=1..5）
+- **阶段 B（精修审稿）**：对象 `06_修订与发布/修订稿 vN.md`；文件 `读者审读 阶段B vN` / `内容密度审读 阶段B vN` / `主编修改建议 阶段B vN`（N=1..5）
 
-审稿修订最多三轮。
-
-如果第 3 轮后仍有必改项，停止流程，输出：
+**每轮顺序（硬规则）**：
 
 ```text
-06_修订与发布/三轮失败报告.md
+1. free-review + reader-review + density-edit（三读只审不改，全部落盘）
+2. editor-review（综合三读 + 成稿卫生扫描）
+3. draft-revise（若有必改或本版必处理建议项；禁止跳过改稿直接放行）
+4. 若仍有必改或未闭环建议 → 下一轮 vN+1
+5. 直至主编输出「内容冻结，可进 release-check」
 ```
 
-不继续强行生成终稿。
+每轮修订后必须检查：主编必改项、读者必改项、**本版必处理建议项**、成稿卫生是否清零。
 
-### 6. 发布闸门
+**禁止**：主编在存在未闭环建议项时输出「内容冻结」；禁止在三读未完成时启动主编审稿。
 
-发布检查未通过，不进入标题、插图和 HTML 阶段。
+**自由审读**（`05-free-review`）为同轮三读之一：零上下文、零格式、纯自由文本。主编必须读取并回应，但不得自动全部升级为必改项。
+
+**内容密度审读**（`05-density-edit`）：产出删留/详略/常识词/字数/加粗建议；主编必须读取并回应。
+
+**成稿卫生**：主编每轮扫描正文，命中 H1（施工标记、内部编号、执行说明入正文等）→ 必改项。
+
+### 5. 阶段审稿上限与人工介入
+
+阶段 A 或阶段 B 任一阶段达到第 5 轮后仍有必改项，停止流程，输出：
+
+```text
+06_修订与发布/人工介入报告.md
+```
+
+不继续强行生成终稿。由人工决定后续动作（继续手改 / 退回大纲 / 退回方向把控等）。
+
+### 6. 发布闸门（内容闭环）
+
+- 仅当主编最新结论为 **`内容冻结，可进 release-check`** 时，方可运行 `06-release-check`。
+- 发布检查（内容闭环）未通过，不进入标题、插图阶段。
+- 发布检查**不做**成稿格式终审（施工标记、HTML 就绪等交给 `06-format-final-check`）。
+
+### 7. 成稿终审闸门（格式）
+
+- 标题与插图方案完成后，运行 `06-format-final-check`，产出 `06_修订与发布/成稿终审.md`。
+- 成稿终审**只做格式与卫生**，不做内容管理（不重审方向、事实、读者体验）。
+- 成稿终审未通过，不进入 `09-html-build`。
 
 ---
 

@@ -1,0 +1,26 @@
+{
+  "article_id": "09",
+  "style": "1907 New York financial crisis, restrained journal-magazine infographic aesthetic: muted warm gray and sepia tones, clean modern diagram clarity over decorative illustration, early-1900s newspaper texture lightly in background, no hero portraits, no conspiracy lighting, no cartoon, mechanism-first information graphics suitable for mobile reading, large sparse Chinese labels only",
+  "images": [
+    {
+      "id": "cover",
+      "filename": "cover.png",
+      "prompt": "A mobile-friendly cover infographic for a Chinese financial history article about the 1907 New York banking panic. Foreground: a large clear scene of depositors queuing outside a 1907 trust company building, bank door half-closed, vintage newspaper headline silhouettes hinting at 'one man saved the market' but kept small and blurred. Background: abstract coordination diagram—a round decision table, ledgers, and 2-3 arrows from multiple generic bank icons converging on a central decision window. NO identifiable historical person, NO single giant personal check, NO wallet held by one hero figure. Restrained journal style, muted warm gray and sepia, cinematic but not sensational. Large clear Chinese headline text centered upper area: 「危机里先缺的不是钱包」. Optional small corner text: 「1907 · 纽约」. No English text, no watermark, no Fed founding celebration, no conspiracy shadows."
+    },
+    {
+      "id": "fig01_audit_comparison",
+      "filename": "fig01_audit_comparison.png",
+      "prompt": "A mobile-friendly split-panel mechanism infographic comparing two 1907 trust company crises under audit judgment. Left panel: Knickerbocker Trust—long withdrawal queue, closing door, restrained red mark, small label 「800万」 optional and secondary. Bottom left label in large Chinese: 「未能确认可救」—must NOT say bankrupt or insolvent. Right panel: Trust Company of America—indoor ledger review scene with open account books, magnifying glass, hourglass suggesting limited time, neutral/green mark. Bottom right label: 「查账后定救」. Top banner across both panels: 「同样是挤兑」. Bottom banner: 「差别不在谁更有钱」. Only silhouettes or back views of auditors, no named portraits, no Morgan hero close-up. Clean journal infographic style, muted sepia and gray, large readable Chinese labels, no conspiracy tone, no watermark, no English text."
+    },
+    {
+      "id": "fig02_convening_power",
+      "filename": "fig02_convening_power.png",
+      "prompt": "A mobile-friendly mechanism infographic explaining convening power during the 1907 NYSE liquidity crisis. Center: a large 1900s private library meeting table or round decision table with 10-14 empty chairs or simplified generic bank building icons arranged around it—no identifiable historical faces. Background corner: faint NYSE trading floor silhouette and a clock near closing time suggesting exchange nearly halted early. Arrows from multiple bank icons converge toward the table center. Large Chinese labels: 「14 家银行 · 约 10 分钟」 and 「约 2360 万美元」. Small corner note: 「银行团承诺」. This image is ONLY the bank consortium NYSE scene (E0917)—do NOT show 25 million or Treasury deposit here. NO single person writing a giant personal check, NO locked-door legend drama, NO 150% interest rate, NO half-hour 25-million rumor. Restrained journal infographic, muted warm tones, large sparse Chinese text, no watermark, no English text."
+    },
+    {
+      "id": "fig03_coordination_network",
+      "filename": "fig03_coordination_network.png",
+      "prompt": "A mobile-friendly summary infographic of three coordination powers and a multi-party rescue network for a 1907 crisis article. Three equal nodes arranged in a simple triangle or three-column layout: (1) 「查账权」 with ledger and balance scale icon, small note 弃救/救对照; (2) 「召集权」 with round table and decision window icon, small note 纽交所·14行; (3) 「接盘网络」 with multiple incoming arrows from separate labeled sources—visually separated zones: 「2500万·财政部」, 「2360万·纽交所」, 「825万·信托」—must NOT merge into one total bailout number. Center: abstract coordination hub node (geometric hub or ring labeled 决策窗口), NOT a portrait of any banker, NOT a giant personal check. Top banner: 「三类协调权」. Bottom banner in large Chinese: 「协调网，不是一张支票」. No Strong or Morgan portraits, no Fed founding imagery, no Jekyll Island conspiracy, no Rockefeller portrait (use text label 产业资本 if needed). Restrained journal-magazine infographic, muted sepia-gray palette, max ~10 short Chinese labels, readable on phone without zoom, no watermark, no English text."
+    }
+  ]
+}
