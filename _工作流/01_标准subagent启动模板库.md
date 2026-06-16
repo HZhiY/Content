@@ -163,7 +163,7 @@ _工作流/03_subagents/
 | 18 | `_工作流/03_subagents/05-reader-review.md` | 读者审读 | 生成 `05_审阅/读者审读 vN.md` 或 `读者审读 阶段B vN.md` | 已完成 |
 | 19 | `_工作流/03_subagents/05-density-edit.md` | 内容密度审读 | 生成 `05_审阅/内容密度审读 vN.md` 或 `内容密度审读 阶段B vN.md` | 已完成 |
 | 20 | `_工作流/03_subagents/05-editor-review.md` | 主编审稿 | 综合三读后生成主编修改建议；每轮必查成稿卫生 | 已完成 |
-| 21 | `_工作流/03_subagents/06-draft-revise.md` | 草稿修订 | 生成 `06_修订与发布/修订稿 vN.md` | 已完成 |
+| 21 | `_工作流/03_subagents/06-draft-revise.md` | 草稿修订 | 生成 `修订稿 vN.md` + `修订执行说明 vN.md` | 已完成 |
 | 22 | `_工作流/03_subagents/06-release-check.md` | 发布检查（内容闭环） | 主编内容冻结后生成 `发布检查.md` | 已完成 |
 | 23 | `_工作流/03_subagents/06-format-final-check.md` | 成稿终审（格式） | HTML 前生成 `成稿终审.md`，仅格式/卫生 | 已完成 |
 | 24 | `_工作流/03_subagents/07-title-ecosystem.md` | 标题生态 | 生成 `07_传播终审与标题/标题生态搜索.md` | 已完成 |
