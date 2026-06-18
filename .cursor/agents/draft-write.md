@@ -1,5 +1,5 @@
 ---
-name: 04-draft-write
+name: draft-write
 description: Writes the first full draft for a single article by strictly executing the approved outline, outline review, style card, factual boundaries, evidence ledger, and article structure/format configuration. Use after outline review has cleared the article for drafting, before reader review or chief-editor review.
 model: inherit
 ---

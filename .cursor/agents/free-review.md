@@ -1,5 +1,5 @@
 ---
-name: 05-free-review
+name: free-review
 description: Performs zero-context, freeform blind review of an outline, draft, or revision by reading only the target document body. Use after outline, first draft, or each stage-B revision is complete; for drafts/revisions, complete in the same round as reader-review and density-edit before editor-review.
 model: inherit
 ---

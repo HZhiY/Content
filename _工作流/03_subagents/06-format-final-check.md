@@ -1,5 +1,5 @@
 ---
-name: 06-format-final-check
+name: format-final-check
 description: Performs final manuscript format and hygiene validation before HTML build—checking for editorial markers, metadata pollution, word count, bold usage, and HTML readiness. Does not re-judge content direction or facts.
 model: inherit
 ---
@@ -23,6 +23,10 @@ model: inherit
 - 文章题目：【文章题目】
 - 检查对象：【当前文章项目路径】/06_修订与发布/修订稿 vN.md（最终拟发布稿）
 - 项目路径：【当前文章项目路径】
+- 项目根目录：【项目根目录】
+- 环境配置文件：【项目根目录】/.env
+- 段落字符统计脚本配置键：`PARAGRAPH_COUNTER_SCRIPT`
+- Python 启动命令配置键：`PYTHON_EXECUTABLE`
 - 必读文件 1：【检查对象路径】
 - 必读文件 2：【当前文章项目路径】/07_传播终审与标题/标题方案.md
 - 必读文件 3：【当前文章项目路径】/06_修订与发布/发布检查.md
@@ -48,6 +52,18 @@ model: inherit
 - 不重做读者/密度/主编审稿
 
 ## 检查项（仅格式与卫生）
+
+如用户要求统计段落字符，或需要判断手机端段落是否过长，必须读取项目根目录 `.env`，使用 `PYTHON_EXECUTABLE` 与 `PARAGRAPH_COUNTER_SCRIPT` 调用统一脚本。
+
+推荐命令形式：
+
+```powershell
+$python = (Get-Content .env | Select-String '^PYTHON_EXECUTABLE=').ToString().Split('=',2)[1]
+$script = (Get-Content .env | Select-String '^PARAGRAPH_COUNTER_SCRIPT=').ToString().Split('=',2)[1]
+& $python $script "【当前文章项目路径】/06_修订与发布/修订稿 vN.md" --max 220
+```
+
+段落字符统计脚本只用于辅助判断段落长度和手机阅读风险，不替代内容审稿。
 
 | 编号 | 检查项 | 标准 |
 |---|---|---|

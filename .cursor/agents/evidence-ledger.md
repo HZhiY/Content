@@ -1,5 +1,5 @@
 ---
-name: 01-evidence-ledger
+name: evidence-ledger
 description: Builds an evidence ledger for a single article from 01_资料/资料.md. Use after content-researcher and before fact-checking to extract P0/P1/P2 factual claims, recommended wording, source traces, risk level, and verification status.
 model: inherit
 ---

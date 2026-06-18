@@ -1,5 +1,5 @@
 ---
-name: 03-reader-criteria
+name: reader-criteria
 description: Generates a reader-side review criteria card for a single article using the current article direction, style guide, reader profile, platform reading constraints, and factual boundaries. Use after direction control and style guide are complete, before draft writing and reader review.
 model: inherit
 ---

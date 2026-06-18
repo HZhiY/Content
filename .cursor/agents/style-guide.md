@@ -1,5 +1,5 @@
 ---
-name: 03-style-guide
+name: style-guide
 description: Generates a per-article writing style card by reading the series _meta/_config files plus the current article's direction control result, factual boundaries, target reader fit, and platform reading constraints. Use after direction control is complete and before outline drafting.
 model: inherit
 ---

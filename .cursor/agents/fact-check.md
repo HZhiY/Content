@@ -1,5 +1,5 @@
 ---
-name: 01-fact-check
+name: fact-check
 description: Fact-checks a single article's research package using 01_资料/资料.md and 01_资料/证据台账.md. Use after evidence ledger creation to produce 01_资料/事实核查清单.md and decide whether P0 facts are cleared for outline and drafting.
 model: inherit
 ---

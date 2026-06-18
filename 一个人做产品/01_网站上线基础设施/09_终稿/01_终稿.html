@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>买了域名，为什么还打不开？</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+      color: #1a1a1a;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    .preview-wrap {
+      max-width: 420px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 1.75rem;
+    }
+
+    .series-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: #666;
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      margin-bottom: 0.85rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.35;
+      margin-bottom: 0.45rem;
+    }
+
+    .subtitle {
+      font-size: 0.95rem;
+      color: #2563eb;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    .entry-group {
+      margin-bottom: 0.5rem;
+    }
+
+    .entry-label {
+      font-size: 0.78rem;
+      color: #888;
+      margin-bottom: 1rem;
+      padding-left: 0.15rem;
+    }
+
+    .cards-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .card-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .card-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #555;
+      padding-left: 0.2rem;
+    }
+
+    .card-label span {
+      color: #2563eb;
+      margin-right: 0.35rem;
+    }
+
+    /* 3:4 vertical card frame */
+    .card-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
+      background: #fff;
+    }
+
+    .card-frame img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: none;
+    }
+
+    .card-frame.has-image img {
+      display: block;
+    }
+
+    .card-frame.has-image .card-fallback {
+      display: none;
+    }
+
+    .card-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.25rem 1.25rem;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .card-fallback.cover {
+      justify-content: center;
+      align-items: flex-start;
+      background: linear-gradient(165deg, #fafafa 0%, #f5f5f5 100%);
+    }
+
+    .card-fallback .page-num {
+      position: absolute;
+      bottom: 1rem;
+      right: 1.1rem;
+      font-size: 0.68rem;
+      color: #bbb;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .card-fallback .tag-pill {
+      display: inline-block;
+      font-size: 0.68rem;
+      color: #ea580c;
+      background: #fff7ed;
+      border-radius: 4px;
+      padding: 0.15rem 0.45rem;
+      margin-bottom: 0.65rem;
+      align-self: flex-start;
+    }
+
+    .cover-line1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #2563eb;
+      line-height: 1.35;
+      margin-bottom: 0.65rem;
+    }
+
+    .cover-line2 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      line-height: 1.4;
+    }
+
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      line-height: 1.65;
+      color: #222;
+    }
+
+    .card-body p {
+      margin: 0;
+    }
+
+    .card-body .flow-line {
+      color: #333;
+    }
+
+    .card-body .flow-arrow {
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    .card-body .bullet-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+    }
+
+    .card-body .bullet-dot {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ea580c;
+      margin-top: 0.45rem;
+    }
+
+    .card-body .highlight-end {
+      color: #2563eb;
+      font-weight: 500;
+    }
+
+    code {
+      font-family: "SF Mono", "Consolas", "Menlo", monospace;
+      font-size: 0.82em;
+      background: #f3f4f6;
+      padding: 0.1em 0.35em;
+      border-radius: 3px;
+      color: #c2410c;
+    }
+
+    .card-caption {
+      font-size: 0.72rem;
+      color: #999;
+      padding-left: 0.2rem;
+      line-height: 1.5;
+    }
+
+    /* caption section */
+    .caption-section {
+      margin-top: 1.75rem;
+      padding: 1.1rem 1.15rem;
+      background: #fff;
+      border-radius: 10px;
+      border: 1px solid #e8e8e8;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .caption-section h2 {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #888;
+      margin-bottom: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .caption-section p {
+      font-size: 0.85rem;
+      line-height: 1.75;
+      color: #333;
+      margin: 0;
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.68rem;
+      color: #aaa;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="preview-wrap">
+    <header class="header">
+      <div class="series-tag">一个人做产品 · 图文 01</div>
+      <h1>买了域名，为什么还打不开？</h1>
+      <p class="subtitle">域名到底是什么？</p>
+    </header>
+
+    <section class="entry-group" aria-label="图文 01 域名到底是什么">
+      <p class="entry-label">主题包：网站上线基础设施 · 6 张卡片</p>
+
+      <div class="cards-grid">
+
+        <!-- 图 1 封面 -->
+        <article class="card-item">
+          <p class="card-label"><span>01</span>图 1｜封面</p>
+          <div class="card-frame" data-card="01">
+            <img src="../08_插图/images/card_01_01.png" alt="图 1 封面：域名到底是什么？买了域名，为什么还打不开？">
+            <div class="card-fallback cover">
+              <p class="cover-line1">域名到底是什么？</p>
+              <p class="cover-line2">买了域名，为什么还打不开？</p>
+              <span class="page-num">01 / 06</span>
+            </div>
+          </div>
+          <p class="card-caption">封面双行：概念问句 + 处境钩（标题方案已定）</p>
+        </article>
+
+        <!-- 图 2 破误解 -->
+        <article class="card-item">
+          <p class="card-label"><span>02</span>图 2｜破误解</p>
+          <div class="card-frame" data-card="02">
+            <img src="../08_插图/images/card_01_02.png" alt="图 2 破误解">
+            <div class="card-fallback">
+              <span class="tag-pill">破误解</span>
+              <div class="card-body">
+                <p>很多人以为买了域名就有了网站。</p>
+                <p>比如你花年费注册 <code>mytool.com</code>，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。</p>
+              </div>
+              <span class="page-num">02 / 06</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 3 寻址名定义 -->
+        <article class="card-item">
+          <p class="card-label"><span>03</span>图 3｜寻址名定义</p>
+          <div class="card-frame" data-card="03">
+            <img src="../08_插图/images/card_01_03.png" alt="图 3 寻址名定义">
+            <div class="card-fallback">
+              <div class="card-body">
+                <p>拿 <code>mytool.com</code> 举例：它是给人记的寻址名，不是网站本身。</p>
+                <p>DNS 负责把它翻译成 IP（示例：<code>203.0.113.10</code>），浏览器才能找到那台机器。</p>
+              </div>
+              <span class="page-num">03 / 06</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 4 三句话分工 -->
+        <article class="card-item">
+          <p class="card-label"><span>04</span>图 4｜三句话分工</p>
+          <div class="card-frame" data-card="04">
+            <img src="../08_插图/images/card_01_04.png" alt="图 4 三句话分工">
+            <div class="card-fallback">
+              <div class="card-body">
+                <p>还是 <code>mytool.com</code> 这一条链：</p>
+                <div class="bullet-row"><span class="bullet-dot"></span><p><code>203.0.113.10</code> → 给机器看的数字地址</p></div>
+                <div class="bullet-row"><span class="bullet-dot"></span><p><code>mytool.com</code> → 给人记的名字</p></div>
+                <div class="bullet-row"><span class="bullet-dot"></span><p>DNS → 把名字翻译成 IP</p></div>
+              </div>
+              <span class="page-num">04 / 06</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 5 访问链路 -->
+        <article class="card-item">
+          <p class="card-label"><span>05</span>图 5｜访问链路</p>
+          <div class="card-frame" data-card="05">
+            <img src="../08_插图/images/card_01_05.png" alt="图 5 访问链路">
+            <div class="card-fallback">
+              <div class="card-body">
+                <p class="flow-line">浏览器输入 <code>mytool.com</code></p>
+                <p class="flow-line"><span class="flow-arrow">→</span> DNS 查到 <code>203.0.113.10</code></p>
+                <p class="flow-line"><span class="flow-arrow">→</span> 连上那台服务器 → 返回网页</p>
+                <p style="margin-top: 0.4rem;">光有域名不够，还要解析指向服务器，服务器上也要有页面</p>
+              </div>
+              <span class="page-num">05 / 06</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- 图 6 收束 -->
+        <article class="card-item">
+          <p class="card-label"><span>06</span>图 6｜收束</p>
+          <div class="card-frame" data-card="06">
+            <img src="../08_插图/images/card_01_06.png" alt="图 6 收束">
+            <div class="card-fallback">
+              <div class="card-body">
+                <p><code>mytool.com</code> 在国内还要单独实名，和腾讯云账号实名不是一回事。</p>
+                <p>域名帮别人找到你，不替你放网页内容。</p>
+                <p class="highlight-end">搞清这一步，才算摸上线地图第一格。</p>
+              </div>
+              <span class="page-num">06 / 06</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="caption-section" aria-label="发布 caption">
+      <h2>Caption</h2>
+      <p>场景：你刚注册 <code>mytool.com</code>，打开却是空白——通常是域名、解析、服务器、页面四件事没串起来，不是「买错了」。备案和买域名也是两回事；实名审核常见约 1–3 个工作日。DNS 怎么配、服务器放哪，见后续条目。个人开发者视角整理，非法律建议。#个人开发者 #独立开发 #产品上线</p>
+    </section>
+
+    <p class="footer-note">小红书图文预览 · 卡片 3:4 · 插图路径 08_插图/images/card_01_01–06.png<br>图片生成后自动替换文字占位</p>
+  </div>
+
+  <script>
+    document.querySelectorAll('.card-frame img').forEach(function (img) {
+      img.addEventListener('load', function () {
+        if (img.naturalWidth > 0) {
+          img.parentElement.classList.add('has-image');
+        }
+      });
+      img.addEventListener('error', function () {
+        img.style.display = 'none';
+      });
+      if (img.complete && img.naturalWidth > 0) {
+        img.parentElement.classList.add('has-image');
+      }
+    });
+  </script>
+</body>
+</html>

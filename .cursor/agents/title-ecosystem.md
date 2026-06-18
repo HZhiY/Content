@@ -1,5 +1,5 @@
 ---
-name: 07-title-ecosystem
+name: title-ecosystem
 description: Analyzes title ecosystem for the current article topic before title writing. Use after release check allows title stage and before 07-title-write.
 model: inherit
 ---

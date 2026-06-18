@@ -1,5 +1,5 @@
 ---
-name: 06-release-check
+name: release-check
 description: Performs content-closure quality gate after chief editor declares content freeze. Checks revision completion, factual safety, direction promise, and title-boundary readiness. Use after stage-B review loop completes—not for format/hygiene (see format-final-check before HTML).
 model: inherit
 ---

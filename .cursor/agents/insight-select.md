@@ -1,5 +1,5 @@
 ---
-name: 02-insight-select
+name: insight-select
 description: Generates candidate insights and theme directions for a single article using research, evidence ledger, fact-check results, and external content analysis. Use after external search analysis and before style card, review cards, outline, or drafting.
 model: inherit
 ---

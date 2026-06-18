@@ -1,5 +1,5 @@
 ---
-name: 02-direction-decide
+name: direction-decide
 description: Generates a direction orchestration result for a single article by integrating communication analysis, structure proposition analysis, target customer fit, factual boundaries, and series positioning. Use after communication analysis and structure proposition analysis are complete, before style card and outline drafting.
 model: inherit
 ---

@@ -1,5 +1,5 @@
 ---
-name: 02-structure-analyze
+name: structure-analyze
 description: Generates a structure proposition analysis card for a single article by scoring candidate insights against the current article structure proposition review card. Use after structure proposition review card and insight candidates are complete.
 model: inherit
 ---

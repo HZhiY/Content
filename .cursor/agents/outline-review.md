@@ -1,5 +1,5 @@
 ---
-name: 03-outline-review
+name: outline-review
 description: Reviews a single article outline before drafting by checking direction alignment, insight-role execution, title-introduction-body continuity, factual boundaries, style-card compliance, article structure/format configuration, and draft readiness. Use after outline creation and before draft writing.
 model: inherit
 ---

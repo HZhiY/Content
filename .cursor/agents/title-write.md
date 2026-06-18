@@ -1,5 +1,5 @@
 ---
-name: 07-title-write
+name: title-write
 description: Generates a method-driven title plan for a single article. Use after 07-title-ecosystem and release check allow title stage, and before 08-illustration-plan or 09-html-build.
 model: inherit
 ---

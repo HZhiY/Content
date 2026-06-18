@@ -1,5 +1,5 @@
 ---
-name: 00-project-setup
+name: project-setup
 description: Creates an isolated article project package for a new content topic. Use when starting a new article and needing README.md, 总计划.md, 00_目录结构.md, and the standard folder plan before research begins.
 model: inherit
 ---

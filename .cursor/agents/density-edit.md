@@ -1,5 +1,5 @@
 ---
-name: 05-density-edit
+name: density-edit
 description: Performs content density audit for a single article draft or revision—identifying deletable padding, required mechanism anchors, over-explained terms, word count, and emphasis suggestions. Use after free-review and reader-review, before chief-editor review. Does not rewrite the article.
 model: inherit
 ---

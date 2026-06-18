@@ -1,5 +1,5 @@
 ---
-name: 09-html-build
+name: html-build
 description: Builds the single final HTML deliverable for an article from revision, title plan, and illustration paths. Use after format-final-check passes (成稿终审.md).
 model: inherit
 ---

@@ -1,5 +1,5 @@
 ---
-name: 01-source-research
+name: source-research
 description: Performs isolated research for a single article and produces 01_资料/资料.md. Use after project initialization and before evidence ledger or fact-checking. It gathers source-backed material, notes source conflicts, and marks unknowns as 待补资料 without writing the article.
 model: inherit
 ---

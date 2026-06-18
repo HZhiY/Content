@@ -1,5 +1,5 @@
 ---
-name: 05-editor-review
+name: editor-review
 description: Performs chief-editor review after free-review, reader-review, and density-edit complete. Integrates three-read outputs, manuscript hygiene checks, factual boundaries, and series standards. Outputs chief-editor revision instructions before draft-revise.
 model: inherit
 ---

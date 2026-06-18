@@ -1,0 +1,36 @@
+{
+  "article_id": "01",
+  "article_title": "01_为什么大多数人赚钱的时候拿不住",
+  "series": "用量化思维理解世界",
+  "style": "克制、信息图风格；冷灰/深蓝为主色调，辅以暖色标注情绪节点；简洁、清晰、无装饰感；适合手机阅读；杂志期刊体",
+  "images": [
+    {
+      "id": "cover",
+      "filename": "cover.png",
+      "position": "公众号/头条文章顶部，标题下方",
+      "role": "激活'赚钱拿不住'的场景感；建立专业但亲近的系列感",
+      "prompt": "A hand hesitating whether to sell a profitable investment portfolio, background shows K-line chart or asset growth curve, subtle balance/scale metaphor hinting at the brain weighing 'cash in hand' vs 'hold for more gains', cool-toned professional aesthetic, not flashy, clean and minimal, suitable for WeChat article cover, no text overlay on the image, photography style with subtle digital elements"
+    },
+    {
+      "id": "fig01_loss_aversion",
+      "filename": "fig01_loss_aversion.png",
+      "position": "第一节结尾 / 第二节开头之前",
+      "role": "视觉化'损失厌恶'机制；用天平静喻呈现'痛苦 > 快乐'的不对称关系",
+      "prompt": "A balance scale infographic, left pan has golden coins labeled 'gain 100', right pan has identical physical weight coins labeled 'loss 100', the scale clearly tilts to the right side (loss pan lower), clean minimalist data visualization style, cool grey and deep blue palette with warm accent on the loss side, Chinese text overlay: left '赚100元' right '亏100元', bottom small text '损失厌恶：损失的痛感大约是同等收益快乐感的约两倍', mobile-friendly, information graphic, no decorative elements"
+    },
+    {
+      "id": "fig02_disposition_effect",
+      "filename": "fig02_disposition_effect.png",
+      "position": "第二节结尾",
+      "role": "呈现'卖出盈利 vs 保留亏损'的行为对比；配合 Odean 数据强化说服力",
+      "prompt": "Two vertical bar chart comparison infographic, left bar labeled 'Sell Winners' in warm orange/red color showing 14.8%, right bar labeled 'Sell Losers' in cool blue/grey color showing 9.8%, simple clean data visualization style, mobile-friendly vertical bars, small text note below chart '样本来源：1987-1993年美国折扣券商账户数据', main title in Chinese '处置效应示意', minimalist information graphic style, no grid lines or heavy chartjunk, suitable for WeChat article"
+    },
+    {
+      "id": "fig03_decision_framework",
+      "filename": "fig03_decision_framework.png",
+      "position": "第三节结尾（判断问题出现的位置）",
+      "role": "将'动机区分'判断工具视觉化；帮助读者快速回忆和使用",
+      "prompt": "A clean two-path decision tree flowchart, top node '卖出决策' splits into two paths: left path labeled '有预设规则 → 计划性止盈 → 纪律' in cool blue/green color with checkmark icon, right path labeled '无预设规则，凭感觉 → 焦虑性落袋 → 情绪交易' in warm red/orange color with warning icon, both paths converge at bottom question in bold '我现在是在执行计划，还是在缓解焦虑？', minimalist design, mobile-friendly vertical flow layout, Chinese text labels, no decorative illustrations, information graphic style"
+    }
+  ]
+}

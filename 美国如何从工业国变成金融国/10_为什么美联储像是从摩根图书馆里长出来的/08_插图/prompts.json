@@ -1,0 +1,63 @@
+{
+  "article_id": "10_为什么美联储像是从摩根图书馆里长出来的",
+  "note": "本文件 prompts.json 是给 AI 图像生成工具的输入文件（功能需要英文 prompt），不是发布版正文。三红线「英文字符=0」适用于发布版正文（HTML / 修订稿 v1.md）。",
+  "style": "期刊杂志体 × 制度史信息图；低饱和度（暖灰、米白、深绿、深蓝）；线条示意图 + 关键标签 + 时间轴；克制、清楚、信息图而非装饰图",
+  "color_palette": {
+    "background": "米白 #F5F2EB",
+    "primary_line": "深蓝 #1F3A5F",
+    "secondary_line": "深绿 #2D5A3D",
+    "accent_left": "浅蓝 #C5D5E0",
+    "accent_right": "浅绿 #C5DCC0",
+    "highlight": "深蓝 #1F3A5F",
+    "text": "深灰 #2C2C2C"
+  },
+  "aspect_ratio": {
+    "cover": "6:5",
+    "fig01_translation": "8:5",
+    "fig02_dispersed": "5:6"
+  },
+  "images": [
+    {
+      "id": "cover",
+      "filename": "cover.png",
+      "position": "H1 标题后、文章开头前",
+      "function": "一眼交付「私人图书馆 vs 公共建筑」视觉对照 + 1907-1928 时间线",
+      "description_cn": "极简线稿风格的双画面拼接。左半是 1902-1906 年间由麦金姆设计的纽约麦迪逊大道 36 号私人图书馆外观（橡木墙、高天花板、暖米色光晕）。右半是联邦储备体系的简化几何抽象（现代主义线条、偏冷色调）。中间一条细横线时间轴：「1907 — 1910 杰基尔岛 — 1913 联邦储备法 — 1920s 演变」。背景米白，线条深蓝。左下小字「1907 私人图书馆」；右下小字「1913 公共制度」。无装饰元素、无写实人像、无阴谋论视觉。比例 6:5。",
+      "prompt": "A minimalist line-drawing illustration in editorial magazine style, split into two halves. Left half: a private library building exterior at 36 Madison Avenue, New York, designed by McKim between 1902-1906, with oak walls and high ceiling visible through windows, oak paneling, warm beige interior glow. Right half: a simplified geometric abstraction of a public institutional building representing the Federal Reserve System, modernist geometric lines, cooler tone. Between the two halves, a thin horizontal timeline reads: '1907 — 1910 Jekyll Island — 1913 Federal Reserve Act — 1920s evolution'. Background is soft beige (#F5F2EB). Line color is deep blue (#1F3A5F). Small text labels at bottom-left: '1907 私人图书馆'; bottom-right: '1913 公共制度'. Style: editorial magazine, restrained, no decorative elements, no realistic human faces, no conspiratorial imagery. Aspect ratio 6:5. Mobile-friendly, high contrast, text size 32px+."
+    },
+    {
+      "id": "fig01_translation",
+      "filename": "fig01_translation.png",
+      "position": "第三节「1910 年 11 月，私人经验被翻译成制度语言」前",
+      "function": "4 对功能映射机制图（候选 1）—— 翻译前/翻译后具体对应",
+      "description_cn": "3 列表格信息图，4 行对应关系。左列「1907 私人工具」，右列「联邦储备法公共工具」，中间细线箭头。行 1：清算所贷款证 → 贴现窗口（成员银行短期借款的官方窗口）。行 2：看账本、查抵押 → 合格抵押品审查（央行标准化识别抵押品价值）。行 3：组织财团购入问题资产 → 公开市场操作（央行买卖债券以调节流动性）。行 4：跨机构协调资金 → 12 个分散储备区之间的跨区协调。背景米白，左列浅蓝底色，右列浅绿底色。行间距 1.5em。底部小字「私人经验被翻译成制度语言」。比例 8:5。",
+      "prompt": "An information-graphic chart in editorial magazine style showing four rows of correspondence between 1907 private tools and Federal Reserve Act public tools. Layout: 3-column table format. Left column header: '1907 私人工具'; right column header: '联邦储备法公共工具'; middle column: thin arrows pointing right. Row 1: '清算所贷款证' → '贴现窗口 (成员银行短期借款的官方窗口)'. Row 2: '看账本、查抵押' → '合格抵押品审查 (央行标准化识别抵押品价值)'. Row 3: '组织财团购入问题资产' → '公开市场操作 (央行买卖债券以调节流动性)'. Row 4: '跨机构协调资金' → '12 个分散储备区之间的跨区协调'. Background is soft beige (#F5F2EB). Left column background light blue (#C5D5E0); right column background light green (#C5DCC0). Text color deep gray (#2C2C2C). Keywords in bold. Spacing 1.5em between rows. Bottom small text: '私人经验被翻译成制度语言'. Aspect ratio 8:5. No decorative elements, no conspiratorial imagery. Mobile-friendly."
+    },
+    {
+      "id": "fig02_dispersed",
+      "filename": "fig02_dispersed.png",
+      "position": "第六节「12 储备区的'分散设计'如何被实际演变悄悄改写」前",
+      "function": "12 储备区 vs 纽约联储事实中枢反讽图（候选 3）—— 法案设计 vs 实际运行",
+      "description_cn": "两层对比信息图。上层：12 个等大浅蓝圆圈代表 12 个联邦储备区（波士顿、纽约、费城、克利夫兰、里士满、亚特兰大、芝加哥、圣路易斯、明尼阿波利斯、堪萨斯城、达拉斯、旧金山），等距排列。标题「法案设计的分散意图」。下层：1 个深蓝大圆圈（纽约联储，曼哈顿金融区，距华尔街最近）居中，11 个浅蓝小圆圈环绕。圆内小字「公开市场操作由纽约联储交易台执行」。标题「实际运行的集中结果」。中间斜向箭头标注「演变为」（软口径，不用「凌驾」「控制」）。背景米白。比例 5:6（竖图）。底部小字「在 1920s 实际运行中演变为事实上的操作中枢」。",
+      "prompt": "An information-graphic chart in editorial magazine style showing the contrast between the Federal Reserve Act's 12-district design and the actual evolution toward the New York Fed as de facto operational center. Layout: two-tier comparison. Upper tier: a map-like arrangement of 12 equal-sized circles representing the 12 Federal Reserve Districts (Boston, New York, Philadelphia, Cleveland, Richmond, Atlanta, Chicago, St.Louis, Minneapolis, Kansas City, Dallas, San Francisco), each circle in light blue (#C5D5E0) with equal size, evenly spaced. Header above upper tier: '法案设计的分散意图'. Lower tier: 1 large dark blue (#1F3A5F) circle representing the New York Fed (in Manhattan financial district, closest to Wall Street) at center, surrounded by 11 smaller light blue circles representing the other 11 Federal Reserve Banks. Inside the large circle, small text: '公开市场操作由纽约联储交易台执行'. Header above lower tier: '实际运行的集中结果'. Between the two tiers, a thin diagonal arrow pointing from the upper 12-circle arrangement down to the lower 1+11 arrangement, labeled '演变为' (evolved into, soft language — NOT 'overpowered' or 'controlled'). Background soft beige (#F5F2EB). Text color deep gray (#2C2C2C). No realistic human faces. No conspiratorial imagery. Aspect ratio 5:6 (portrait, mobile-friendly). Bottom small text: '在 1920s 实际运行中演变为事实上的操作中枢'."
+    }
+  ],
+  "negative_prompts": [
+    "写实人像",
+    "本杰明·斯特朗肖像",
+    "阴谋论视觉",
+    "锁门或秘密会议元素",
+    "打猎俱乐部元素",
+    "装饰插画",
+    "高饱和度色彩",
+    "色情或暴力元素",
+    "政治党派元素"
+  ],
+  "consistency_rules": [
+    "所有图使用同一配色方案",
+    "所有图遵循期刊杂志体 × 制度史信息图风格",
+    "图上文字只能是插图方案中规定的，不允许出现方案外文字",
+    "图上人名只能作为示意标签（不带肖像）",
+    "所有图必须手机可读：文字 24px+、高对比度、不拥挤"
+  ]
+}

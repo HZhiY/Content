@@ -1,5 +1,5 @@
 ---
-name: 02-ecosystem-scan
+name: ecosystem-scan
 description: Analyzes external content search results for a single article topic. Use after fact-checking passes and before insight generation to summarize how others write similar topics, common angles, title patterns, overused frames, and differentiation constraints.
 model: inherit
 ---

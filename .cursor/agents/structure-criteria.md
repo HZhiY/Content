@@ -1,5 +1,5 @@
 ---
-name: 02-structure-criteria
+name: structure-criteria
 description: Generates a structure proposition review card for a single article using series structure proposition configuration and current article materials. Use before structure proposition analysis, style card, outline, or drafting.
 model: inherit
 ---

@@ -1,5 +1,5 @@
 ---
-name: 02-communication-analyze
+name: communication-analyze
 description: Generates a communication analysis card for a single article by scoring candidate insights against the current article communication review card. Use after communication review card, external content search, and insight candidates are complete.
 model: inherit
 ---

@@ -1,5 +1,5 @@
 ---
-name: 05-reader-review
+name: reader-review
 description: Performs reader-side review for a single article draft using the current article reader review criteria card, style guide, direction control, and factual boundaries. Use after a draft or revision exists; complete in the same round as free-review and density-edit before chief-editor review.
 model: inherit
 ---

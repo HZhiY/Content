@@ -1,5 +1,5 @@
 ---
-name: 03-outline-plan
+name: outline-plan
 description: Generates or revises a structured outline for a single article by integrating direction control, style card, factual boundaries, article structure/format configuration, platform constraints, reader fit, and outline review feedback when present. Use after direction control and style card are complete, before outline review and draft writing; reuse after outline review when revision is required.
 model: inherit
 ---

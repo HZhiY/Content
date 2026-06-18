@@ -1,5 +1,5 @@
 ---
-name: 02-communication-criteria
+name: communication-criteria
 description: Generates a communication review card for a single article using series communication configuration and current article materials. Use after insight candidates are drafted and before communication analysis, style card, outline, or drafting.
 model: inherit
 ---
