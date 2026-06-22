@@ -55,8 +55,26 @@
       "filename": "card_01_06.png",
       "position": "图文01 / 卡片6｜收束",
       "function": "收束判断 + 国内实名边界 + 系列地图第一格",
-      "description_cn": "收束笔记卡。三行短段；末句蓝色强调；mytool.com 标示例。页码 06/06。",
-      "prompt": "Vertical 3:4 closing note card, cream background, black text, blue accent on final line. Chinese text exactly: 「mytool.com 在国内还要单独实名，和腾讯云账号实名不是一回事。」 newline 「域名帮别人找到你，不替你放网页内容。」 newline 「搞清这一步，才算摸上线地图第一格。」 in blue. Small 「示例」 near mytool.com. Three short paragraphs, generous spacing, page number 「06 / 06」 bottom-right. Restrained developer-note aesthetic.",
+      "description_cn": "收束笔记卡。三行短段；末句蓝色强调；mytool.com 标示例。页码 06/08。",
+      "prompt": "Vertical 3:4 closing note card, cream background, black text, blue accent on final line. Chinese text exactly: 「mytool.com 在国内还要单独实名，和腾讯云账号实名不是一回事。」 newline 「域名帮别人找到你，不替你放网页内容。」 newline 「搞清这一步，才算摸上线地图第一格。」 in blue. Small 「示例」 near mytool.com. Three short paragraphs, generous spacing, page number 「06 / 08」 bottom-right. Restrained developer-note aesthetic.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_07",
+      "filename": "card_01_07.png",
+      "position": "图文01 / 卡片7｜常见踩坑（v5 新增）",
+      "function": "v5 同步 8 卡 → 锚点：实名差异。强调「域名实名 ≠ 账号实名 ≠ 备案主体」",
+      "description_cn": "踩坑笔记卡。三类实名并列 + 末句蓝色加粗主钉。页码 07/08。",
+      "prompt": "Vertical 3:4 pitfall note card, off-white background, black text, blue bold on the final line. Chinese text exactly: 「买了域名没实名 → 注册商提示『不可解析』。」 newline 「实名信息填错 → 修改要重新走审核，等几天。」 newline 「mytool.com 用个人身份证实名，公司主体备案就过不了。」 Final line in bold blue: 「域名实名 ≠ 账号实名 ≠ 备案主体——三个是两件事。」 Three short bullet-style paragraphs with orange tiny labels, page number 「07 / 08」 bottom-right. Product documentation note style.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_08",
+      "filename": "card_01_08.png",
+      "position": "图文01 / 卡片8｜DNS 怎么解析（v5 新增）",
+      "function": "v5 同步 8 卡 → 锚点：解析配置。流程 + 主钉「域名 + 解析 + 服务器 = 三件事齐了」",
+      "description_cn": "解析配置卡。流程段 + 末句蓝色加粗主钉。页码 08/08。",
+      "prompt": "Vertical 3:4 DNS-config note card, white background, black text, blue arrows, orange example labels. Chinese text exactly: 「解析 = 让域名指向哪台服务器。」 newline 「云平台添加 A 记录：mytool.com → 203.0.113.10。」 newline 「改完通常几分钟内全球生效（DNS 缓存）。」 Final line in bold blue: 「域名 + 解析 + 服务器 = 三件事齐了，浏览器才找得到你。」 Show mytool.com and 203.0.113.10 as 「示例」. Clean arrow hint between them. Page number 「08 / 08」 bottom-right.",
       "aspect_ratio": "3:4"
     }
   ],

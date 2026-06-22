@@ -1,0 +1,67 @@
+{
+  "article_id": "01",
+  "article_entry": "网站上线基础设施_v4_加深卡_图7与图8",
+  "series": "一个人做产品",
+  "theme_pack": "01_网站上线基础设施",
+  "scope": "v4 升级新增条目 — 仅图 7（图 7 加深卡）与图 8（图 8 加深卡），条目 02–10 各 1 张，共 18 张。条目 01 沿用 v2，故本文件不含 01-07 / 01-08。",
+  "style": "Mini PPT / product documentation note card style for Xiaohongshu. Off-white or cream background, black body text, single accent color (blue primary, orange for arrows and example labels). Clean, restrained, not a marketing poster. Large readable Chinese text, few lines, mobile-friendly. Page number bottom-right on every card. No people portraits, no stickers, no training-course aesthetics.",
+  "consistency_rules": [
+    "All 18 cards share same palette (blue primary, orange accent) and white/cream background as v4 6-card set",
+    "Page numbering uses entry id + card index, e.g. 02-07 / 08 ... 02-08 / 08 for entry 02, 10-07 / 08 ... 10-08 / 08 for entry 10",
+    "Example domain mytool.com and example IP 203.0.113.10 marked with tiny 「示例」 label whenever shown",
+    "Vertical 3:4 mobile-friendly card",
+    "图 7 = 「剖面」卡：按条目类型差异化设计（流程型用时间轴 / 用途剖面；概念+代价用代价清单；概念+对比用三形态取舍；概念+边界用境外场景实操；选择型用升级换型判断）",
+    "图 8 = 「卡点 / 判断工具」卡：流程型用真实驳回案例 / 排期模板；概念+代价用续期 / 配错事故清单；概念+对比用升级时机；概念+边界用错位成本；选择型用避坑清单",
+    "文案严格按 修订稿 v4.md 的 图 7 / 图 8 抄录，不改字、不补字、不删字",
+    "延续 v4 6 卡视觉：白/米色底、黑字、蓝色主色、橙色强调（示例 / 数字 / 箭头）"
+  ],
+  "negative_prompts": [
+    "people portrait",
+    "training course aesthetics",
+    "marketing poster",
+    "stock photo",
+    "browser screenshot",
+    "server rack photo",
+    "DNS config UI",
+    "watermark",
+    "emoji stickers",
+    "English-only text"
+  ],
+  "images": [
+    {"id":"02-07","filename":"card_02_07.png","position":"图文02/卡片7 三种形态的取舍","function":"v4 新增图 7｜概念+对比型：云服务器 / 共享主机 / Serverless 三种形态的取舍","description_cn":"竖卡，对比型清单 + 落地段。顶行小标「三种形态的取舍」；三条取舍结论；末段以 mytool.com 收束。蓝色主色 + 橙色关键词。页码 02-07 / 08。mytool.com 标 示例。","prompt":"Vertical 3:4 comparison note card, white background, black text, blue title accent, orange key words. Small label 「三种形态的取舍」 top-left. Chinese text exactly: 「云服务器：自由度高，能装任何东西，但运维要自己扛。」 newline 「共享主机：便宜省心，但跑不动大流量、配置锁死。」 newline 「Serverless：不用管服务器，按调用付费，但冷启动 + 调试复杂。」 newline 「mytool.com 第一版只是静态页——共享主机够；要做用户登录 + 数据存储——必须云服务器或 Serverless。」 mytool.com marked 「示例」. Page number 「02-07 / 08」 bottom-right. Restrained product-doc aesthetic, max 6 lines visible.","aspect_ratio":"3:4"},
+
+    {"id":"02-08","filename":"card_02_08.png","position":"图文02/卡片8 什么时候升级","function":"v4 新增图 8｜概念+对比型：升级时机三信号 + 升级路径","description_cn":"竖卡，三信号清单 + 升级路径 + 收束段。蓝色主色 + 橙色数字。页码 02-08 / 08。","prompt":"Vertical 3:4 note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「升级信号三个：① CPU 长期 > 70% ② 月流量超过套餐阈值 ③ 部署发布脚本开始变成体力活。」 newline 「升级路径：共享主机 → 轻量 / 云服务器 → ECS / 自建集群。」 newline 「不要在第一版就上 ECS——还没验证需求，钱白花。」 Page number 「02-08 / 08」 bottom-right. Three-line layout, equal spacing, large readable font.","aspect_ratio":"3:4"},
+
+    {"id":"03-07","filename":"card_03_07.png","position":"图文03/卡片7 真实场景剖面","function":"v4 新增图 7｜流程型：同机器不同用途的备案剖面（官网 vs 小程序后端）","description_cn":"竖卡，剖面对比。同一 mytool.com 同一 203.0.113.10，两种用途拆三栏。蓝色主色 + 橙色时间数字。mytool.com / 203.0.113.10 标 示例。页码 03-07 / 08。","prompt":"Vertical 3:4 cross-section note card, white background, black text, blue accent, orange time numbers. Small label 「真实场景剖面」 top-left. Chinese text exactly: 「同一个 mytool.com、同一台国内服务器——」 then two stacked rows: 「做『产品官网』备案：填主体 + 网站名 + ICP 备案号；接入商初审 1–3 天；管局抽审 7–14 天。」 「做『小程序后端』备案：除上面之外，还要填『服务类目』『接入方式』，接入商会要求小程序 AppID；驳回率明显更高，因为类目填错就退回。」 Final emphasized line in blue: 「同一台机器，备案要填的东西、走的关卡、卡住的概率完全不同——用途决定代价。」 mytool.com and 203.0.113.10 marked 「示例」. Page number 「03-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"03-08","filename":"card_03_08.png","position":"图文03/卡片8 你会在哪里卡住","function":"v4 新增图 8｜流程型：三类真实驳回 + 解法方向","description_cn":"竖卡，三类驳回清单。蓝色主色 + 橙色驳回原因关键词。页码 03-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange highlighted rejection reasons. Chinese text exactly: 「三类真实驳回 + 解法方向：」 then three bullets: 「①『主体信息与域名实名不一致』：你备案填的是张三，域名实名是李四——一般卡 5 个工作日；解法：改域名模板或换备案主体，二选一。」 「②『网站名称不合规』：叫『我的测试』会被打回，必须含『网站』/『工作室』类词——卡 3 个工作日；解法：改名字重新提交。」 「③『服务器不在户籍地或常驻地』：你在北京，服务器买了上海——个人备案常被退回——要换接入商或加居住证明。」 Page number 「03-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"04-07","filename":"card_04_07.png","position":"图文04/卡片7 不装证书的真实代价","function":"v4 新增图 7｜概念+代价型：不装证书的硬代价清单","description_cn":"竖卡，四条代价清单 + 蓝色收束句。橙色序号 + 蓝色强调收束句。mytool.com 标 示例。页码 04-07 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue final-line accent, orange number markers. Chinese text exactly: 「不装证书的真实代价：」 then four bullets: 「浏览器地址栏直接标『不安全』——90% 用户会关掉。」 「微信内嵌页、公众号 H5、小程序 web-view——不装证书直接打不开。」 「支付场景（微信支付、支付宝）——回调地址必须 https。」 「第三方登录（GitHub OAuth、微信开放平台）——回调白名单只接受 https。」 Final emphasized line in blue: 「不装证书 = 把一半用户挡在门外——这不是『加分项』。」 Page number 「04-07 / 08」 bottom-right. mytool.com not used on this card.","aspect_ratio":"3:4"},
+
+    {"id":"04-08","filename":"card_04_08.png","position":"图文04/卡片8 续期 / 配错会怎样","function":"v4 新增图 8｜概念+代价型：三类常见证书事故 + 续期提醒","description_cn":"竖卡，三类事故清单 + 收束建议。橙色序号 + 蓝色收束句。页码 04-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue final-line accent, orange number markers. Chinese text exactly: 「三类常见事故：」 then three bullets: 「① 证书过期没换：浏览器红屏；最坏情况是凌晨 2 点收到报警电话。」 「② 证书绑错域名：买了 mytool.com 的证书挂在 www.mytool.com——浏览器提示『证书与域名不匹配』。」 「③ 私钥泄露：必须立刻吊销 + 重签——但客户端要刷新才能看到新证书。」 Final line: 「云平台免费证书通常 90 天到期——建议日历提前 14 天提醒续期。」 with the last half 「建议日历提前 14 天提醒续期」 in blue. mytool.com and www.mytool.com marked 「示例」. Page number 「04-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"05-07","filename":"card_05_07.png","position":"图文05/卡片7 配错会怎样","function":"v4 新增图 7｜概念+代价型：三类 CDN 配错事故 + 真实回滚时长","description_cn":"竖卡，三类事故清单 + 蓝色收束句。橙色序号 + 蓝色收束句。mytool.com / 203.0.113.10 标 示例。页码 05-07 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「三类常见 CDN 事故：」 then three bullets: 「① 缓存策略配错：更新了首页文案，用户看到的是旧版本——解法：手动刷新 URL 或临时关缓存。」 「② 动态接口被缓存：用户 A 看到的下单结果是用户 B 的——这是血泪级事故，必须严格设置『不缓存 POST / 带 Cookie / 带参数』。」 「③ 源站 IP 暴露：CDN 没开『回源鉴权』，被扫到 IP 后绕过 CDN 直接打源站——CDN 形同虚设。」 Final emphasized line in blue: 「mytool.com 配错一次缓存，回滚花了 4 个小时——首次接入 CDN 一定要在测试域名上跑一遍。」 mytool.com and 203.0.113.10 marked 「示例」. Page number 「05-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"05-08","filename":"card_05_08.png","position":"图文05/卡片8 什么时候需要 CDN","function":"v4 新增图 8｜概念+代价型：CDN 上 / 不上 三信号","description_cn":"竖卡，两组三信号清单 + 蓝色收束句。橙色序号 + 蓝色收束句。页码 05-08 / 08。","prompt":"Vertical 3:4 comparison checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「判断信号三个：① 月流量超过 100 GB ② 源站 CPU 经常被打满 ③ 国内多地域访问慢。」 then second header: 「不急着接的信号：① 日活 < 100 ② 几乎全是动态内容 ③ 还没做 HTTPS。」 Final emphasized line in blue: 「起步阶段不上 CDN——先让源站跑稳，流量起来再考虑；CDN 是放大器，不是补药。」 Page number 「05-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"06-07","filename":"card_06_07.png","position":"图文06/卡片7 境外服务器的真实剖面","function":"v4 新增图 7｜概念+边界型：境外服务器的体验 / 合规 / 支付 / 适用 vs 不适用","description_cn":"竖卡，四维剖面 + 适用 / 不适用清单。蓝色主色 + 橙色勾叉（用文字表达即可，不画符号）。mytool.com 标 示例。页码 06-07 / 08。","prompt":"Vertical 3:4 cross-section note card, white background, black text, blue accent, orange tagged lines. Small label 「境外服务器的真实剖面」 top-left. Chinese text exactly: 「访问体验：国内用户访问境外服务器，延迟 200–500ms；晚高峰更慢。」 「合规要求：域名仍要实名；不能做新闻 / 出版 / 医疗等敏感类目。」 「支付方式：境外信用卡 + Stripe 通用；微信支付 / 支付宝要单独申请跨境资质。」 newline 「适用场景：① 出海产品 ② 国内开发 + 海外用户 ③ 工具类 / 文档类（对延迟不敏感）。」 「不适用场景：① 国内用户为主 ② 需要备案才能上的功能（如小程序）③ 任何要 ICP 备案号才能接入的渠道。」 mytool.com not used on this card. Page number 「06-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"06-08","filename":"card_06_08.png","position":"图文06/卡片8 错位的具体成本","function":"v4 新增图 8｜概念+边界型：三种顺序错位的具体成本","description_cn":"竖卡，三种错位成本清单 + 蓝色收束句。橙色序号 + 蓝色收束句。页码 06-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「错位一：先备案后买域名 → 备案主体信息对不上 → 重新提交 = 5–15 个工作日。」 「错位二：服务器地域选错 → 想从香港迁回大陆 = 数据迁移 + 重新备案 = 1–2 个月。」 「错位三：解析配错类型（A 写成 CNAME 或反过来）→ 站点时通时不通 → 排查半天。」 Final emphasized line in blue: 「上线地图的错位成本以周计，不以小时计——顺序先对，再动手。」 Page number 「06-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"07-07","filename":"card_07_07.png","position":"图文07/卡片7 不备案的真实链路","function":"v4 新增图 7｜概念+边界型：不备案的倒计时时间轴","description_cn":"竖卡，时间轴卡（四步倒计时） + 蓝色收束句。橙色天数数字。mytool.com / 203.0.113.10 标 示例。页码 07-07 / 08。","prompt":"Vertical 3:4 timeline note card, white background, black text, blue accent, orange day numbers. Small label 「不备案的真实链路」 top-left. Chinese text exactly: 「第一天：服务器 IP 还能访问。」 「第三天：接入商检测到未备案，短信 + 站内信提醒。」 「第七天：仍未备案，HTTP 80 / 443 端口被屏蔽。」 「第十四天：域名被加入工信部黑名单 → 其他接入商也不能用。」 Final emphasized line in blue: 「『暂时不备』不是免费午餐——是倒计时。想做长期项目，第一周就把备案排上。」 mytool.com and 203.0.113.10 marked 「示例」. Page number 「07-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"07-08","filename":"card_07_08.png","position":"图文07/卡片8 常见的『以为不用备』","function":"v4 新增图 8｜概念+边界型：五种常见误解","description_cn":"竖卡，五条误解清单。橙色序号 + 蓝色误解关键词。页码 07-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent on 误解 markers, orange number markers. Chinese text exactly: 「误解一：『只是个人项目，没流量』——没用，没备案照样关。」 「误解二：『我不放内容，只放 API』——后端 API 解析到大陆 IP 也要备。」 「误解三：『用对象存储放静态文件』——只要走 CDN 走大陆节点，还是要备。」 「误解四：『公司网站才要备，个人不用』——错，个人备案更常见。」 「误解五：『试运行几天再补』——接入商检测是实时的，不会等你。」 Page number 「07-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"08-07","filename":"card_08_07.png","position":"图文08/卡片7 等待地图","function":"v4 新增图 7｜流程型：同一周一下午开始的上线等待地图","description_cn":"竖卡，时间轴卡（六步：从周一 17:00 到下周二 12:00） + 蓝色收束句。橙色时间戳 + 蓝色收束句。mytool.com 标 示例。页码 08-07 / 08。","prompt":"Vertical 3:4 timeline note card, white background, black text, blue accent, orange time stamps. Small label 「等待地图」 top-left. Chinese text exactly: 「同一周一下午开始，假设一切顺利——」 then six bullets: 「周一 17:00 注册域名 mytool.com（10 分钟）」 「周二等实名审核（你什么也做不了）」 「周三 11:00 实名通过，买服务器 + 提交备案（30 分钟）」 「周三 → 下周一：等管局审核（你什么也做不了）」 「下周二上午：备案通过，配置解析 + 上传网站（1 小时）」 「下周二 12:00：浏览器第一次打开 mytool.com 看到内容」 Final emphasized line in blue: 「真正花时间的只有实名 + 备案，其他加起来不到 1 小时——上线动作的瓶颈在『等』，不在『做』。」 mytool.com marked 「示例」. Page number 「08-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"08-08","filename":"card_08_08.png","position":"图文08/卡片8 排期模板","function":"v4 新增图 8｜流程型：第一版上线标准排期模板","description_cn":"竖卡，五步排期清单 + 总耗时收束 + 蓝色收束句。橙色序号 + 蓝色收束句。页码 08-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「『第一版上线』标准排期（按工作日）：」 then five bullets: 「注册域名：0.5 天」 「实名审核：1–3 天（等）」 「买服务器：0.5 天」 「备案（含接入商 + 管局）：3–15 天（等）」 「解析 + 上传 + 测试：0.5 天」 Emphasized middle line: 「总耗时：5–19 天，其中真正动手的不到 2 天，剩下全是等。」 Final emphasized line in blue: 「保守排期 3 周、激进排期 1 周——新项目排期主要不是写代码，是这套流程。」 Page number 「08-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"09-07","filename":"card_09_07.png","position":"图文09/卡片7 什么时候必须升级","function":"v4 新增图 7｜选择型：静态站必须升级的三信号 + 升级路径","description_cn":"竖卡，三信号清单 + 升级路径 + 蓝色收束句。橙色序号 + 蓝色收束句。页码 09-07 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「升级信号三个：① 需要用户系统（注册 / 登录 / 收藏）② 需要提交表单（联系、试用申请、订阅）③ 想要看到访问数据（埋点、A/B）。」 newline 「升级路径：静态站 + Serverless 函数（最便宜）→ 静态站 + 单独后端 → 全部重写为动态站。」 Final emphasized line in blue: 「验证需求阶段别急着升级——先用静态页测流量，确认有人要看，再决定要不要后端。」 Page number 「09-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"09-08","filename":"card_09_08.png","position":"图文09/卡片8 个人项目避坑","function":"v4 新增图 8｜选择型：静态站四个常见坑","description_cn":"竖卡，四坑清单。橙色「坑 X：」标签 + 蓝色关键词。页码 09-08 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange 坑 markers. Chinese text exactly: 「坑一：把博客也做成静态站——内容超过 50 篇后，每次更新都要重新部署——解法：用 Hexo / Hugo / Astro 等静态生成器。」 「坑二：以为静态站不用备案——服务器在大陆仍要备案，没例外。」 「坑三：在静态站里塞 jQuery 写『动态』——不如直接用 Vue / React + 静态导出。」 「坑四：把支付 / 登录硬塞进静态站——这是反模式，会让简单的事变复杂。」 Page number 「09-08 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"10-07","filename":"card_10_07.png","position":"图文10/卡片7 什么时候换型","function":"v4 新增图 7｜选择型：轻量服务器换型三信号 + 换型路径","description_cn":"竖卡，三信号清单 + 换型路径 + 蓝色收束句。橙色序号 + 蓝色收束句。页码 10-07 / 08。","prompt":"Vertical 3:4 checklist note card, off-white background, black text, blue accent, orange number markers. Chinese text exactly: 「换型信号三个：① CPU 长期 > 60% ② 月流量超出套餐 1.5 倍 ③ 需要的功能（GPU、对象存储、独立数据库）套餐里没有。」 newline 「换型路径：轻量 → ECS 同区域（同厂商迁移最方便）→ 多台 ECS + 负载均衡。」 Final emphasized line in blue: 「不要等到崩了才换——看到信号就提前 1–2 周规划。」 Page number 「10-07 / 08」 bottom-right.","aspect_ratio":"3:4"},
+
+    {"id":"10-08","filename":"card_10_08.png","position":"图文10/卡片8 轻量 vs ECS 真实差距","function":"v4 新增图 8｜选择型：轻量 vs ECS 四维差距对比","description_cn":"竖卡，四维对比清单 + 蓝色收束句。橙色维度词 + 蓝色收束句。mytool.com 标 示例。页码 10-08 / 08。","prompt":"Vertical 3:4 comparison checklist note card, off-white background, black text, blue accent, orange dimension labels. Chinese text exactly: 「价格：轻量首年几十到几百，ECS 同配置贵 30%–50%。」 「性能：轻量 CPU 共享，ECS 可选独享；高并发差距明显。」 「自由度：ECS 可改内核参数、可挂多网卡；轻量锁死。」 「运维：轻量自带镜像 + 控制台一键；ECS 要自己搭监控 + 备份。」 Final emphasized line in blue: 「起步选轻量没错，但心里要知道它的天花板——这是『够用就好』，不是『永远够用』。」 mytool.com not used on this card. Page number 「10-08 / 08」 bottom-right.","aspect_ratio":"3:4"}
+  ]
+}

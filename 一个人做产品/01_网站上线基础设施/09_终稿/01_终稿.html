@@ -1,409 +1,163 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>买了域名，为什么还打不开？</title>
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      font-size: 16px;
-    }
-
-    body {
-      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
-      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
-      color: #1a1a1a;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      min-height: 100vh;
-    }
-
-    .preview-wrap {
-      max-width: 420px;
-      margin: 0 auto;
-      padding: 1.5rem 1rem 3rem;
-    }
-
-    .header {
-      text-align: center;
-      margin-bottom: 1.75rem;
-    }
-
-    .series-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      color: #666;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 999px;
-      padding: 0.25rem 0.75rem;
-      margin-bottom: 0.85rem;
-      letter-spacing: 0.02em;
-    }
-
-    h1 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #111;
-      line-height: 1.35;
-      margin-bottom: 0.45rem;
-    }
-
-    .subtitle {
-      font-size: 0.95rem;
-      color: #2563eb;
-      font-weight: 500;
-      line-height: 1.4;
-    }
-
-    .entry-group {
-      margin-bottom: 0.5rem;
-    }
-
-    .entry-label {
-      font-size: 0.78rem;
-      color: #888;
-      margin-bottom: 1rem;
-      padding-left: 0.15rem;
-    }
-
-    .cards-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .card-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-
-    .card-label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: #555;
-      padding-left: 0.2rem;
-    }
-
-    .card-label span {
-      color: #2563eb;
-      margin-right: 0.35rem;
-    }
-
-    /* 3:4 vertical card frame */
-    .card-frame {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.04);
-      background: #fff;
-    }
-
-    .card-frame img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: none;
-    }
-
-    .card-frame.has-image img {
-      display: block;
-    }
-
-    .card-frame.has-image .card-fallback {
-      display: none;
-    }
-
-    .card-fallback {
-      position: absolute;
-      inset: 0;
-      display: flex;
-      flex-direction: column;
-      padding: 1.5rem 1.25rem 1.25rem;
-      background: #fff;
-      overflow: hidden;
-    }
-
-    .card-fallback.cover {
-      justify-content: center;
-      align-items: flex-start;
-      background: linear-gradient(165deg, #fafafa 0%, #f5f5f5 100%);
-    }
-
-    .card-fallback .page-num {
-      position: absolute;
-      bottom: 1rem;
-      right: 1.1rem;
-      font-size: 0.68rem;
-      color: #bbb;
-      font-variant-numeric: tabular-nums;
-    }
-
-    .card-fallback .tag-pill {
-      display: inline-block;
-      font-size: 0.68rem;
-      color: #ea580c;
-      background: #fff7ed;
-      border-radius: 4px;
-      padding: 0.15rem 0.45rem;
-      margin-bottom: 0.65rem;
-      align-self: flex-start;
-    }
-
-    .cover-line1 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: #2563eb;
-      line-height: 1.35;
-      margin-bottom: 0.65rem;
-    }
-
-    .cover-line2 {
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: #1a1a1a;
-      line-height: 1.4;
-    }
-
-    .card-body {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      gap: 0.55rem;
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: #222;
-    }
-
-    .card-body p {
-      margin: 0;
-    }
-
-    .card-body .flow-line {
-      color: #333;
-    }
-
-    .card-body .flow-arrow {
-      color: #2563eb;
-      font-weight: 500;
-    }
-
-    .card-body .bullet-row {
-      display: flex;
-      align-items: baseline;
-      gap: 0.4rem;
-    }
-
-    .card-body .bullet-dot {
-      flex-shrink: 0;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: #ea580c;
-      margin-top: 0.45rem;
-    }
-
-    .card-body .highlight-end {
-      color: #2563eb;
-      font-weight: 500;
-    }
-
-    code {
-      font-family: "SF Mono", "Consolas", "Menlo", monospace;
-      font-size: 0.82em;
-      background: #f3f4f6;
-      padding: 0.1em 0.35em;
-      border-radius: 3px;
-      color: #c2410c;
-    }
-
-    .card-caption {
-      font-size: 0.72rem;
-      color: #999;
-      padding-left: 0.2rem;
-      line-height: 1.5;
-    }
-
-    /* caption section */
-    .caption-section {
-      margin-top: 1.75rem;
-      padding: 1.1rem 1.15rem;
-      background: #fff;
-      border-radius: 10px;
-      border: 1px solid #e8e8e8;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    .caption-section h2 {
-      font-size: 0.78rem;
-      font-weight: 600;
-      color: #888;
-      margin-bottom: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .caption-section p {
-      font-size: 0.85rem;
-      line-height: 1.75;
-      color: #333;
-      margin: 0;
-    }
-
-    .footer-note {
-      margin-top: 1.5rem;
-      text-align: center;
-      font-size: 0.68rem;
-      color: #aaa;
-      line-height: 1.6;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>网站上线基础设施 · 主题包预览 v5 · 一个人做产品</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+  background: #fafafa;
+  color: #1a1a1a;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+.preview-wrap { max-width: 460px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+.header { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid #ececec; }
+.series-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #666;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 999px;
+  padding: 0.22rem 0.7rem;
+  margin-bottom: 0.85rem;
+}
+.pack-title { font-size: 1.45rem; font-weight: 700; color: #111; line-height: 1.35; margin-bottom: 0.5rem; }
+.pack-intro { font-size: 0.82rem; color: #555; line-height: 1.7; padding: 0 0.5rem; }
+.pack-intro .accent { color: #2563eb; font-weight: 500; }
+.pack-meta { margin-top: 0.85rem; font-size: 0.7rem; color: #999; }
+.entry-group { margin-bottom: 2.25rem; }
+.entry-header { display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.35rem; }
+.entry-num { font-size: 0.95rem; font-weight: 700; color: #2563eb; flex-shrink: 0; }
+.entry-title { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; line-height: 1.4; }
+.entry-sub { font-size: 0.74rem; color: #888; margin-bottom: 1rem; padding-left: 0.1rem; }
+.cards-grid { display: flex; flex-direction: column; gap: 1.1rem; }
+.card-item { display: flex; flex-direction: column; gap: 0.45rem; }
+.card-label { font-size: 0.72rem; font-weight: 600; color: #555; padding-left: 0.2rem; }
+.card-label span { color: #2563eb; margin-right: 0.3rem; }
+.card-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08), 0 1px 4px rgba(0,0,0,0.04);
+  background: #fff;
+}
+.card-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.card-frame.has-image .card-fallback { display: none; }
+.card-fallback {
+  position: absolute;
+  inset: 0;
+  padding: 1rem 0.9rem;
+  background: linear-gradient(180deg, #fafafa 0%, #f5f3ee 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.86rem;
+  color: #1a1a1a;
+  line-height: 1.7;
+}
+.card-fallback .badge {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  font-size: 0.62rem;
+  color: #2563eb;
+  background: rgba(37,99,235,0.08);
+  padding: 0.18rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+.card-fallback .page-num {
+  position: absolute;
+  bottom: 0.55rem;
+  right: 0.7rem;
+  font-size: 0.62rem;
+  color: #999;
+  font-family: monospace;
+}
+.card-fallback p { margin: 0; }
+.card-fallback .line { display: block; }
+.card-fallback .gap { margin-top: 0.55rem; display: block; }
+.card-fallback .accent { color: #2563eb; font-weight: 600; }
+.card-fallback .example { font-family: monospace; background: rgba(0,0,0,0.04); padding: 0 0.25em; border-radius: 3px; }
+.card-fallback strong { color: #1a1a1a; font-weight: 700; }
+.card-caption { font-size: 0.7rem; color: #999; padding-left: 0.2rem; line-height: 1.55; }
+.caption-section {
+  margin-top: 1.5rem;
+  padding: 0.95rem 1rem;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+.caption-section h2 {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #888;
+  margin-bottom: 0.55rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.caption-section p { font-size: 0.78rem; line-height: 1.7; color: #333; margin: 0; }
+.footer-note {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #ececec;
+  font-size: 0.7rem;
+  color: #aaa;
+  text-align: center;
+  line-height: 1.6;
+}
+.footer-note strong { color: #555; }
+code {
+  font-family: "SF Mono", "Consolas", "Menlo", monospace;
+  font-size: 0.82em;
+  background: #f3f4f6;
+  padding: 0.08em 0.32em;
+  border-radius: 3px;
+  color: #c2410c;
+}
+</style>
 </head>
 <body>
-  <div class="preview-wrap">
-    <header class="header">
-      <div class="series-tag">一个人做产品 · 图文 01</div>
-      <h1>买了域名，为什么还打不开？</h1>
-      <p class="subtitle">域名到底是什么？</p>
-    </header>
-
-    <section class="entry-group" aria-label="图文 01 域名到底是什么">
-      <p class="entry-label">主题包：网站上线基础设施 · 6 张卡片</p>
-
-      <div class="cards-grid">
-
-        <!-- 图 1 封面 -->
-        <article class="card-item">
-          <p class="card-label"><span>01</span>图 1｜封面</p>
-          <div class="card-frame" data-card="01">
-            <img src="../08_插图/images/card_01_01.png" alt="图 1 封面：域名到底是什么？买了域名，为什么还打不开？">
-            <div class="card-fallback cover">
-              <p class="cover-line1">域名到底是什么？</p>
-              <p class="cover-line2">买了域名，为什么还打不开？</p>
-              <span class="page-num">01 / 06</span>
-            </div>
-          </div>
-          <p class="card-caption">封面双行：概念问句 + 处境钩（标题方案已定）</p>
-        </article>
-
-        <!-- 图 2 破误解 -->
-        <article class="card-item">
-          <p class="card-label"><span>02</span>图 2｜破误解</p>
-          <div class="card-frame" data-card="02">
-            <img src="../08_插图/images/card_01_02.png" alt="图 2 破误解">
-            <div class="card-fallback">
-              <span class="tag-pill">破误解</span>
-              <div class="card-body">
-                <p>很多人以为买了域名就有了网站。</p>
-                <p>比如你花年费注册 <code>mytool.com</code>，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。</p>
-              </div>
-              <span class="page-num">02 / 06</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 图 3 寻址名定义 -->
-        <article class="card-item">
-          <p class="card-label"><span>03</span>图 3｜寻址名定义</p>
-          <div class="card-frame" data-card="03">
-            <img src="../08_插图/images/card_01_03.png" alt="图 3 寻址名定义">
-            <div class="card-fallback">
-              <div class="card-body">
-                <p>拿 <code>mytool.com</code> 举例：它是给人记的寻址名，不是网站本身。</p>
-                <p>DNS 负责把它翻译成 IP（示例：<code>203.0.113.10</code>），浏览器才能找到那台机器。</p>
-              </div>
-              <span class="page-num">03 / 06</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 图 4 三句话分工 -->
-        <article class="card-item">
-          <p class="card-label"><span>04</span>图 4｜三句话分工</p>
-          <div class="card-frame" data-card="04">
-            <img src="../08_插图/images/card_01_04.png" alt="图 4 三句话分工">
-            <div class="card-fallback">
-              <div class="card-body">
-                <p>还是 <code>mytool.com</code> 这一条链：</p>
-                <div class="bullet-row"><span class="bullet-dot"></span><p><code>203.0.113.10</code> → 给机器看的数字地址</p></div>
-                <div class="bullet-row"><span class="bullet-dot"></span><p><code>mytool.com</code> → 给人记的名字</p></div>
-                <div class="bullet-row"><span class="bullet-dot"></span><p>DNS → 把名字翻译成 IP</p></div>
-              </div>
-              <span class="page-num">04 / 06</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 图 5 访问链路 -->
-        <article class="card-item">
-          <p class="card-label"><span>05</span>图 5｜访问链路</p>
-          <div class="card-frame" data-card="05">
-            <img src="../08_插图/images/card_01_05.png" alt="图 5 访问链路">
-            <div class="card-fallback">
-              <div class="card-body">
-                <p class="flow-line">浏览器输入 <code>mytool.com</code></p>
-                <p class="flow-line"><span class="flow-arrow">→</span> DNS 查到 <code>203.0.113.10</code></p>
-                <p class="flow-line"><span class="flow-arrow">→</span> 连上那台服务器 → 返回网页</p>
-                <p style="margin-top: 0.4rem;">光有域名不够，还要解析指向服务器，服务器上也要有页面</p>
-              </div>
-              <span class="page-num">05 / 06</span>
-            </div>
-          </div>
-        </article>
-
-        <!-- 图 6 收束 -->
-        <article class="card-item">
-          <p class="card-label"><span>06</span>图 6｜收束</p>
-          <div class="card-frame" data-card="06">
-            <img src="../08_插图/images/card_01_06.png" alt="图 6 收束">
-            <div class="card-fallback">
-              <div class="card-body">
-                <p><code>mytool.com</code> 在国内还要单独实名，和腾讯云账号实名不是一回事。</p>
-                <p>域名帮别人找到你，不替你放网页内容。</p>
-                <p class="highlight-end">搞清这一步，才算摸上线地图第一格。</p>
-              </div>
-              <span class="page-num">06 / 06</span>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <section class="caption-section" aria-label="发布 caption">
-      <h2>Caption</h2>
-      <p>场景：你刚注册 <code>mytool.com</code>，打开却是空白——通常是域名、解析、服务器、页面四件事没串起来，不是「买错了」。备案和买域名也是两回事；实名审核常见约 1–3 个工作日。DNS 怎么配、服务器放哪，见后续条目。个人开发者视角整理，非法律建议。#个人开发者 #独立开发 #产品上线</p>
-    </section>
-
-    <p class="footer-note">小红书图文预览 · 卡片 3:4 · 插图路径 08_插图/images/card_01_01–06.png<br>图片生成后自动替换文字占位</p>
+<div class="preview-wrap">
+  <div class="header">
+    <span class="series-tag">一个人做产品 · 主题包</span>
+    <h1 class="pack-title">网站上线基础设施</h1>
+    <p class="pack-intro">一个中国个人开发者想把网站上线，需要理解的 <span class="accent">10 个基础概念</span>。<br>10 条图文，6 卡 + 8 卡组合，全部用 <code>mytool.com</code> 实例贯穿。</p>
+    <p class="pack-meta">v4 · 全部 9 条统一升级到 8 卡 · 加深"机制 + 坑"</p>
   </div>
+<div class="entry-group"><div class="entry-header"><span class="entry-num">条目 01</span><span class="entry-title">域名到底是什么？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">域名到底是什么？ 买了 <span class="example">mytool.com</span>，为什么还打不开？</p><span class="page-num">01-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">很多人以为买了域名就有了网站。 比如你花年费注册 <span class="example">mytool.com</span>，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。 对个人开发者：搞不清「寻址名 ≠ 网站本体」，上线第一天就会卡在解析那一步。</p><span class="page-num">01-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">拿 <span class="example">mytool.com</span> 举例：它是给人记的寻址名，不是网站本身。 DNS 负责把它翻译成 IP（示例：<span class="example">203.0.113.10</span>），浏览器才能找到那台机器。</p><span class="page-num">01-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">还是 <span class="example">mytool.com</span> 这一条链： <span class="example">203.0.113.10</span> → 给机器看的数字地址 <span class="example">mytool.com</span> → 给人记的名字 DNS → 把名字翻译成 IP</p><span class="page-num">01-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">浏览器输入 <span class="example">mytool.com</span> → DNS 查到 <span class="example">203.0.113.10</span> → 连上那台服务器 → 返回网页 光有域名不够，还要解析指向服务器，服务器上也要有页面。</p><span class="page-num">01-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line"><span class="example">mytool.com</span> 在国内还要单独实名，和腾讯云账号实名不是一回事。 域名帮别人找到你，不替你放网页内容。 搞清这一步，才算摸上线地图第一格。</p><span class="page-num">01-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">买了域名没实名 → 注册商提示「不可解析」。 实名信息填错 → 修改要重新走审核，等几天。 <span class="example">mytool.com</span> 用个人身份证实名，公司主体备案就过不了。 <strong>域名实名 ≠ 账号实名 ≠ 备案主体——三个是两件事。</strong></p><span class="page-num">01-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_01_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">解析 = 让域名指向哪台服务器。 云平台添加 A 记录：<span class="example">mytool.com</span> → <span class="example">203.0.113.10</span>。 改完通常几分钟内全球生效（DNS 缓存）。 <strong>域名 + 解析 + 服务器 = 三件事齐了，浏览器才找得到你。</strong></p><span class="page-num">01-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>场景：你刚注册 `mytool.com`，打开却是空白——通常是域名、解析、服务器、页面四件事没串起来，不是「买错了」。备案和买域名也是两件事；实名审核常见约 1–3 个工作日。个人开发者视角整理，非法律建议。#个人开发者 #独立开发 #产品上线
 
-  <script>
-    document.querySelectorAll('.card-frame img').forEach(function (img) {
-      img.addEventListener('load', function () {
-        if (img.naturalWidth > 0) {
-          img.parentElement.classList.add('has-image');
-        }
-      });
-      img.addEventListener('error', function () {
-        img.style.display = 'none';
-      });
-      if (img.complete && img.naturalWidth > 0) {
-        img.parentElement.classList.add('has-image');
-      }
-    });
-  </script>
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 02</span><span class="entry-title">服务器到底是什么？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">服务器到底是什么？ 没它，域名解析了也没东西能响应——上线最后一步。</p><span class="page-num">02-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">很多人以为服务器就是「我电脑一直开着」。 其实它更像一台不停机的、装在专业机房里替你值班的电脑。 对个人开发者：上线花钱和选规格的对象，就是它——选错地域影响备案和访问速度。</p><span class="page-num">02-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">服务器是 7×24 小时在线、对外提供服务的机器。 <span class="example">mytool.com</span> 的网页放在一台服务器上，浏览器请求进来，它把页面送回去。</p><span class="page-num">02-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">个人开发者常见三种： ① 云服务器（ECS/CVM）：远程租一台 ② 虚拟主机 / 共享主机：和别人合租一台 ③ Serverless：把代码丢给云平台托管</p><span class="page-num">02-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">域名解决「别人怎么找到你」， 服务器解决「被找到后由谁来回应」。 <span class="example">mytool.com</span> + 服务器 + 解析，才算凑齐一回完整链路。</p><span class="page-num">02-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">服务器要付租金、要选地域、要续费。 服务器在国内就要考虑备案。 后面条目拆云服务器、虚拟主机、Serverless 怎么选。</p><span class="page-num">02-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">云服务器自由，但要自己扛运维。 共享主机省心，但配置锁死、跑不动大流量。 Serverless 免运维，但冷启动慢、调试复杂。</p><span class="page-num">02-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_02_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">升级信号：CPU 长期偏高、月流量快超阈值、部署成了体力活。 路径：共享主机 → 轻量 / 云服务器 → ECS。 <strong>第一版先别上 ECS——还没验证需求，钱白花。</strong></p><span class="page-num">02-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：上线前第一个要付费的「重资产」，选错地域就影响备案和访问速度。场景：下单了一台云服务器、拿到公网 IP，浏览器输入 IP 还是看不到——通常是没装程序、没开端口。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 03</span><span class="entry-title">备案到底是什么？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">备案到底是什么？ 没备就关停，国内服务器上线第一道门。</p><span class="page-num">03-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">备案不是给网站内容「过审」。 它是「域名 + 服务器」绑在一起、报给工信部的一步行政登记。 对个人开发者：跳过这一步，国内服务器站点直接开不起来。</p><span class="page-num">03-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">主体：你（个人 / 公司）是谁 网站：放什么服务 接入商：你买的哪家云平台</p><span class="page-num">03-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">域名解析到中国大陆服务器，就必须备案。 服务器在境外，目前不要求。 跟 <span class="example">.com</span> 还是 <span class="example">.cn</span> 后缀没关系，看服务器在哪里。</p><span class="page-num">03-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">首次备案一般 1–20 个工作日，因地因人而异。 常见被驳回：域名实名信息和备案主体不一致；服务器不在你户籍地或常驻地。 具体以接入商控制台和管局口径为准。</p><span class="page-num">03-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">备案是接入门票，不是内容审核。 <span class="example">mytool.com</span> 想进大陆服务器，要走完这一步才合法「开门」。 DNS 怎么配、接入商怎么填，见后续条目。</p><span class="page-num">03-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">同一个 <span class="example">mytool.com</span>、同一台国内服务器—— 产品官网备案：填主体 + 网站名 + ICP 备案号。 小程序后端备案：还要填服务类目 + 接入方式，要 AppID。 <strong>同一台机器，备案要填的东西、驳回概率都不同——用途决定代价</strong></p><span class="page-num">03-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_03_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">三类真实驳回： ① 主体信息与域名实名不一致 ② 网站名称不合规 ③ 服务器不在户籍地或常驻地 解法：改信息、改名、换接入商或加居住证明——看驳回原因。</p><span class="page-num">03-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：首次备案不是一次过——驳回再提交会重排 1–2 周。场景：你周一提交，周五上午被驳回，原因是「网站名称不含规范词」，改完再提交又要等几天。个人开发者视角整理，非法律建议。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 04</span><span class="entry-title">SSL 证书到底是什么？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">SSL 证书到底是什么？ 没它浏览器标红「不安全」，小程序和微信生态直接拒绝接入。</p><span class="page-num">04-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">SSL 证书不是「让网站变高级」的装饰。 它是浏览器和服务器之间的「身份证 + 加密锁」。 对个人开发者：现在的小程序、支付、第三方登录，基本都强制 https。</p><span class="page-num">04-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 加密：传输内容不让中间人偷看 ② 身份：证明这台服务器就是 <span class="example">mytool.com</span> 声明的那台 ③ 信任：由可信第三方（CA）签发</p><span class="page-num">04-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">DV（域名验证）：只验证你能控制这个域名，最快 OV（组织验证）：再加验证机构身份 EV（扩展验证）：更严，浏览器地址栏展示更多</p><span class="page-num">04-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">云平台一键申请免费证书（通常 DV）。 绑定域名 <span class="example">mytool.com</span> 后，到期前续签或重新申请。 证书过期没换，浏览器会直接红色警告。</p><span class="page-num">04-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">网站不装证书，浏览器会标「不安全」。 个人项目先用云厂商免费 DV 就够。 <span class="example">mytool.com</span> 的「锁」是基本动作，不是加分项。</p><span class="page-num">04-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">浏览器标「不安全」——绝大多数用户会关掉。 微信内嵌页、公众号 H5、小程序 web-view——不装直接打不开。 支付场景——回调地址必须 https。 <strong>不装证书 = 把大量用户挡在门外</strong>。</p><span class="page-num">04-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_04_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 证书过期没换：浏览器红屏；常常在凌晨收到报警。 ② 证书绑错域名：浏览器提示「不匹配」。 <strong>云平台免费证书通常 90 天到期——日历提前 14 天提醒续期。</strong></p><span class="page-num">04-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：现在不装证书，新用户打开就被警告，小程序和支付场景会直接被拒。场景：刚上线的小程序或官网，出现「您的连接不是私密连接」通常是证书没装、过期或域名没在证书里。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 05</span><span class="entry-title">CDN 到底是什么？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">CDN 到底是什么？ 流量从 0 到 1000，省钱和不被压垮的关键开关。</p><span class="page-num">05-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">CDN 不是「让网站变快」的玄学开关。 它是在全国各地放「复印点」，让用户就近拿内容。 对个人开发者：也是第一次面对「被攻击 / 被爬」时的第一道缓冲。</p><span class="page-num">05-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">源站：真正的服务器 <span class="example">203.0.113.10</span> 节点：分散各地的副本 调度：DNS 把用户指向最近的节点</p><span class="page-num">05-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">减少延迟：物理距离近 抗突发：单点压力大时分流 隐藏源站：用户拿不到真实 IP</p><span class="page-num">05-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">动态接口（要实时算的）不一定加速 配错缓存策略可能「改完不生效」 HTTPS 证书要和源站/域名对齐</p><span class="page-num">05-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">流量上来后再上 CDN，先把源站跑稳。 <span class="example">mytool.com</span> 装 CDN 后，DNS 解析会指向 CDN 节点，不是源 IP。 <strong>CDN = 放大器：要先有流量，CDN 才有用。</strong></p><span class="page-num">05-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 缓存策略配错：更新了文案，用户看到旧版本。 ② 动态接口被缓存：用户看到别人的数据。 ③ 源站 IP 暴露：CDN 没开回源鉴权，被绕过直打源站。 <strong>首次接入 CDN 一定要在测试域名上跑一遍。</strong></p><span class="page-num">05-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_05_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">不急着接：日活 &lt; 100 / 几乎全是动态内容 / 还没做 HTTPS。 需要接：月流量超约 100 GB / 源站 CPU 常被打满 / 国内多地域慢。 <strong>起步阶段不上 CDN</strong>——CDN 是放大器，不是补药。</p><span class="page-num">05-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：起步阶段省钱的工具，流量起来后变成「服务器不被压垮」的关键。场景：刚上线没人访问，先别买 CDN。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 06</span><span class="entry-title">域名、服务器、备案是什么关系？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">域名、服务器、备案是什么关系？ 新手第一次上线卡得最久的，就是这条顺序链。</p><span class="page-num">06-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">域名：别人怎么找到你 服务器：被找到后由谁来回应 备案：在中国大陆合法「开门营业」的入场券 对个人开发者：上线动作里最容易错位的一组概念。</p><span class="page-num">06-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 注册域名 + 实名 ② 买服务器（地域先想好） ③ 备案（域名实名 + 服务器 + 接入商三合一） ④ 解析：把域名指向服务器 IP ⑤ 上线：放页面 / 程序</p><span class="page-num">06-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">只买域名没解析 → 浏览器找不到 只买服务器没备案 → 大陆站点会被关停 先备案再买域名 → 备案主体信息对不上</p><span class="page-num">06-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">服务器在境外，目前不要求 ICP 备案。 访问速度、合规要求、支付方式各自不同。 <span class="example">mytool.com</span> 想出海才考虑这条路。 （不展开跨境支付细节，仅作边界提示。）</p><span class="page-num">06-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">这是上线基础设施里最常错位的一条链。 顺序对、概念清，剩下是填表和等审核。 后续条目拆每一步怎么落地。</p><span class="page-num">06-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">访问体验：国内用户访问境外服务器，延迟通常较高。 合规要求：域名仍要实名；具体合规场景以服务商页面为准。 支付方式：境外信用卡 + Stripe 通用；境内支付方式各有适用条件。</p><span class="page-num">06-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_06_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">错位一：先备案后买域名 → 信息对不上 → 重提交几周。 错位二：服务器地域选错 → 想迁回大陆 → 重备数周。 错位三：解析类型配错 → 站点时通时不通 → 排查数小时。 <strong>上线地图的错位成本以周计，不以小时计</strong>——顺序先对再动手。</p><span class="page-num">06-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：上线失败 80% 不是代码错，是这条链上某一步没串起来。场景：朋友问「域名买了，服务器也买了，怎么还看不到」——通常是顺序错或备案没通过。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 07</span><span class="entry-title">为什么国内服务器通常要备案？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">为什么国内服务器通常要备案？ 新手项目最常见的「上线失败」原因之一。</p><span class="page-num">07-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">中国大陆对提供互联网信息服务的站点做登记。 没登记就不能在大陆服务器上对外提供服务。 对个人开发者：这是出海攻略忽悠你「免备案」前必须知道的事实——「免备案」只在境外服务器管用。</p><span class="page-num">07-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">工信部 + 省通信管理局。 接入商（云平台）代为提交、查验。</p><span class="page-num">07-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">网站被关停，域名被列入黑名单。 其他接入商也不能再用这个域名。 个人开发者新项目最常见的「上线失败」原因之一。</p><span class="page-num">07-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">服务器在境外。 纯内网、不对外暴露。 后端 API 仍解析到大陆 IP 也要备。 「免备案」只在境外服务器管用，这是出海前必查的口径。</p><span class="page-num">07-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">备案是入场券，不是审核你的代码写得好不好。 <span class="example">mytool.com</span> 想做大陆用户，先把备案当成必须项排进时间表。</p><span class="page-num">07-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">接入商检测到未备案 → 短信 + 站内信提醒。 几天后仍未备案 → HTTP 端口被屏蔽。 更久后 → 域名被列入黑名单 → 其他接入商也不能用。 <strong>「暂时不备」不是免费午餐——是倒计时</strong>。</p><span class="page-num">07-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_07_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">①「只是个人项目，没流量」——没用，照样关。 ②「我不放内容，只放 API」——后端 API 解析到大陆 IP 也要备。 ③「用对象存储放静态文件」——只要走 CDN 大陆节点，还是要备。</p><span class="page-num">07-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：跳过这一步，国内服务器上的站点会被关停，新项目排期会延 2–3 周。场景：很多出海教程鼓吹「免备案」，但服务器在国内就绕不开。把它当成上线地图上的固定关卡。个人开发者视角整理，非法律建议。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 08</span><span class="entry-title">一个网页上线要经过哪几步？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">一个网页上线要经过哪几步？ 第一次上线排期的全部真相。</p><span class="page-num">08-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">不是写完代码就直接上线。 中间还有 4–5 道手续，每一道都可能卡你几天。 对个人开发者：上线排期主要不是写代码，是这套流程。</p><span class="page-num">08-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 注册域名 → ② 实名认证 ③ 买服务器 → ④ 备案（大陆必走） ⑤ 域名解析 → ⑥ 上传网站 / 测试 每一步都不能跳，但可以并行。</p><span class="page-num">08-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">注册域名：几分钟。 实名审核：通常 1–3 个工作日。 备案：通常 1–20 个工作日。 解析生效：几分钟到几小时。</p><span class="page-num">08-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">先备案后买域名 → 信息对不上 只解析没上传内容 → 空白页 只备案没解析 → 还是打不开</p><span class="page-num">08-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">这是上线地图的标准路径。 <span class="example">mytool.com</span> 这条链全跑通，才算「上线」二字。 后面条目拆每一步具体怎么做。</p><span class="page-num">08-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">注册 + 实名：动手 10 分钟，等审核 1–3 个工作日。 买服务器 + 备案：动手 30 分钟，等审核 1–20 个工作日。 解析 + 上传 + 测试：动手 1 小时左右。 <strong>上线动作的瓶颈在「等」，不在「做」。</strong></p><span class="page-num">08-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_08_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">动手环节加起来不到 2 天。 等审核环节加起来通常 2 周左右。 <strong>总耗时：约 2 周，保守排 3 周、激进排 1 周。</strong> 新项目排期主要不是写代码，是这套流程。</p><span class="page-num">08-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你会在哪里卡住：上线日不是「写完代码那天」，是「排队等审核通过那天」。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 09</span><span class="entry-title">静态网站适合什么项目？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">静态网站适合什么项目？ 验证想法阶段最便宜也最快的一档选择。</p><span class="page-num">09-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">不需要数据库、不需要后端语言的网站。 HTML/CSS/JS 文件直接放在服务器上就能跑。 对个人开发者：决定第一版要不要先堆后端的关键判断——多数产品介绍页、文档站都属此类。</p><span class="page-num">09-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">个人主页 产品介绍 / 落地页 开源文档 活动页 / 一次性宣传页</p><span class="page-num">09-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">用户登录、评论、收藏 电商下单、支付 实时数据（聊天、看板）</p><span class="page-num">09-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">部署简单：上传文件即可。 成本低：静态托管便宜甚至免费。 速度快：没有后端拖累。 备案要求同：服务器在大陆仍要备案。</p><span class="page-num">09-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">先问：是不是「只展示、不交互」？ 是 → 静态站。 不是 → 后面条目拆「轻量服务器」「Serverless」怎么选。 关键提醒：服务器在大陆，静态站同样要备案。</p><span class="page-num">09-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 需要登录注册。 ② 需要表单提交。 ③ 想看访问数据。 <strong>验证需求阶段别急着升级</strong>——先用静态页测流量。</p><span class="page-num">09-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_09_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① 以为静态站不用备案——服务器在大陆仍要备案。 ② 在静态站里硬塞动态逻辑——不如接 Serverless 或单独后端。 ③ 把支付 / 登录硬塞进静态站——反模式，把简单的事变复杂。</p><span class="page-num">09-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：先静态后动态，把验证期成本压到最低，错过的只是「看起来复杂」。场景：产品还在验证阶段，先做静态落地页测流量。个人开发者视角整理。#个人开发者 #独立开发 #产品上线
+
+---</p></div></div><div class="entry-group"><div class="entry-header"><span class="entry-num">条目 10</span><span class="entry-title">轻量服务器适合什么项目？</span></div><div class="entry-sub">8 卡 · caption 一段</div><div class="cards-grid"><div class="card-item"><div class="card-label"><span>图1</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_01.png" alt="图1" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">轻量服务器适合什么项目？ 起步阶段最划算的一档「够用就好」。</p><span class="page-num">10-01 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图2</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_02.png" alt="图2" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">云厂商为个人开发者打包的入门套餐。 固定配置、按月付、自带常用运行环境。 对个人开发者：决定起步成本和未来升级路径的关键档位——比共享主机自由，比 ECS 便宜。</p><span class="page-num">10-02 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图3</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_03.png" alt="图3" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">个人博客 / 小程序后端 小型 API 服务 学习、试验、原型 流量不大的工具站</p><span class="page-num">10-03 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图4</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_04.png" alt="图4" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">大流量电商 复杂微服务架构 对内核参数、网络性能有专业要求</p><span class="page-num">10-04 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图5</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_05.png" alt="图5" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">资源上限低：高负载会卡 套餐绑死：升级/迁移可能受限 国内仍要备案：跟普通服务器规则一样</p><span class="page-num">10-05 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图6</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_06.png" alt="图6" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">起步阶段够用，比共享主机自由，比 ECS 便宜。 <span class="example">mytool.com</span> 跑第一版先选轻量，等量起来了再升。 后续条目会拆「云服务器 ECS 怎么选」。。</p><span class="page-num">10-06 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图7</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_07.png" alt="图7" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">① CPU 长期 &gt; 60%。 ② 月流量超出套餐约 1.5 倍。 ③ 需要的功能（GPU、独立数据库）套餐里没有。 <strong>不要等到崩了才换</strong>——看到信号就提前 1–2 周规划。</p><span class="page-num">10-07 / 08</span></div></div></div><div class="card-item"><div class="card-label"><span>图8</span></div><div class="card-frame has-image"><img src="../08_插图/images/card_10_08.png" alt="图8" onerror="this.parentElement.classList.remove('has-image')"><div class="card-fallback"><span class="badge">图文卡片</span><div class="gap">&nbsp;</div><p class="line">价：轻量便宜，ECS 同配置偏贵。 性能：轻量 CPU 共享，ECS 可选独享。 自由度：ECS 可改内核参数，轻量锁死。 运维：轻量自带镜像 + 一键；ECS 要自己搭。 <strong>起步选轻量没错，但心里要知道它的天花板</strong>。</p><span class="page-num">10-08 / 08</span></div></div></div></div><div class="caption-section"><h2>Caption</h2><p>你为什么会在意：起步阶段省下的几百到一千，决定第一款产品能多撑几个月。场景：第一款产品上线，先用轻量服务器撑 3–6 个月，等日活稳定再升级。个人开发者视角整理。#个人开发者 #独立开发 #产品上线</p></div></div>
+  <div class="footer-note">
+    <strong>主题包预览页</strong> · 小红书发布单元 = 单条图文<br>
+    本页仅作内容预览；实际发布请按条目拆分成单条图文<br>
+    v4 · 2026-06-22
+  </div>
+</div>
 </body>
 </html>
