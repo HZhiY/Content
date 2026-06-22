@@ -1,0 +1,80 @@
+{
+  "article_id": "01",
+  "style": "Flat explanatory illustration, infographic style, restrained color palette, Chinese annotations, PPT/PDF presentation illustration style. Clean geometric shapes, solid color blocks, no gradients, no shadows, no 3D effects. Color scheme: China = deep red (#C41E3A), USA = blue (#2E5B8A), Gulf = gold (#C9A84C), Pakistan = dark green (#014D16), background = light gray (#F5F5F5), text = dark gray (#333333). Simple flat icons, single-weight arrows, clean composition suitable for mobile reading.",
+  "images": [
+    {
+      "id": "cover",
+      "filename": "cover.png",
+      "position": "文章封面图（HTML封面区）",
+      "function": "用视觉建立'三份工同时运转'印象，承载最终标题'换生存易，换转型难：巴基斯坦的\"中-美-海湾\"三份工'",
+      "description_cn": "徽章风格封面：深绿色底圆形徽章，中央绿色底上升箭头代表'生存'，三条色带（深红/蓝/金）从左/右/下三向螺旋环绕箭头，象征中国耐心轴/美国阀门轴/海湾避险轴三轨并行汇聚。箭头周围标注三轴关键词。底部水平排列标题'换生存易，换转型难'。整体扁平麦肯锡风格，克制配色，中文标注，无渐变无阴影。",
+      "prompt": "Flat infographic badge illustration, circular emblem on dark green background, central upward green arrow symbolizing Pakistan's survival, three spiraling color bands converging around the arrow: deep red band labeled 'China: patience axis', blue band labeled 'USA: valve axis', gold band labeled 'Gulf: hedge axis', three bands representing Pakistan's three asymmetric dependencies managed simultaneously, not picking sides. Chinese text at bottom: '换生存易，换转型难'. Minimalist McKinsey presentation style, solid color blocks, no gradients, no shadows, clean geometric shapes, light gray background, Chinese annotations in dark gray text.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig01_three_axes",
+      "filename": "fig01_three_axes.png",
+      "position": "引言之后、第一节'巴基斯坦的三组约束'之前",
+      "function": "视觉建立'三组不对称依赖同时指向巴基斯坦'的整体框架，让读者在读正文细节前先有全局印象",
+      "description_cn": "扁平俯视示意图：巴基斯坦居画面中央偏左（绿色简化国土块示意），左方红色粗箭头标注'中国（耐心轴）：战略背书/基础设施/债务展期'指向巴方，右方蓝色粗箭头标注'美国（阀门轴）：援助/合法性/可调节'指向巴方，下方金色粗箭头标注'海湾（避险轴）：现金/能源赊账/展期'指向巴方。三条箭头粗细相近、同时汇聚，表示三方同时在场。三轴配色与封面一致。背景浅灰米色，无装饰。",
+      "prompt": "Flat infographic diagram, Pakistan in center-left of composition (simplified green landmass silhouette), three bold arrows converging from left, right, and below into Pakistan: left red arrow labeled 'China (Patience Axis): strategic backing / infrastructure / debt rollover', right blue arrow labeled 'USA (Valve Axis): aid / legitimacy / adjustable', bottom gold arrow labeled 'Gulf (Hedge Axis): cash / energy credit / rollover'. Three arrows of equal thickness converging simultaneously, representing three asymmetric dependencies all present at once, not choosing sides. Color coding consistent throughout: deep red for China, blue for USA, gold for Gulf, dark green for Pakistan landmass. Flat minimalist style, no realistic maps, simple geometric arrows, light gray background, Chinese annotations in dark gray.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig02_alliance",
+      "filename": "fig02_alliance.png",
+      "position": "第二节'分工联盟：谁在替巴方谈判'开头",
+      "function": "可视化'谁在替巴基斯坦谈判'——军方/文官/两方共签的分工结构",
+      "description_cn": "扁平三列并排结构，每列代表一类谈判主体：\n第一列（军方）：军事徽章图标，上方标注'军方（中巴走廊）'，下方标注'陆军参谋长直接通话（2025-05）'+'走廊局（2019）'，箭头指向中国耐心轴；\n第二列（文官）：公文包图标，上方标注'文官（IMF+海湾）'，下方标注'财政部+SBP'+'IMF协议谈判'，箭头指向海湾避险轴；\n第三列（共签）：两把钥匙交叉图标，上方标注'共签（IMF信用阀）'，下方标注'IMF需文官签字+军方认可'。\n三列图标下方画IMF阀门图标，标注'IMF阀门：需两方签字+海湾40亿配套触发'。配色与中国-美国-海湾轴对应。",
+      "prompt": "Flat infographic with three vertical parallel columns, each representing a different Pakistani negotiating party: Column 1 (Military): military badge icon at top labeled 'Military: China-Pakistan Corridor', below labeled 'Army Chief direct call (May 2025) + CPEC Authority (2019)', arrow pointing to China axis. Column 2 (Civilian): briefcase icon at top labeled 'Civilian: IMF + Gulf', below labeled 'Finance Ministry + SBP + IMF negotiations', arrow pointing to Gulf axis. Column 3 (Joint): two crossed keys icon at top labeled 'Joint Signature: IMF Credit Valve', below labeled 'IMF requires civilian signature + military endorsement'. At the bottom spanning all three columns: IMF valve icon labeled 'IMF Valve: requires dual signatures + Gulf $4B配套 trigger'. Clean flat style, geometric icons, Chinese annotations, color coded: red for China connections, blue for US/IMF connections, gold for Gulf connections, green for Pakistani actors.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig03_exchange",
+      "filename": "fig03_exchange.png",
+      "position": "第三节/四节/五节后、第六节'换生存易、换转型难'之前",
+      "function": "可视化三轴各自'换到了什么'——中国换战略通道/美国换合作条件/海湾换能源安全；用三组并列的投入-产出箭头流程图说明'兑换术'机制",
+      "description_cn": "扁平三列横向流程图：\n左列（中国轴）：红色箭头流，起点标注'中国投入：耐心+长期贷款+战略背书'，中间节点'瓜达尔港/债务展期/印度洋通道'，终点标注'巴方换到：战略通道稳定+电力主干网标准+时间'；\n中列（海湾轴）：金色箭头流，起点标注'海湾投入：现金存款+能源赊账+宗派纽带'，中间节点'沙特30亿展期/卡塔尔LNG/阿联酋存款'，终点标注'巴方换到：流动性缓冲+能源安全阀+短期信任'；\n右列（美国轴）：蓝色箭头流，起点标注'美国投入：援助+合法性背书+阀门调节'，中间节点'反恐报销/FATF移出灰名单/IMF通道'，终点标注'巴方换到：美元清算通道+多边融资资格+合规背书'。\n三列下方共用虚线框汇总：'三轴兑换=巴基斯坦换到了生存'。",
+      "prompt": "Flat infographic showing three parallel horizontal flow diagrams, one for each axis: Left flow (China, red): input 'China: patience + long-term loans + strategic backing' flowing through nodes 'Gwadar Port / debt rollover / Indian Ocean corridor' to output 'Pakistan: strategic corridor stability + power grid standards + time'. Middle flow (Gulf, gold): input 'Gulf: cash deposits + energy credit + sectarian ties' flowing through nodes 'Saudi $3B rollover / Qatar LNG / UAE deposits' to output 'Pakistan: liquidity buffer + energy security valve + short-term trust'. Right flow (USA, blue): input 'USA: aid + legitimacy backing + valve adjustment' flowing through nodes 'CSF reimbursement / FATF delisting / IMF channel' to output 'Pakistan: USD clearing通道 + multilateral financing eligibility + compliance backing'. Below all three flows a dashed summary box reads: 'Three-axis exchange = Pakistan bought survival'. Clean flat style, horizontal flow arrows, geometric node boxes, Chinese labels, restrained color palette.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig04_five_tools",
+      "filename": "fig04_five_tools.png",
+      "position": "第六节'换生存易、换转型难'开头",
+      "function": "用5个图标并列展示巴基斯坦能换到的5类工具，下方分叉箭头标注'换到了什么'——现金/贷款/存款/合法性（够生存）vs.国内改革/产业升级（换不到）",
+      "description_cn": "扁平两行结构：\n上行5个并排图标，依次为：(1)银行合同图标，标注'IMF四轮安排(2008/2013/2019/2023)'；(2)钱袋存款图标，标注'海湾存款(沙特/阿联酋/卡塔尔)'；(3)收据报销图标，标注'美国反恐报销(CSF)'；(4)合规打勾图标，标注'FATF移出灰名单(2022)'；(5)法案授权图标，标注'美国国会授权援助(年度拨款)'。\n下行双分叉箭头：左侧绿色实线上箭头标注'→换到：现金+贷款+存款+合法性=生存够'；右侧灰色虚线上箭头标注'→换不到：国内改革+产业升级=转型难'。\n底部虚线框标注'既得利益网络：外部资源按老路径分配'，箭头从框内向右侧灰色分叉延伸。",
+      "prompt": "Flat infographic, upper row showing 5 parallel icons: (1) bank contract icon labeled 'IMF 4 rounds (2008/2013/2019/2023)'; (2) money bag icon labeled 'Gulf deposits (Saudi/UAE/Qatar)'; (3) receipt icon labeled 'US CSF reimbursement'; (4) compliance checkmark icon labeled 'FATF delisting (2022)'; (5) legislation icon labeled 'US Congressional authorized aid'. Lower section with forked arrows: left green solid arrow labeled '→ Got: cash + loans + deposits + legitimacy = Survival OK'; right gray dashed arrow labeled '→ Cannot get: domestic reform + industrial upgrade = Transformation difficult'. Bottom dashed box labeled 'Vested interest network: external resources distributed along old paths', arrow from box pointing toward gray dashed fork. Trapezoidal composition, flat gray icons, green for survival side, gray dashed for transformation side, clean minimal style.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig05_lock_in",
+      "filename": "fig05_lock_in.png",
+      "position": "第六节'双向锁定'段之后",
+      "function": "可视化'外部不敢停'与'国内不敢推'的双向锁定结构；中间连接'既得利益网络'；体现'兑换术能换生存但难换转型'的根本原因",
+      "description_cn": "扁平对称H形/桥形结构：\n左侧锁形图标，上方标注'外部不敢停'，图标旁三条标注：'中国：停了=印度洋通道不稳' / '海湾：停了=能源安全阀失灵' / '美国：停了=多边通道断裂'；\n右侧锁形图标（朝向相反），上方标注'国内不敢推'，图标旁两条标注：'既得利益网络：动了奶酪就反噬' / '部委/国企/地方派系'；\n左右两侧之间横向链条图标，标注'既得利益网络=外部资源的下游客户'。\n两条力线（外推+内推）从两侧向中间链条汇聚，形成静态平衡。\n底部横向标注'锁定结果：能换现金/贷款/存款/合法性→难换国内改革/产业升级'。配色：左侧三色代表三方外部主体，右侧灰色代表内部阻力，链条深红。",
+      "prompt": "Flat symmetric infographic, H-shaped or bridge composition. Left side: lock icon facing outward labeled 'External actors dare not stop', with three annotations: 'China: stop = Indian Ocean corridor unstable' / 'Gulf: stop = energy security valve fails' / 'USA: stop = multilateral channel breaks'. Right side: lock icon facing inward labeled 'Domestic cannot push reform', with annotations: 'Vested interest network: touching their profits triggers backlash' / 'Ministries / state enterprises / local factions'. Center: horizontal chain icon connecting both locks labeled 'Vested interest network = downstream client of external resources'. Two opposing force lines converging toward center chain from left and right locks, creating static balance. Bottom center: 'Lock-in result: can exchange for cash/loans/deposits/legitimacy → cannot exchange for domestic reform/industrial upgrade'. Left side color-coded red/blue/gold for three external actors, right side in gray for internal resistance, center chain in deep red. Clean flat style, geometric locks, simple chain graphic.",
+      "size": "1536x1024"
+    }
+  ],
+  "negative_prompts": [
+    "阴谋论视觉：暗色背景、神秘剪影、阴影暗示",
+    "写实人物肖像：鲁比奥、阿西姆·穆尼尔等任何真实人物面孔",
+    "过度装饰：渐变、3D效果、阴影、纹理背景",
+    "写实地图：精确国界线、地形起伏、卫星图",
+    "情绪化表述：崩溃边缘、被救助的弱者、绝望等",
+    "扁平标签词汇：巴铁、战略支轴、缓冲国、失败国家",
+    "未核实数据图表：超出文章已放行事实的数字",
+    "论文腔图表：密密麻麻的数据表格、引用标注",
+    "短视频腔装饰：表情包、emoji、夸张箭头",
+    "AI生成痕迹：签名、水印、低分辨率图标"
+  ],
+  "consistency_rules": [
+    "所有6张图使用统一配色方案：深红=#C41E3A（中国）、蓝=#2E5B8A（美国）、金=#C9A84C（海湾）、深绿=#014D16（巴基斯坦国土/主体）、浅灰=#F5F5F5（背景）、深灰=#333333（文字）",
+    "所有6张图使用统一扁平风格：纯色块、简单几何形状、无渐变、无阴影、无3D效果",
+    "所有6张图中文标注为主，关键术语全中文覆盖",
+    "所有6张图保持麦肯锡/经济学教材PPT的克制专业感",
+    "图片宽高比统一为1536x1024（横版3:2），适配信息图横版阅读场景",
+    "封面图与图1-5在视觉上形成系列感：共用配色体系和风格语言"
+  ]
+}

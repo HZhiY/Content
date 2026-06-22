@@ -1,0 +1,44 @@
+{
+  "article_id": "01",
+  "style": "Flat explanatory illustration, infographic style, restrained color palette, Chinese annotations, PPT/PDF presentation illustration style. Clean geometric shapes, solid color blocks, no gradients, no shadows, no 3D effects. Color scheme: China = deep red (#C41E3A), USA = blue (#2E5B8A), Gulf = gold (#C9A84C), Pakistan = dark green (#014D16), background = light gray (#F5F5F5), text = dark gray (#333333). Simple flat icons, single-weight arrows, clean composition suitable for mobile reading.",
+  "images": [
+    {
+      "id": "fig04_five_tools",
+      "filename": "fig04_five_tools.png",
+      "position": "第六节'换生存易、换转型难'开头",
+      "function": "用5个图标并列展示巴基斯坦能换到的5类工具，下方分叉箭头标注'换到了什么'——现金/贷款/存款/合法性（够生存）vs.国内改革/产业升级（换不到）",
+      "description_cn": "简化版：5个灰色圆形图标在上排，下方双向箭头（一实一虚）",
+      "prompt": "Flat infographic illustration, very simple and clean corporate style. Top row: five evenly spaced gray circular icons with small labels underneath, each representing a tool. Bottom: two arrows diverging downward, one solid green labeled as survival achieved, one dashed gray labeled as transformation not achieved. Light background, minimal text, geometric shapes only, no human figures, no flags, no maps.",
+      "size": "1536x1024"
+    },
+    {
+      "id": "fig05_lock_in",
+      "filename": "fig05_lock_in.png",
+      "position": "第六节'双向锁定'段之后",
+      "function": "可视化'外部不敢停'与'国内不敢推'的双向锁定结构；中间连接'既得利益网络'；体现'兑换术能换生存但难换转型'的根本原因",
+      "description_cn": "简化版：H形对称布局，左外向箭头+三色点，右内向箭头+两灰点，中间横条连接",
+      "prompt": "Flat infographic illustration, symmetric H-shape layout. Left column: outward arrow with three small colored dots and short labels. Right column: inward arrow with two gray dots and short labels. Center: a simple horizontal bar connecting both columns. Clean corporate style, light background, minimal text, geometric shapes only.",
+      "size": "1536x1024"
+    }
+  ],
+  "negative_prompts": [
+    "阴谋论视觉：暗色背景、神秘剪影、阴影暗示",
+    "写实人物肖像：鲁比奥、阿西姆·穆尼尔等任何真实人物面孔",
+    "过度装饰：渐变、3D效果、阴影、纹理背景",
+    "写实地图：精确国界线、地形起伏、卫星图",
+    "情绪化表述：崩溃边缘、被救助的弱者、绝望等",
+    "扁平标签词汇：巴铁、战略支轴、缓冲国、失败国家",
+    "未核实数据图表：超出文章已放行事实的数字",
+    "论文腔图表：密密麻麻的数据表格、引用标注",
+    "短视频腔装饰：表情包、emoji、夸张箭头",
+    "AI生成痕迹：签名、水印、低分辨率图标"
+  ],
+  "consistency_rules": [
+    "所有6张图使用统一配色方案：深红=#C41E3A（中国）、蓝=#2E5B8A（美国）、金=#C9A84C（海湾）、深绿=#014D16（巴基斯坦国土/主体）、浅灰=#F5F5F5（背景）、深灰=#333333（文字）",
+    "所有6张图使用统一扁平风格：纯色块、简单几何形状、无渐变、无阴影、无3D效果",
+    "所有6张图中文标注为主，关键术语全中文覆盖",
+    "所有6张图保持麦肯锡/经济学教材PPT的克制专业感",
+    "图片宽高比统一为1536x1024（横版3:2），适配信息图横版阅读场景",
+    "封面图与图1-5在视觉上形成系列感：共用配色体系和风格语言"
+  ]
+}

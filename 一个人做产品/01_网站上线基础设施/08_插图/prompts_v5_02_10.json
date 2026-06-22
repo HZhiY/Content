@@ -1,0 +1,170 @@
+{
+  "article_id": "01_pack_v5",
+  "article_entry": "01_网站上线基础设施_v5（条目02-10）",
+  "series": "一个人做产品",
+  "theme_pack": "01_网站上线基础设施",
+  "based_on": "06_修订与发布/修订稿 v5.md",
+  "style": "Mini PPT / product documentation note card style for Xiaohongshu. Off-white or cream background, black body text, single accent color (blue primary, orange for arrows and example labels). Clean, restrained, not a marketing poster. Large readable Chinese text, few lines, mobile-friendly. Page number bottom-right on every card. No people portraits, no stickers, no training-course aesthetics.",
+  "negative_prompts_global": [
+    "marketing poster",
+    "training course banner",
+    "get rich quick",
+    "real person portrait",
+    "conspiracy aesthetic",
+    "browser UI screenshot",
+    "DNS configuration panel",
+    "stock photo server room",
+    "emoji stickers",
+    "watermark",
+    "infographic clutter"
+  ],
+  "images": [
+    {
+      "id": "card_02_07",
+      "filename": "card_02_07.png",
+      "position": "图文02 / 卡片7｜三种形态取舍（v5 锚点：对比取舍）",
+      "function": "对比取舍；mytool.com 实例从静态到动态的演化判断",
+      "description_cn": "对比卡。三种形态并列 + mytool.com 案例。页码 07/08。",
+      "prompt": "Vertical 3:4 comparison note card, off-white background, black text, orange labels. Three rows exactly: 「云服务器自由，但要自己扛运维。」 「共享主机省心，但配置锁死、跑不动大流量。」 「Serverless 免运维，但冷启动慢、调试复杂。」 Bottom small line: 「mytool.com 静态页用共享主机；登录+数据必须云服务器或 Serverless。」 Tiny 「示例」 near mytool.com. Page number 「07 / 08」 bottom-right."
+    },
+    {
+      "id": "card_02_08",
+      "filename": "card_02_08.png",
+      "position": "图文02 / 卡片8｜什么时候升级（v5 锚点：判断信号）",
+      "function": "升级信号 + 路径 + 第一版别上 ECS 主钉",
+      "description_cn": "判断信号卡。三信号 + 路径箭头 + 末句蓝色加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 decision-card note, white background, black text, blue bold on final line. Three signal bullets: 「CPU 长期偏高」 「月流量快超阈值」 「部署成了体力活」. Path: 「共享主机 → 轻量/云服务器 → ECS」. Final line in bold blue: 「第一版先别上 ECS——还没验证需求，钱白花。」 Page number 「08 / 08」."
+    },
+    {
+      "id": "card_03_07",
+      "filename": "card_03_07.png",
+      "position": "图文03 / 卡片7｜真实场景剖面（v5 锚点：用途决定代价）",
+      "function": "同一台机器两种备案剖面对比 + 母题句",
+      "description_cn": "剖面卡。两段对比 + 末句加粗。页码 07/08。",
+      "prompt": "Vertical 3:4 cross-section note card, cream background, black text, orange example labels. Two short paragraphs: 「同一 mytool.com、同台国内服务器——」 「产品官网备案：填主体+网站名+ICP 备案号。」 「小程序后端备案：还要填服务类目+接入方式，要 AppID。」 Final line in bold blue: 「同一台机器，备案要填的东西、驳回概率都不同——用途决定代价」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_03_08",
+      "filename": "card_03_08.png",
+      "position": "图文03 / 卡片8｜你会在哪里卡住（v5 锚点：三类驳回类型）",
+      "function": "三类驳回类型 + 解法方向",
+      "description_cn": "三类驳回清单 + 简短解法。页码 08/08。",
+      "prompt": "Vertical 3:4 pitfall list card, off-white background, black text. Three labeled rows exactly: 「① 主体信息与域名实名不一致」 「② 网站名称不合规」 「③ 服务器不在户籍地或常驻地」. One bottom line: 「解法：改信息、改名、换接入商或加居住证明——看驳回原因。」 Page number 「08 / 08」 bottom-right. Clean documentation note style."
+    },
+    {
+      "id": "card_04_07",
+      "filename": "card_04_07.png",
+      "position": "图文04 / 卡片7｜不装证书的真实代价（v5 锚点：https 拒绝）",
+      "function": "https 拒绝生态 + 母题句",
+      "description_cn": "拒绝生态卡。三段场景 + 末句加粗主钉。页码 07/08。",
+      "prompt": "Vertical 3:4 rejection ecosystem note, off-white background, black text, orange accent on scenario labels. Three bullets: 「浏览器标『不安全』→ 绝大多数用户会关掉」 「微信/公众号 H5/小程序 web-view → 不装直接打不开」 「支付场景 → 回调地址必须 https」. Final line in bold blue: 「不装证书 = 把大量用户挡在门外」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_04_08",
+      "filename": "card_04_08.png",
+      "position": "图文04 / 卡片8｜续期 / 配错会怎样（v5 锚点：常见事故）",
+      "function": "两类事故 + 90 天到期提醒",
+      "description_cn": "事故卡。两类事故 + 提醒句加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 accident-summary card, white background, black text. Two accident lines: 「① 证书过期没换：浏览器红屏；常常在凌晨收到报警」 「② 证书绑错域名：浏览器提示『不匹配』」. Final line in bold blue: 「云平台免费证书通常 90 天到期——日历提前 14 天提醒续期」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_05_07",
+      "filename": "card_05_07.png",
+      "position": "图文05 / 卡片7｜配错会怎样（v5 锚点：三类事故）",
+      "function": "三类 CDN 事故 + 末句加粗",
+      "description_cn": "事故清单卡。三类 + 提醒句。页码 07/08。",
+      "prompt": "Vertical 3:4 CDN-incident card, off-white background, black text, orange labels. Three bullets: 「① 缓存策略配错：更新了文案，用户看到旧版本」 「② 动态接口被缓存：用户看到别人的数据」 「③ 源站 IP 暴露：CDN 没开回源鉴权，被绕过直打源站」. Final line in bold blue: 「首次接入 CDN 一定要在测试域名上跑一遍」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_05_08",
+      "filename": "card_05_08.png",
+      "position": "图文05 / 卡片8｜什么时候需要 CDN（v5 锚点：判断信号）",
+      "function": "不急着接 / 需要接 两组信号 + 主钉",
+      "description_cn": "判断信号卡。两组信号并列 + 末句加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 decision-card note, white background, black text. Two sections: 「不急着接：日活<100 / 几乎全是动态内容 / 还没做 HTTPS」 「需要接：月流量超约 100 GB / 源站 CPU 常被打满 / 国内多地域慢」. Final line in bold blue: 「起步阶段不上 CDN——CDN 是放大器，不是补药」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_06_07",
+      "filename": "card_06_07.png",
+      "position": "图文06 / 卡片7｜境外服务器的真实剖面（v5 锚点：边界）",
+      "function": "境外服务器边界提示（不展开跨境支付细节）",
+      "description_cn": "边界卡。三段机制（保守写法）。页码 07/08。",
+      "prompt": "Vertical 3:4 boundary-card note, cream background, black text. Three short paragraphs exactly: 「访问体验：国内用户访问境外服务器，延迟通常较高」 「合规要求：域名仍要实名；具体合规场景以服务商页面为准」 「支付方式：境外信用卡+Stripe 通用；境内支付方式各有适用条件」. Page number 「07 / 08」. No marketing tone, no urgency. Restrained documentation style."
+    },
+    {
+      "id": "card_06_08",
+      "filename": "card_06_08.png",
+      "position": "图文06 / 卡片8｜错位的具体成本（v5 锚点：以周计）",
+      "function": "三类错位成本 + 母题句",
+      "description_cn": "错位成本卡。三类 + 母题句加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 cost-card note, off-white background, black text. Three labeled rows: 「错位一：先备案后买域名 → 信息对不上 → 重提交几周」 「错位二：服务器地域选错 → 想迁回大陆 → 重备数周」 「错位三：解析类型配错 → 站点时通时不通 → 排查数小时」. Final line in bold blue: 「上线地图的错位成本以周计，不以小时计——顺序先对再动手」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_07_07",
+      "filename": "card_07_07.png",
+      "position": "图文07 / 卡片7｜不备案的真实链路（v5 锚点：倒计时）",
+      "function": "倒计时链路 + 主钉",
+      "description_cn": "倒计时卡。三步 + 母题句加粗。页码 07/08。",
+      "prompt": "Vertical 3:4 countdown-card note, white background, black text, orange labels for time. Three rows: 「接入商检测到未备案 → 短信+站内信提醒」 「几天后仍未备案 → HTTP 端口被屏蔽」 「更久后 → 域名被列入黑名单 → 其他接入商也不能用」. Final line in bold blue: 「『暂时不备』不是免费午餐——是倒计时」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_07_08",
+      "filename": "card_07_08.png",
+      "position": "图文07 / 卡片8｜常见的『以为不用备』（v5 锚点：误解清单）",
+      "function": "三条核心误解清单",
+      "description_cn": "误解卡。三条误解并列。页码 08/08。",
+      "prompt": "Vertical 3:4 misconception card, off-white background, black text. Three labeled rows: 「①『只是个人项目，没流量』→ 没用，照样关」 「②『不放内容，只放 API』→ 后端 API 解析到大陆 IP 也要备」 「③『用对象存储放静态文件』→ 只要走 CDN 大陆节点，还是要备」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_08_07",
+      "filename": "card_08_07.png",
+      "position": "图文08 / 卡片7｜等待地图（v5 锚点：等是瓶颈）",
+      "function": "等待地图：动手 vs 等审核 + 主钉",
+      "description_cn": "等待地图卡。三段对比 + 母题句加粗。页码 07/08。",
+      "prompt": "Vertical 3:4 waiting-map note, cream background, black text, blue+orange accents for time. Three rows exactly: 「注册+实名：动手 10 分钟，等审核 1–3 个工作日」 「买服务器+备案：动手 30 分钟，等审核 1–20 个工作日」 「解析+上传+测试：动手 1 小时左右」. Final line in bold blue: 「上线动作的瓶颈在『等』，不在『做』」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_08_08",
+      "filename": "card_08_08.png",
+      "position": "图文08 / 卡片8｜排期模板（v5 锚点：保守排期）",
+      "function": "排期模板：动手 vs 等 + 总耗时",
+      "description_cn": "排期卡。三段 + 总耗时加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 schedule-card note, white background, black text. Two rows: 「动手环节加起来不到 2 天」 「等审核环节加起来通常 2 周左右」. Final line in bold blue: 「总耗时：约 2 周，保守排 3 周、激进排 1 周」. Last line in regular: 「新项目排期主要不是写代码，是这套流程」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_09_07",
+      "filename": "card_09_07.png",
+      "position": "图文09 / 卡片7｜什么时候必须升级（v5 锚点：升级信号）",
+      "function": "三条升级信号 + 主钉",
+      "description_cn": "升级信号卡。三条 + 母题句加粗。页码 07/08。",
+      "prompt": "Vertical 3:4 upgrade-signal card, off-white background, black text. Three short bullets: 「① 需要登录注册」 「② 需要表单提交」 「③ 想看访问数据」. Final line in bold blue: 「验证需求阶段别急着升级——先用静态页测流量」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_09_08",
+      "filename": "card_09_08.png",
+      "position": "图文09 / 卡片8｜个人项目避坑（v5 锚点：常见坑）",
+      "function": "三条避坑（删坑一 + 改坑三）",
+      "description_cn": "避坑卡。三条简化（无技术栈选择）。页码 08/08。",
+      "prompt": "Vertical 3:4 pitfall card, cream background, black text. Three labeled rows: 「① 以为静态站不用备案——服务器在大陆仍要备案」 「② 在静态站里硬塞动态逻辑——不如接 Serverless 或单独后端」 「③ 把支付/登录硬塞进静态站——反模式，把简单的事变复杂」. Page number 「08 / 08」."
+    },
+    {
+      "id": "card_10_07",
+      "filename": "card_10_07.png",
+      "position": "图文10 / 卡片7｜什么时候换型（v5 锚点：换型信号）",
+      "function": "三条换型信号 + 主钉",
+      "description_cn": "换型信号卡。三条 + 母题句加粗。页码 07/08。",
+      "prompt": "Vertical 3:4 upgrade-signal card, off-white background, black text. Three short bullets: 「① CPU 长期 > 60%」 「② 月流量超出套餐约 1.5 倍」 「③ 需要的功能（GPU、独立数据库）套餐里没有」. Final line in bold blue: 「不要等到崩了才换——看到信号就提前 1–2 周规划」. Page number 「07 / 08」."
+    },
+    {
+      "id": "card_10_08",
+      "filename": "card_10_08.png",
+      "position": "图文10 / 卡片8｜轻量 vs ECS 真实差距（v5 锚点：差异点）",
+      "function": "四维度差异 + 主钉",
+      "description_cn": "差异卡。四维度 + 母题句加粗。页码 08/08。",
+      "prompt": "Vertical 3:4 comparison card, cream background, black text. Four short rows: 「价：轻量便宜，ECS 同配置偏贵」 「性能：轻量 CPU 共享，ECS 可选独享」 「自由度：ECS 可改内核参数，轻量锁死」 「运维：轻量自带镜像+一键；ECS 要自己搭」. Final line in bold blue: 「起步选轻量没错，但心里要知道它的天花板」. Page number 「08 / 08」."
+    }
+  ],
+  "cover_image_count_per_entry": 1,
+  "deepening_card_count_per_entry": 2,
+  "notes": "v5 prompts reflect 修订稿 v5.md content. C4 压字落地后，单条字数 406–631；图 7/图 8 单卡 80–109 字（多数 ≤ 90）。条目 02/04/05/06/08/09/10 共 18 张深化卡，提示词已与 v5 正文同步。生成时间：v5 修订落地后。"
+}
