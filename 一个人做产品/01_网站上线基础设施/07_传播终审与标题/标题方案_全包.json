@@ -1,0 +1,65 @@
+{
+  "theme_pack": "01_网站上线基础设施",
+  "entries": {
+    "01": {
+      "work_title": "域名到底是什么？",
+      "note_title": "买了域名，为什么还打不开？",
+      "cover_line1": "域名到底是什么？",
+      "cover_line2": "买了域名，为什么还打不开？"
+    },
+    "02": {
+      "work_title": "服务器到底是什么？",
+      "note_title": "有了域名，网页文件放哪儿？",
+      "cover_line1": "服务器到底是什么？",
+      "cover_line2": "有了域名，网页文件放哪儿？"
+    },
+    "03": {
+      "work_title": "备案到底是什么？",
+      "note_title": "买了域名，为什么还要备案？",
+      "cover_line1": "备案到底是什么？",
+      "cover_line2": "买了域名，为什么还要备案？"
+    },
+    "04": {
+      "work_title": "SSL 证书到底是什么？",
+      "note_title": "网站上线了，为什么还不安全？",
+      "cover_line1": "SSL 证书到底是什么？",
+      "cover_line2": "网站为什么显示「不安全」？"
+    },
+    "05": {
+      "work_title": "CDN 到底是什么？",
+      "note_title": "网站上线了，还要上 CDN 吗？",
+      "cover_line1": "CDN 到底是什么？",
+      "cover_line2": "已经上线了，还要 CDN 吗？"
+    },
+    "06": {
+      "work_title": "域名、服务器、备案是什么关系？",
+      "note_title": "域名、服务器、备案是什么关系？",
+      "cover_line1": "域名、服务器、备案",
+      "cover_line2": "到底是什么关系？"
+    },
+    "07": {
+      "work_title": "为什么国内服务器通常要备案？",
+      "note_title": "为什么国内服务器要备案？",
+      "cover_line1": "为什么国内服务器",
+      "cover_line2": "通常要备案？"
+    },
+    "08": {
+      "work_title": "一个网页上线要经过哪几步？",
+      "note_title": "一个网页上线要经过哪几步？",
+      "cover_line1": "一个网页上线",
+      "cover_line2": "要经过哪几步？"
+    },
+    "09": {
+      "work_title": "静态网站适合什么项目？",
+      "note_title": "静态网站适合什么项目？",
+      "cover_line1": "静态网站适合",
+      "cover_line2": "什么项目？"
+    },
+    "10": {
+      "work_title": "轻量服务器适合什么项目？",
+      "note_title": "轻量服务器适合什么项目？",
+      "cover_line1": "轻量服务器适合",
+      "cover_line2": "什么项目？"
+    }
+  }
+}

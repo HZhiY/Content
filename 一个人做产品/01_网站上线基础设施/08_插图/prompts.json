@@ -1,6 +1,6 @@
 {
-  "article_id": "01",
-  "article_entry": "图文01_域名到底是什么",
+  "article_id": "01-10",
+  "article_entry": "网站上线基础设施全包",
   "series": "一个人做产品",
   "theme_pack": "01_网站上线基础设施",
   "style": "Mini PPT / product documentation note card style for Xiaohongshu. Off-white or cream background, black body text, single accent color (blue primary, orange for arrows and example labels). Clean, restrained, not a marketing poster. Large readable Chinese text, few lines, mobile-friendly. Page number bottom-right on every card. No people portraits, no stickers, no training-course aesthetics.",
@@ -8,73 +8,577 @@
     {
       "id": "card_01_01",
       "filename": "card_01_01.png",
-      "position": "图文01 / 卡片1｜封面",
-      "function": "双问句停驻；建立条目01入口",
-      "description_cn": "竖版笔记封面卡。白底黑字，两行大问句居中偏上，「域名到底是什么？」用蓝色强调。右下角页码 01/06。无人物无广告素材。",
-      "prompt": "Vertical 3:4 note card, off-white background, minimalist product-doc aesthetic, NOT a marketing poster. Large bold Chinese text exactly: 「域名到底是什么？」 on first line in blue accent, second line 「买了域名，为什么还打不开？」 in black. Generous whitespace, clean sans-serif typography, small page number 「01 / 06」 bottom-right corner. No photos, no illustrations, no stickers.",
+      "position": "图文01 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "域名到底是什么？ / 买了域名，为什么还打不开？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「域名到底是什么？」 on first line in blue accent, second line 「买了域名，为什么还打不开？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
       "id": "card_01_02",
       "filename": "card_01_02.png",
-      "position": "图文01 / 卡片2｜破误解",
-      "function": "打破「买了域名就有网站」误解",
-      "description_cn": "笔记卡。顶部小标签「破误解」。正文短段；mytool.com 橙色高亮并旁注小字「示例」。页码 02/06。",
-      "prompt": "Vertical 3:4 note card, cream background, black text, blue and orange accent. Small label 「破误解」 top-left. Chinese body text exactly: 「很多人以为买了域名就有了网站。」 newline 「比如你花年费注册 mytool.com，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。」 Highlight mytool.com in orange with tiny label 「示例」 beside it. Clean note layout, max 5 lines, page number 「02 / 06」 bottom-right. No browser screenshot, no stock photos.",
+      "position": "图文01 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人以为买了域名就有了网站。\n比如你花年费注册 `mytool.com`，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为买了域名就有了网站。 newline 比如你花年费注册 `mytool.com`，浏览器却提示无法访问——域名只是名字，网页文件还在服务器上。. Page number 「02 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
       "id": "card_01_03",
       "filename": "card_01_03.png",
-      "position": "图文01 / 卡片3｜寻址名定义",
-      "function": "定义寻址名；DNS 翻译 IP 机制钉",
-      "description_cn": "概念笔记卡。标题区强调「寻址名」。mytool.com 与 203.0.113.10 均标「示例」。可用细箭头示意思路。页码 03/06。",
-      "prompt": "Vertical 3:4 concept note card, white background, black text, blue title accent. Chinese text exactly: 「拿 mytool.com 举例：它是给人记的寻址名，不是网站本身。」 newline 「DNS 负责把它翻译成 IP（示例：203.0.113.10），浏览器才能找到那台机器。」 Show mytool.com and 203.0.113.10 with small 「示例」 labels, 203.0.113.10 in monospace. Optional minimal thin-arrow hint domain→DNS→IP. Page number 「03 / 06」. Product documentation style, not infographic clutter.",
+      "position": "图文01 / 图 3｜寻址名定义",
+      "function": "图 3｜寻址名定义",
+      "description_cn": "拿 `mytool.com` 举例：它是给人记的寻址名，不是网站本身。\nDNS 负责把它翻译成 IP（示例：`203.0.113.10`），浏览器才能找到那台机器。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 拿 `mytool.com` 举例：它是给人记的寻址名，不是网站本身。 newline DNS 负责把它翻译成 IP（示例：`203.0.113.10`），浏览器才能找到那台机器。. Page number 「03 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
       "id": "card_01_04",
       "filename": "card_01_04.png",
-      "position": "图文01 / 卡片4｜三句话分工",
-      "function": "可截图收藏的 IP/域名/DNS 分工卡",
-      "description_cn": "三行清单卡。顶行引入句；三行分工用圆点/短横线排列；关键词分色。页码 04/06。",
-      "prompt": "Vertical 3:4 checklist note card, off-white background, screenshot-friendly layout. Chinese text exactly: 「还是 mytool.com 这一条链：」 then three bullet lines: 「203.0.113.10 → 给机器看的数字地址」 「mytool.com → 给人记的名字」 「DNS → 把名字翻译成 IP」. Use orange bullet dots, blue highlight on IP and DNS keywords. Equal spacing, large readable font, page number 「04 / 06」 bottom-right. Minimal line dividers, no decorative icons.",
+      "position": "图文01 / 图 4｜三句话分工",
+      "function": "图 4｜三句话分工",
+      "description_cn": "还是 `mytool.com` 这一条链：\n`203.0.113.10` → 给机器看的数字地址\n`mytool.com` → 给人记的名字\nDNS → 把名字翻译成 IP",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 还是 `mytool.com` 这一条链： newline `203.0.113.10` → 给机器看的数字地址 newline `mytool.com` → 给人记的名字 newline DNS → 把名字翻译成 IP. Page number 「04 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
       "id": "card_01_05",
       "filename": "card_01_05.png",
-      "position": "图文01 / 卡片5｜访问链路",
-      "function": "箭头流程图解释访问链与「光有域名不够」",
-      "description_cn": "唯一流程图卡。四步箭头链 + 下方两句收束。示例域名/IP 标注。页码 05/06。",
-      "prompt": "Vertical 3:4 flowchart note card, white background, black text, blue arrows, orange example labels. Top section: vertical arrow flow with Chinese steps exactly: 「浏览器输入 mytool.com」 → 「DNS 查到 203.0.113.10」 → 「连上那台服务器 → 返回网页」. Label mytool.com and 203.0.113.10 as 「示例」. Bottom section separated by thin line, two lines exactly: 「光有域名不够，还要解析指向服务器，服务器上也要有页面」. Clean arrow diagram for mobile reading, page number 「05 / 06」. No server rack photos, no config screenshots.",
+      "position": "图文01 / 图 5｜访问链路",
+      "function": "图 5｜访问链路",
+      "description_cn": "浏览器输入 `mytool.com`\n→ DNS 查到 `203.0.113.10`\n→ 连上那台服务器 → 返回网页\n光有域名不够，还要解析指向服务器，服务器上也要有页面",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 浏览器输入 `mytool.com` newline → DNS 查到 `203.0.113.10` newline → 连上那台服务器 → 返回网页 newline 光有域名不够，还要解析指向服务器，服务器上也要有页面. Page number 「05 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
       "id": "card_01_06",
       "filename": "card_01_06.png",
-      "position": "图文01 / 卡片6｜收束",
-      "function": "收束判断 + 国内实名边界 + 系列地图第一格",
-      "description_cn": "收束笔记卡。三行短段；末句蓝色强调；mytool.com 标示例。页码 06/08。",
-      "prompt": "Vertical 3:4 closing note card, cream background, black text, blue accent on final line. Chinese text exactly: 「mytool.com 在国内还要单独实名，和腾讯云账号实名不是一回事。」 newline 「域名帮别人找到你，不替你放网页内容。」 newline 「搞清这一步，才算摸上线地图第一格。」 in blue. Small 「示例」 near mytool.com. Three short paragraphs, generous spacing, page number 「06 / 08」 bottom-right. Restrained developer-note aesthetic.",
+      "position": "图文01 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "`mytool.com` 在国内还要单独实名，和腾讯云账号实名不是一回事。\n域名帮别人找到你，不替你放网页内容。\n搞清这一步，才算摸上线地图第一格。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: `mytool.com` 在国内还要单独实名，和腾讯云账号实名不是一回事。 newline 域名帮别人找到你，不替你放网页内容。 newline 搞清这一步，才算摸上线地图第一格。. Page number 「06 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
-      "id": "card_01_07",
-      "filename": "card_01_07.png",
-      "position": "图文01 / 卡片7｜常见踩坑（v5 新增）",
-      "function": "v5 同步 8 卡 → 锚点：实名差异。强调「域名实名 ≠ 账号实名 ≠ 备案主体」",
-      "description_cn": "踩坑笔记卡。三类实名并列 + 末句蓝色加粗主钉。页码 07/08。",
-      "prompt": "Vertical 3:4 pitfall note card, off-white background, black text, blue bold on the final line. Chinese text exactly: 「买了域名没实名 → 注册商提示『不可解析』。」 newline 「实名信息填错 → 修改要重新走审核，等几天。」 newline 「mytool.com 用个人身份证实名，公司主体备案就过不了。」 Final line in bold blue: 「域名实名 ≠ 账号实名 ≠ 备案主体——三个是两件事。」 Three short bullet-style paragraphs with orange tiny labels, page number 「07 / 08」 bottom-right. Product documentation note style.",
+      "id": "card_02_01",
+      "filename": "card_02_01.png",
+      "position": "图文02 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "服务器到底是什么？ / 有了域名，网页文件放哪儿？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「服务器到底是什么？」 on first line in blue accent, second line 「有了域名，网页文件放哪儿？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
       "aspect_ratio": "3:4"
     },
     {
-      "id": "card_01_08",
-      "filename": "card_01_08.png",
-      "position": "图文01 / 卡片8｜DNS 怎么解析（v5 新增）",
-      "function": "v5 同步 8 卡 → 锚点：解析配置。流程 + 主钉「域名 + 解析 + 服务器 = 三件事齐了」",
-      "description_cn": "解析配置卡。流程段 + 末句蓝色加粗主钉。页码 08/08。",
-      "prompt": "Vertical 3:4 DNS-config note card, white background, black text, blue arrows, orange example labels. Chinese text exactly: 「解析 = 让域名指向哪台服务器。」 newline 「云平台添加 A 记录：mytool.com → 203.0.113.10。」 newline 「改完通常几分钟内全球生效（DNS 缓存）。」 Final line in bold blue: 「域名 + 解析 + 服务器 = 三件事齐了，浏览器才找得到你。」 Show mytool.com and 203.0.113.10 as 「示例」. Clean arrow hint between them. Page number 「08 / 08」 bottom-right.",
+      "id": "card_02_02",
+      "filename": "card_02_02.png",
+      "position": "图文02 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人把服务器当成域名，或当成网盘。\n`mytool.com` 只是寻址名；真正存放 HTML、图片、接口程序的，是 IP 为 `203.0.113.10`（示例）的那台机器。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人把服务器当成域名，或当成网盘。 newline `mytool.com` 只是寻址名；真正存放 HTML、图片、接口程序的，是 IP 为 `203.0.113.10`（示例）的那台机器。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_03",
+      "filename": "card_02_03.png",
+      "position": "图文02 / 图 3｜一句话解释",
+      "function": "图 3｜一句话解释",
+      "description_cn": "服务器是互联网上持续运行、能对外提供网页或接口的计算机环境。\n云厂商的「轻量服务器」「云服务器」，本质是远程租一台机器，让你的产品能 24 小时在线响应访问。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 服务器是互联网上持续运行、能对外提供网页或接口的计算机环境。 newline 云厂商的「轻量服务器」「云服务器」，本质是远程租一台机器，让你的产品能 24 小时在线响应访问。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_04",
+      "filename": "card_02_04.png",
+      "position": "图文02 / 图 4｜它解决什么",
+      "function": "图 4｜它解决什么",
+      "description_cn": "服务器解决「内容存在哪、谁来响应请求」。\n浏览器连到 `203.0.113.10` 后，这台机器才返回 `mytool.com` 对应的页面或数据。\n没有服务器，域名再漂亮也找不到东西。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 服务器解决「内容存在哪、谁来响应请求」。 newline 浏览器连到 `203.0.113.10` 后，这台机器才返回 `mytool.com` 对应的页面或数据。 newline 没有服务器，域名再漂亮也找不到东西。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_05",
+      "filename": "card_02_05.png",
+      "position": "图文02 / 图 5｜个人开发者要记住",
+      "function": "图 5｜个人开发者要记住",
+      "description_cn": "代码在本机能跑通之后，就要想：别人怎么访问。\n做第一款小产品时，通常得买或租服务器，把页面部署上去。\n服务器和域名是两件独立的事，先有机房再放货。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 代码在本机能跑通之后，就要想：别人怎么访问。 newline 做第一款小产品时，通常得买或租服务器，把页面部署上去。 newline 服务器和域名是两件独立的事，先有机房再放货。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_06",
+      "filename": "card_02_06.png",
+      "position": "图文02 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "记住分工：`mytool.com` 负责指路，`203.0.113.10` 负责开门迎客。\n服务器不是 DNS，也不是备案。\n搞清服务器，是上线地图第二格。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 记住分工：`mytool.com` 负责指路，`203.0.113.10` 负责开门迎客。 newline 服务器不是 DNS，也不是备案。 newline 搞清服务器，是上线地图第二格。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_01",
+      "filename": "card_03_01.png",
+      "position": "图文03 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "备案到底是什么？ / 买了域名，为什么还要备案？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「备案到底是什么？」 on first line in blue accent, second line 「买了域名，为什么还要备案？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_02",
+      "filename": "card_03_02.png",
+      "position": "图文03 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人把备案当成买域名，或当成「给网站加密」。\n备案全称 ICP 备案，是在国内服务器上线前的行政登记——和域名注册、SSL 证书是三件不同的事。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人把备案当成买域名，或当成「给网站加密」。 newline 备案全称 ICP 备案，是在国内服务器上线前的行政登记——和域名注册、SSL 证书是三件不同的事。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_03",
+      "filename": "card_03_03.png",
+      "position": "图文03 / 图 3｜一句话解释",
+      "function": "图 3｜一句话解释",
+      "description_cn": "备案解决「这台内地服务器能不能合法对外提供信息服务」。\n你把 `mytool.com` 解析到中国大陆的服务器 IP，通常就要在接入商平台提交 ICP 备案。\n它是合规流程，不是写代码的步骤。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案解决「这台内地服务器能不能合法对外提供信息服务」。 newline 你把 `mytool.com` 解析到中国大陆的服务器 IP，通常就要在接入商平台提交 ICP 备案。 newline 它是合规流程，不是写代码的步骤。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_04",
+      "filename": "card_03_04.png",
+      "position": "图文03 / 图 4｜它解决什么",
+      "function": "图 4｜它解决什么",
+      "description_cn": "备案让监管部门和接入商能核验：谁在用哪台服务器、提供什么服务。\n个人备案时，域名实名信息须和备案主体一致。\n备案通过后，内地服务器才可持续对外提供服务。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案让监管部门和接入商能核验：谁在用哪台服务器、提供什么服务。 newline 个人备案时，域名实名信息须和备案主体一致。 newline 备案通过后，内地服务器才可持续对外提供服务。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_05",
+      "filename": "card_03_05.png",
+      "position": "图文03 / 图 5｜个人开发者要记住",
+      "function": "图 5｜个人开发者要记住",
+      "description_cn": "备案和买域名是两件事，先后遇到，不是一次办完。\n备案前通常须先有已实名的域名；刚实名完立刻提交，常见建议等约 3 天再备。\n管局审核通常约数个工作日到约三周，以平台进度为准。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案和买域名是两件事，先后遇到，不是一次办完。 newline 备案前通常须先有已实名的域名；刚实名完立刻提交，常见建议等约 3 天再备。 newline 管局审核通常约数个工作日到约三周，以平台进度为准。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_06",
+      "filename": "card_03_06.png",
+      "position": "图文03 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "备案不是技术门槛，是内地服务器的合规前置。\n关键看服务器在哪里，不是看 `mytool.com` 后缀是不是 .com。\n搞清备案，是上线地图里独立的一格。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案不是技术门槛，是内地服务器的合规前置。 newline 关键看服务器在哪里，不是看 `mytool.com` 后缀是不是 .com。 newline 搞清备案，是上线地图里独立的一格。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_01",
+      "filename": "card_04_01.png",
+      "position": "图文04 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "SSL 证书到底是什么？ / 网站为什么显示「不安全」？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「SSL 证书到底是什么？」 on first line in blue accent, second line 「网站为什么显示「不安全」？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_02",
+      "filename": "card_04_02.png",
+      "position": "图文04 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人把 SSL 当成备案，或当成域名自带的功能。\nSSL 证书只管浏览器和服务器之间的加密传输——和域名注册、ICP 备案、服务器选购各管一段。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人把 SSL 当成备案，或当成域名自带的功能。 newline SSL 证书只管浏览器和服务器之间的加密传输——和域名注册、ICP 备案、服务器选购各管一段。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_03",
+      "filename": "card_04_03.png",
+      "position": "图文04 / 图 3｜一句话解释",
+      "function": "图 3｜一句话解释",
+      "description_cn": "SSL 证书是一份数字凭证，让 `mytool.com` 能用 HTTPS 访问。\n浏览器地址栏的小锁，表示你和 `203.0.113.10`（示例）之间的数据被加密，不易被中途窃听或篡改。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: SSL 证书是一份数字凭证，让 `mytool.com` 能用 HTTPS 访问。 newline 浏览器地址栏的小锁，表示你和 `203.0.113.10`（示例）之间的数据被加密，不易被中途窃听或篡改。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_04",
+      "filename": "card_04_04.png",
+      "position": "图文04 / 图 4｜它解决什么",
+      "function": "图 4｜它解决什么",
+      "description_cn": "SSL 解决「传输路上安不安全、访客敢不敢输入信息」。\n没有证书，浏览器可能标「不安全」，用户填邮箱或密码时会犹豫。\n它不负责放网页，也不替代备案。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: SSL 解决「传输路上安不安全、访客敢不敢输入信息」。 newline 没有证书，浏览器可能标「不安全」，用户填邮箱或密码时会犹豫。 newline 它不负责放网页，也不替代备案。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_05",
+      "filename": "card_04_05.png",
+      "position": "图文04 / 图 5｜个人开发者要记住",
+      "function": "图 5｜个人开发者要记住",
+      "description_cn": "第一款产品上线时，HTTPS 几乎是标配——哪怕只是落地页。\n云厂商和 Let's Encrypt 等渠道可申请免费或低价证书，但「申请」和「装到服务器」是两步。\n证书有有效期，到期前要记得续。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一款产品上线时，HTTPS 几乎是标配——哪怕只是落地页。 newline 云厂商和 Let's Encrypt 等渠道可申请免费或低价证书，但「申请」和「装到服务器」是两步。 newline 证书有有效期，到期前要记得续。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_06",
+      "filename": "card_04_06.png",
+      "position": "图文04 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "分工记一句：域名指路，服务器放内容，SSL 护住传输路。\n`https://mytool.com` 能打开小锁，不代表已备案、也不代表已部署好页面。\n搞清 SSL，是上线地图里安全那一格。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 分工记一句：域名指路，服务器放内容，SSL 护住传输路。 newline `https://mytool.com` 能打开小锁，不代表已备案、也不代表已部署好页面。 newline 搞清 SSL，是上线地图里安全那一格。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_01",
+      "filename": "card_05_01.png",
+      "position": "图文05 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "CDN 到底是什么？ / 已经上线了，还要 CDN 吗？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「CDN 到底是什么？」 on first line in blue accent, second line 「已经上线了，还要 CDN 吗？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_02",
+      "filename": "card_05_02.png",
+      "position": "图文05 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人把 CDN 当成服务器，或当成「再买一个域名」。\nCDN 是内容分发网络——在你原有服务器（源站）前面加一层缓存加速，不是替代 `203.0.113.10` 那台机器。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人把 CDN 当成服务器，或当成「再买一个域名」。 newline CDN 是内容分发网络——在你原有服务器（源站）前面加一层缓存加速，不是替代 `203.0.113.10` 那台机器。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_03",
+      "filename": "card_05_03.png",
+      "position": "图文05 / 图 3｜一句话解释",
+      "function": "图 3｜一句话解释",
+      "description_cn": "CDN 在全国或全球部署边缘节点，把 `mytool.com` 的静态文件（图片、CSS、JS）复制一份放在离访客更近的地方。\n用户访问时，往往从最近的节点取文件，不用每次都跨城连源站。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: CDN 在全国或全球部署边缘节点，把 `mytool.com` 的静态文件（图片、CSS、JS）复制一份放在离访客更近的地方。 newline 用户访问时，往往从最近的节点取文件，不用每次都跨城连源站。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_04",
+      "filename": "card_05_04.png",
+      "position": "图文05 / 图 4｜它解决什么",
+      "function": "图 4｜它解决什么",
+      "description_cn": "CDN 解决「访客离服务器太远、打开慢」。\n源站仍是 `203.0.113.10`，CDN 只缓存可缓存的静态资源。\n动态接口、数据库读写仍回源站处理。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: CDN 解决「访客离服务器太远、打开慢」。 newline 源站仍是 `203.0.113.10`，CDN 只缓存可缓存的静态资源。 newline 动态接口、数据库读写仍回源站处理。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_05",
+      "filename": "card_05_05.png",
+      "position": "图文05 / 图 5｜个人开发者要记住",
+      "function": "图 5｜个人开发者要记住",
+      "description_cn": "第一款小产品、访客不多时，CDN 通常不是第一天必选项。\n页面变慢、图片变大、用户分布变广后再考虑，性价比更高。\n上了 CDN，`mytool.com` 解析到的 IP 可能变成 CDN 节点，属正常现象。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一款小产品、访客不多时，CDN 通常不是第一天必选项。 newline 页面变慢、图片变大、用户分布变广后再考虑，性价比更高。 newline 上了 CDN，`mytool.com` 解析到的 IP 可能变成 CDN 节点，属正常现象。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_06",
+      "filename": "card_05_06.png",
+      "position": "图文05 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "CDN 是加速器，不是主机。\n记住：源站在 `203.0.113.10`，CDN 在路途上帮一把。\n搞清 CDN，是上线地图里「可选优化」那一格。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: CDN 是加速器，不是主机。 newline 记住：源站在 `203.0.113.10`，CDN 在路途上帮一把。 newline 搞清 CDN，是上线地图里「可选优化」那一格。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_01",
+      "filename": "card_06_01.png",
+      "position": "图文06 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "域名、服务器、备案 / 到底是什么关系？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「域名、服务器、备案」 on first line in blue accent, second line 「到底是什么关系？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_02",
+      "filename": "card_06_02.png",
+      "position": "图文06 / 图 2｜一句话对照",
+      "function": "图 2｜一句话对照",
+      "description_cn": "拿 `mytool.com` 串起来：\n域名 → 别人怎么找到你\n服务器（`203.0.113.10` 示例）→ 内容放哪、谁来响应\n备案 → 内地服务器能不能合法对外服务",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 拿 `mytool.com` 串起来： newline 域名 → 别人怎么找到你 newline 服务器（`203.0.113.10` 示例）→ 内容放哪、谁来响应 newline 备案 → 内地服务器能不能合法对外服务. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_03",
+      "filename": "card_06_03.png",
+      "position": "图文06 / 图 3｜域名这一环",
+      "function": "图 3｜域名这一环",
+      "description_cn": "你先注册 `mytool.com`，完成实名。\n它是名字，不是网站，也不等于已备案。\n还要 DNS 解析，把名字指到服务器 IP。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 你先注册 `mytool.com`，完成实名。 newline 它是名字，不是网站，也不等于已备案。 newline 还要 DNS 解析，把名字指到服务器 IP。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_04",
+      "filename": "card_06_04.png",
+      "position": "图文06 / 图 4｜服务器这一环",
+      "function": "图 4｜服务器这一环",
+      "description_cn": "再买或租服务器，把页面部署到 `203.0.113.10`（示例）。\n服务器在境外，域名可以解析过去，合规场景不同。\n服务器在内地，通常进入备案这一环。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 再买或租服务器，把页面部署到 `203.0.113.10`（示例）。 newline 服务器在境外，域名可以解析过去，合规场景不同。 newline 服务器在内地，通常进入备案这一环。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_05",
+      "filename": "card_06_05.png",
+      "position": "图文06 / 图 5｜备案这一环",
+      "function": "图 5｜备案这一环",
+      "description_cn": "备案不跟着域名走，跟着「内地服务器 + 对外服务」走。\n须用已实名且信息一致的 `mytool.com` 提交。\n通过后，内地 IP 才能持续对外提供访问。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案不跟着域名走，跟着「内地服务器 + 对外服务」走。 newline 须用已实名且信息一致的 `mytool.com` 提交。 newline 通过后，内地 IP 才能持续对外提供访问。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_06",
+      "filename": "card_06_06.png",
+      "position": "图文06 / 图 6｜串成一条线",
+      "function": "图 6｜串成一条线",
+      "description_cn": "典型内地路径：\n买域名 → 实名 → 买内地服务器 → 部署 → 备案 → 解析指向 `203.0.113.10` → 访客输入 `mytool.com` 能打开\n任一步缺了，都可能卡住。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 典型内地路径： newline 买域名 → 实名 → 买内地服务器 → 部署 → 备案 → 解析指向 `203.0.113.10` → 访客输入 `mytool.com` 能打开 newline 任一步缺了，都可能卡住。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_07",
+      "filename": "card_06_07.png",
+      "position": "图文06 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "三者不是一件事，但上线时会先后遇到。\n域名找路，服务器待客，备案给内地服务器发「通行证」。\n搞清关系，比死记名词更有用。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 三者不是一件事，但上线时会先后遇到。 newline 域名找路，服务器待客，备案给内地服务器发「通行证」。 newline 搞清关系，比死记名词更有用。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_01",
+      "filename": "card_07_01.png",
+      "position": "图文07 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "为什么国内服务器 / 通常要备案？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「为什么国内服务器」 on first line in blue accent, second line 「通常要备案？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_02",
+      "filename": "card_07_02.png",
+      "position": "图文07 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人以为「买了 .com 就不用备」，或以为「小网站没人管」。\n备案看的是 `mytool.com` 是否解析到中国大陆服务器，与后缀、访问量无必然对应。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为「买了 .com 就不用备」，或以为「小网站没人管」。 newline 备案看的是 `mytool.com` 是否解析到中国大陆服务器，与后缀、访问量无必然对应。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_03",
+      "filename": "card_07_03.png",
+      "position": "图文07 / 图 3｜法规在管什么",
+      "function": "图 3｜法规在管什么",
+      "description_cn": "《非经营性互联网信息服务备案管理办法》要求：\n在中国内地服务器提供互联网信息服务，须先备案。\n目的是可追溯：谁、用什么域名、在哪台服务器上提供服务。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 《非经营性互联网信息服务备案管理办法》要求： newline 在中国内地服务器提供互联网信息服务，须先备案。 newline 目的是可追溯：谁、用什么域名、在哪台服务器上提供服务。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_04",
+      "filename": "card_07_04.png",
+      "position": "图文07 / 图 4｜为什么个人开发者会碰到",
+      "function": "图 4｜为什么个人开发者会碰到",
+      "description_cn": "你用内地轻量服务器部署 `mytool.com`，哪怕只是落地页或 API，只要对外可访问，通常就要备。\n不是技术考试，是接入商和管局的合规流程。\n个人备案时，域名持有者须为本人（工信部 264 号文第一条第一款）。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 你用内地轻量服务器部署 `mytool.com`，哪怕只是落地页或 API，只要对外可访问，通常就要备。 newline 不是技术考试，是接入商和管局的合规流程。 newline 个人备案时，域名持有者须为本人（工信部 264 号文第一条第一款）。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_05",
+      "filename": "card_07_05.png",
+      "position": "图文07 / 图 5｜和境外服务器的区别",
+      "function": "图 5｜和境外服务器的区别",
+      "description_cn": "服务器在境外，适用另一套合规场景，本篇不展开。\n很多困惑来自：教程用境外主机，自己却买了内地服务器。\n选型时先想清楚服务器放哪，备案需求自然不同。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 服务器在境外，适用另一套合规场景，本篇不展开。 newline 很多困惑来自：教程用境外主机，自己却买了内地服务器。 newline 选型时先想清楚服务器放哪，备案需求自然不同。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_06",
+      "filename": "card_07_06.png",
+      "position": "图文07 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "备案不是域名注册的附赠品，是内地服务器的入场登记。\n`mytool.com` + 内地 `203.0.113.10`，通常就要面对它。\n搞清原因，比找捷径更省心。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 备案不是域名注册的附赠品，是内地服务器的入场登记。 newline `mytool.com` + 内地 `203.0.113.10`，通常就要面对它。 newline 搞清原因，比找捷径更省心。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_01",
+      "filename": "card_08_01.png",
+      "position": "图文08 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "一个网页上线 / 要经过哪几步？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「一个网页上线」 on first line in blue accent, second line 「要经过哪几步？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_02",
+      "filename": "card_08_02.png",
+      "position": "图文08 / 图 2｜为什么不是一步",
+      "function": "图 2｜为什么不是一步",
+      "description_cn": "很多人以为「代码写完 = 上线」或「买了域名 = 能访问」。\n以 `mytool.com` 为例，至少要把名字、机器、内容、通路四件事串起来。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为「代码写完 = 上线」或「买了域名 = 能访问」。 newline 以 `mytool.com` 为例，至少要把名字、机器、内容、通路四件事串起来。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_03",
+      "filename": "card_08_03.png",
+      "position": "图文08 / 图 3｜第一步：域名与实名",
+      "function": "图 3｜第一步：域名与实名",
+      "description_cn": "注册 `mytool.com`，完成域名实名。\n实名审核常见约 1–3 个工作日。\n这一步只拿到名字，还没有可访问的网站。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 注册 `mytool.com`，完成域名实名。 newline 实名审核常见约 1–3 个工作日。 newline 这一步只拿到名字，还没有可访问的网站。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_04",
+      "filename": "card_08_04.png",
+      "position": "图文08 / 图 4｜第二步：服务器与部署",
+      "function": "图 4｜第二步：服务器与部署",
+      "description_cn": "买或租服务器（如 `203.0.113.10` 示例），把网页文件或程序部署上去。\n先在服务器上能直接通过 IP 访问，再谈域名。\n本地能跑 ≠ 别人能访问。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 买或租服务器（如 `203.0.113.10` 示例），把网页文件或程序部署上去。 newline 先在服务器上能直接通过 IP 访问，再谈域名。 newline 本地能跑 ≠ 别人能访问。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_05",
+      "filename": "card_08_05.png",
+      "position": "图文08 / 图 5｜第三步：解析与 HTTPS",
+      "function": "图 5｜第三步：解析与 HTTPS",
+      "description_cn": "在 DNS 把 `mytool.com` 指到 `203.0.113.10`。\n配置 SSL，让访客走 `https://mytool.com`。\n解析生效通常需要一些时间传播，以实际查询为准。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 在 DNS 把 `mytool.com` 指到 `203.0.113.10`。 newline 配置 SSL，让访客走 `https://mytool.com`。 newline 解析生效通常需要一些时间传播，以实际查询为准。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_06",
+      "filename": "card_08_06.png",
+      "position": "图文08 / 图 6｜第四步：备案（如适用）",
+      "function": "图 6｜第四步：备案（如适用）",
+      "description_cn": "服务器在内地，通常还要 ICP 备案，审核常见约数个工作日到约三周。\n备案和解析可并行准备，但内地服务器未备案可能被拦截访问。\n境外服务器适用不同合规场景。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 服务器在内地，通常还要 ICP 备案，审核常见约数个工作日到约三周。 newline 备案和解析可并行准备，但内地服务器未备案可能被拦截访问。 newline 境外服务器适用不同合规场景。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_07",
+      "filename": "card_08_07.png",
+      "position": "图文08 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "上线 checklist：\n域名实名 → 部署到服务器 → DNS 解析 → HTTPS → 内地备案（如需要）\n`mytool.com` 能稳定打开，才算真正进入真实世界。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 上线 checklist： newline 域名实名 → 部署到服务器 → DNS 解析 → HTTPS → 内地备案（如需要） newline `mytool.com` 能稳定打开，才算真正进入真实世界。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_01",
+      "filename": "card_09_01.png",
+      "position": "图文09 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "静态网站适合 / 什么项目？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「静态网站适合」 on first line in blue accent, second line 「什么项目？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_02",
+      "filename": "card_09_02.png",
+      "position": "图文09 / 图 2｜常见误解",
+      "function": "图 2｜常见误解",
+      "description_cn": "很多人以为「做网站 = 必须买服务器跑后端」。\n其实一整个 `mytool.com` 落地页，可以只是一组静态文件，不一定要常驻运行的数据库和接口。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为「做网站 = 必须买服务器跑后端」。 newline 其实一整个 `mytool.com` 落地页，可以只是一组静态文件，不一定要常驻运行的数据库和接口。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_03",
+      "filename": "card_09_03.png",
+      "position": "图文09 / 图 3｜静态是什么",
+      "function": "图 3｜静态是什么",
+      "description_cn": "静态网站 = 事先写好的 HTML、CSS、JS 文件，访客请求时原样返回。\n不需要服务器每次现算页面。\n部署后可通过 `203.0.113.10`（示例）或静态托管平台对外提供。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 静态网站 = 事先写好的 HTML、CSS、JS 文件，访客请求时原样返回。 newline 不需要服务器每次现算页面。 newline 部署后可通过 `203.0.113.10`（示例）或静态托管平台对外提供。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_04",
+      "filename": "card_09_04.png",
+      "position": "图文09 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：`mytool.com` 产品介绍页、个人作品集、活动页、文档站、等待列表。\n内容更新不频繁、交互以展示和表单提交为主。\n第一款产品验证想法时，静态往往够用且成本低。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：`mytool.com` 产品介绍页、个人作品集、活动页、文档站、等待列表。 newline 内容更新不频繁、交互以展示和表单提交为主。 newline 第一款产品验证想法时，静态往往够用且成本低。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_05",
+      "filename": "card_09_05.png",
+      "position": "图文09 / 图 5｜不适合什么",
+      "function": "图 5｜不适合什么",
+      "description_cn": "不适合：复杂登录体系、实时协作、大量后端逻辑、频繁读写数据库。\n若 `mytool.com` 需要用户账号、付费、动态推荐，通常要后端或 BaaS 支撑。\n别为了「显得专业」强行上全栈。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不适合：复杂登录体系、实时协作、大量后端逻辑、频繁读写数据库。 newline 若 `mytool.com` 需要用户账号、付费、动态推荐，通常要后端或 BaaS 支撑。 newline 别为了「显得专业」强行上全栈。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_06",
+      "filename": "card_09_06.png",
+      "position": "图文09 / 图 6｜怎么选",
+      "function": "图 6｜怎么选",
+      "description_cn": "问自己：页面内容是不是能预先生成？用户要不要登录和付费？\n若是展示 + 外链表单，静态优先。\n若要接口和数据库，看条目 10 轻量服务器。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 问自己：页面内容是不是能预先生成？用户要不要登录和付费？ newline 若是展示 + 外链表单，静态优先。 newline 若要接口和数据库，看条目 10 轻量服务器。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_09_07",
+      "filename": "card_09_07.png",
+      "position": "图文09 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "静态不是「低级」，是「够用的形态」。\n`mytool.com` 第一天只是落地页，静态完全合理。\n需求涨了再升级，别第一天过度工程。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 静态不是「低级」，是「够用的形态」。 newline `mytool.com` 第一天只是落地页，静态完全合理。 newline 需求涨了再升级，别第一天过度工程。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_01",
+      "filename": "card_10_01.png",
+      "position": "图文10 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "轻量服务器适合 / 什么项目？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「轻量服务器适合」 on first line in blue accent, second line 「什么项目？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_02",
+      "filename": "card_10_02.png",
+      "position": "图文10 / 图 2｜常见误解",
+      "function": "图 2｜常见误解",
+      "description_cn": "很多人第一天就买服务器，结果只放几个 HTML 文件。\n也有人以为轻量服务器 = 域名或 = 备案本身——它只是你租的一台小机器，如 `203.0.113.10`（示例）。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人第一天就买服务器，结果只放几个 HTML 文件。 newline 也有人以为轻量服务器 = 域名或 = 备案本身——它只是你租的一台小机器，如 `203.0.113.10`（示例）。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_03",
+      "filename": "card_10_03.png",
+      "position": "图文10 / 图 3｜轻量是什么",
+      "function": "图 3｜轻量是什么",
+      "description_cn": "轻量应用服务器是云厂商的入门级 VPS：有独立 IP、能装运行环境、自己管部署。\n比静态托管灵活，比高配云服务器便宜。\n适合个人开发者第一款需要后端的产品。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 轻量应用服务器是云厂商的入门级 VPS：有独立 IP、能装运行环境、自己管部署。 newline 比静态托管灵活，比高配云服务器便宜。 newline 适合个人开发者第一款需要后端的产品。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_04",
+      "filename": "card_10_04.png",
+      "position": "图文10 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：`mytool.com` 要带 Node/Python 接口、Webhook、小数据库、定时任务。\n用户要登录、要 CRUD、要服务端校验，轻量服务器是常见起点。\nAI 写的全栈 demo 上线，往往落在这里。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：`mytool.com` 要带 Node/Python 接口、Webhook、小数据库、定时任务。 newline 用户要登录、要 CRUD、要服务端校验，轻量服务器是常见起点。 newline AI 写的全栈 demo 上线，往往落在这里。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_05",
+      "filename": "card_10_05.png",
+      "position": "图文10 / 图 5｜不适合什么",
+      "function": "图 5｜不适合什么",
+      "description_cn": "不适合：纯展示落地页（见条目 09 静态方案）、高并发大流量、复杂微服务。\n日活几百以内的小产品，轻量通常够用；别第一天按「百万用户」选型。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不适合：纯展示落地页（见条目 09 静态方案）、高并发大流量、复杂微服务。 newline 日活几百以内的小产品，轻量通常够用；别第一天按「百万用户」选型。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_06",
+      "filename": "card_10_06.png",
+      "position": "图文10 / 图 6｜要付出的成本",
+      "function": "图 6｜要付出的成本",
+      "description_cn": "比静态多：系统更新、安全补丁、进程守护、日志和备份。\n服务器在内地，`mytool.com` 通常还要备案。\n运维时间也是产品成本，一个人做要算进去。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 比静态多：系统更新、安全补丁、进程守护、日志和备份。 newline 服务器在内地，`mytool.com` 通常还要备案。 newline 运维时间也是产品成本，一个人做要算进去。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_10_07",
+      "filename": "card_10_07.png",
+      "position": "图文10 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "轻量服务器解决「我要跑自己的程序」。\n`mytool.com` 解析到 `203.0.113.10`，后端和数据库可以都在这台机器上。\n静态能搞定就别硬上；真需要后端，轻量是现实起点。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 轻量服务器解决「我要跑自己的程序」。 newline `mytool.com` 解析到 `203.0.113.10`，后端和数据库可以都在这台机器上。 newline 静态能搞定就别硬上；真需要后端，轻量是现实起点。. Page number 「07 / 07」 bottom-right.",
       "aspect_ratio": "3:4"
     }
   ],

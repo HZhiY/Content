@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站上线了，为什么还不安全？</title>
+  <style>    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+      color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+    .preview-wrap { max-width: 420px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    .header { text-align: center; margin-bottom: 1.75rem; }
+    .series-tag {
+      display: inline-block; font-size: 0.72rem; color: #666; background: #fff;
+      border: 1px solid #e0e0e0; border-radius: 999px; padding: 0.25rem 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 700; color: #111; line-height: 1.35; margin-bottom: 0.45rem; }
+    .subtitle { font-size: 0.95rem; color: #2563eb; font-weight: 500; }
+    .entry-label { font-size: 0.78rem; color: #888; margin-bottom: 1rem; }
+    .cards-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+    .card-item { display: flex; flex-direction: column; gap: 0.5rem; }
+    .card-label { font-size: 0.75rem; font-weight: 600; color: #555; }
+    .card-label span { color: #2563eb; margin-right: 0.35rem; }
+    .card-frame { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+    .card-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+    .card-frame.has-image img { display: block; }
+    .card-frame.has-image .card-fallback { display: none; }
+    .card-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+      padding: 1.5rem 1.25rem; background: #fff; overflow: hidden; }
+    .card-fallback.cover { justify-content: center; background: linear-gradient(165deg, #fafafa, #f5f5f5); }
+    .page-num { position: absolute; bottom: 1rem; right: 1.1rem; font-size: 0.68rem; color: #bbb; }
+    .cover-line1 { font-size: 1.25rem; font-weight: 700; color: #2563eb; margin-bottom: 0.65rem; }
+    .cover-line2 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; }
+    .card-body { font-size: 0.88rem; line-height: 1.65; color: #222; display: flex; flex-direction: column; gap: 0.55rem; }
+    .card-body p { margin: 0; }
+    .flow-arrow { color: #2563eb; font-weight: 500; }
+    code { font-family: Consolas, monospace; font-size: 0.82em; background: #f3f4f6; padding: 0.1em 0.35em; border-radius: 3px; color: #c2410c; }
+    .caption-section { margin-top: 1.75rem; padding: 1.1rem; background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; }
+    .caption-section h2 { font-size: 0.78rem; color: #888; margin-bottom: 0.65rem; }
+    .caption-section p { font-size: 0.85rem; line-height: 1.75; color: #333; }
+    .footer-note { margin-top: 1.5rem; text-align: center; font-size: 0.68rem; color: #aaa; }</style>
+</head>
+<body>
+  <div class="preview-wrap">
+    <header class="header">
+      <div class="series-tag">一个人做产品 · 图文 04</div>
+      <h1>网站上线了，为什么还不安全？</h1>
+      <p class="subtitle">SSL 证书到底是什么？</p>
+    </header>
+    <section class="entry-group">
+      <p class="entry-label">主题包：网站上线基础设施 · 6 张卡片</p>
+      <div class="cards-grid">
+        <article class="card-item">
+          <p class="card-label"><span>01</span>图 1｜封面</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_01.png" alt="图 1｜封面">
+            <div class="card-fallback cover">
+              <div class="card-body"><p class="cover-line1">SSL 证书到底是什么？</p><p class="cover-line2">网站为什么显示「不安全」？</p></div>
+              <span class="page-num">01 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>02</span>图 2｜破误解</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_02.png" alt="图 2｜破误解">
+            <div class="card-fallback">
+              <div class="card-body"><p>很多人把 SSL 当成备案，或当成域名自带的功能。</p>
+                <p>SSL 证书只管浏览器和服务器之间的加密传输——和域名注册、ICP 备案、服务器选购各管一段。</p></div>
+              <span class="page-num">02 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>03</span>图 3｜一句话解释</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_03.png" alt="图 3｜一句话解释">
+            <div class="card-fallback">
+              <div class="card-body"><p>SSL 证书是一份数字凭证，让 <code>mytool.com</code> 能用 HTTPS 访问。</p>
+                <p>浏览器地址栏的小锁，表示你和 <code>203.0.113.10</code>（示例）之间的数据被加密，不易被中途窃听或篡改。</p></div>
+              <span class="page-num">03 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>04</span>图 4｜它解决什么</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_04.png" alt="图 4｜它解决什么">
+            <div class="card-fallback">
+              <div class="card-body"><p>SSL 解决「传输路上安不安全、访客敢不敢输入信息」。</p>
+                <p>没有证书，浏览器可能标「不安全」，用户填邮箱或密码时会犹豫。</p>
+                <p>它不负责放网页，也不替代备案。</p></div>
+              <span class="page-num">04 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>05</span>图 5｜个人开发者要记住</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_05.png" alt="图 5｜个人开发者要记住">
+            <div class="card-fallback">
+              <div class="card-body"><p>第一款产品上线时，HTTPS 几乎是标配——哪怕只是落地页。</p>
+                <p>云厂商和 Let's Encrypt 等渠道可申请免费或低价证书，但「申请」和「装到服务器」是两步。</p>
+                <p>证书有有效期，到期前要记得续。</p></div>
+              <span class="page-num">05 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>06</span>图 6｜收束</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_04_06.png" alt="图 6｜收束">
+            <div class="card-fallback">
+              <div class="card-body"><p>分工记一句：域名指路，服务器放内容，SSL 护住传输路。</p>
+                <p><code>https://mytool.com</code> 能打开小锁，不代表已备案、也不代表已部署好页面。</p>
+                <p>搞清 SSL，是上线地图里安全那一格。</p></div>
+              <span class="page-num">06 / 06</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="caption-section"><h2>Caption</h2><p>场景：本地 <code>localhost</code> 能访问，上线后浏览器却警告「不安全」——多半是还没配 HTTPS。免费证书怎么申请属操作细节，本篇只讲「它是什么」。个人开发者视角整理，非法律建议。#个人开发者 #HTTPS #SSL证书</p></section>
+    <p class="footer-note">小红书图文预览 · 08_插图/images/card_04_01–06.png</p>
+  </div>
+  <script>
+    document.querySelectorAll('.card-frame img').forEach(img => {
+      const onLoad = () => { if (img.naturalWidth > 0) img.parentElement.classList.add('has-image'); };
+      img.addEventListener('load', onLoad);
+      img.addEventListener('error', () => { img.style.display = 'none'; });
+      if (img.complete && img.naturalWidth > 0) onLoad();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>为什么国内服务器要备案？</title>
+  <style>    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+      color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+    .preview-wrap { max-width: 420px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    .header { text-align: center; margin-bottom: 1.75rem; }
+    .series-tag {
+      display: inline-block; font-size: 0.72rem; color: #666; background: #fff;
+      border: 1px solid #e0e0e0; border-radius: 999px; padding: 0.25rem 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 700; color: #111; line-height: 1.35; margin-bottom: 0.45rem; }
+    .subtitle { font-size: 0.95rem; color: #2563eb; font-weight: 500; }
+    .entry-label { font-size: 0.78rem; color: #888; margin-bottom: 1rem; }
+    .cards-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+    .card-item { display: flex; flex-direction: column; gap: 0.5rem; }
+    .card-label { font-size: 0.75rem; font-weight: 600; color: #555; }
+    .card-label span { color: #2563eb; margin-right: 0.35rem; }
+    .card-frame { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+    .card-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+    .card-frame.has-image img { display: block; }
+    .card-frame.has-image .card-fallback { display: none; }
+    .card-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+      padding: 1.5rem 1.25rem; background: #fff; overflow: hidden; }
+    .card-fallback.cover { justify-content: center; background: linear-gradient(165deg, #fafafa, #f5f5f5); }
+    .page-num { position: absolute; bottom: 1rem; right: 1.1rem; font-size: 0.68rem; color: #bbb; }
+    .cover-line1 { font-size: 1.25rem; font-weight: 700; color: #2563eb; margin-bottom: 0.65rem; }
+    .cover-line2 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; }
+    .card-body { font-size: 0.88rem; line-height: 1.65; color: #222; display: flex; flex-direction: column; gap: 0.55rem; }
+    .card-body p { margin: 0; }
+    .flow-arrow { color: #2563eb; font-weight: 500; }
+    code { font-family: Consolas, monospace; font-size: 0.82em; background: #f3f4f6; padding: 0.1em 0.35em; border-radius: 3px; color: #c2410c; }
+    .caption-section { margin-top: 1.75rem; padding: 1.1rem; background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; }
+    .caption-section h2 { font-size: 0.78rem; color: #888; margin-bottom: 0.65rem; }
+    .caption-section p { font-size: 0.85rem; line-height: 1.75; color: #333; }
+    .footer-note { margin-top: 1.5rem; text-align: center; font-size: 0.68rem; color: #aaa; }</style>
+</head>
+<body>
+  <div class="preview-wrap">
+    <header class="header">
+      <div class="series-tag">一个人做产品 · 图文 07</div>
+      <h1>为什么国内服务器要备案？</h1>
+      <p class="subtitle">为什么国内服务器通常要备案？</p>
+    </header>
+    <section class="entry-group">
+      <p class="entry-label">主题包：网站上线基础设施 · 6 张卡片</p>
+      <div class="cards-grid">
+        <article class="card-item">
+          <p class="card-label"><span>01</span>图 1｜封面</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_01.png" alt="图 1｜封面">
+            <div class="card-fallback cover">
+              <div class="card-body"><p class="cover-line1">为什么国内服务器</p><p class="cover-line2">通常要备案？</p></div>
+              <span class="page-num">01 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>02</span>图 2｜破误解</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_02.png" alt="图 2｜破误解">
+            <div class="card-fallback">
+              <div class="card-body"><p>很多人以为「买了 .com 就不用备」，或以为「小网站没人管」。</p>
+                <p>备案看的是 <code>mytool.com</code> 是否解析到中国大陆服务器，与后缀、访问量无必然对应。</p></div>
+              <span class="page-num">02 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>03</span>图 3｜法规在管什么</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_03.png" alt="图 3｜法规在管什么">
+            <div class="card-fallback">
+              <div class="card-body"><p>《非经营性互联网信息服务备案管理办法》要求：</p>
+                <p>在中国内地服务器提供互联网信息服务，须先备案。</p>
+                <p>目的是可追溯：谁、用什么域名、在哪台服务器上提供服务。</p></div>
+              <span class="page-num">03 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>04</span>图 4｜为什么个人开发者会碰到</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_04.png" alt="图 4｜为什么个人开发者会碰到">
+            <div class="card-fallback">
+              <div class="card-body"><p>你用内地轻量服务器部署 <code>mytool.com</code>，哪怕只是落地页或 API，只要对外可访问，通常就要备。</p>
+                <p>不是技术考试，是接入商和管局的合规流程。</p>
+                <p>个人备案时，域名持有者须为本人（工信部 264 号文第一条第一款）。</p></div>
+              <span class="page-num">04 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>05</span>图 5｜和境外服务器的区别</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_05.png" alt="图 5｜和境外服务器的区别">
+            <div class="card-fallback">
+              <div class="card-body"><p>服务器在境外，适用另一套合规场景，本篇不展开。</p>
+                <p>很多困惑来自：教程用境外主机，自己却买了内地服务器。</p>
+                <p>选型时先想清楚服务器放哪，备案需求自然不同。</p></div>
+              <span class="page-num">05 / 06</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>06</span>图 6｜收束</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_07_06.png" alt="图 6｜收束">
+            <div class="card-fallback">
+              <div class="card-body"><p>备案不是域名注册的附赠品，是内地服务器的入场登记。</p>
+                <p><code>mytool.com</code> + 内地 <code>203.0.113.10</code>，通常就要面对它。</p>
+                <p>搞清原因，比找捷径更省心。</p></div>
+              <span class="page-num">06 / 06</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="caption-section"><h2>Caption</h2><p>场景：已买内地服务器，不确定要不要备——只要域名解析到内地 IP 对外服务，通常就要。不写规避路径，只讲为什么存在这道关卡。个人开发者视角整理，非法律建议。#个人开发者 #ICP备案 #合规</p></section>
+    <p class="footer-note">小红书图文预览 · 08_插图/images/card_07_01–06.png</p>
+  </div>
+  <script>
+    document.querySelectorAll('.card-frame img').forEach(img => {
+      const onLoad = () => { if (img.naturalWidth > 0) img.parentElement.classList.add('has-image'); };
+      img.addEventListener('load', onLoad);
+      img.addEventListener('error', () => { img.style.display = 'none'; });
+      if (img.complete && img.naturalWidth > 0) onLoad();
+    });
+  </script>
+</body>
+</html>

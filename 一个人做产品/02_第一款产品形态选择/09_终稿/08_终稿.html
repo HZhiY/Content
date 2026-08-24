@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>为什么第一天别做太复杂？</title>
+  <style>    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+      color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+    .preview-wrap { max-width: 420px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    .header { text-align: center; margin-bottom: 1.75rem; }
+    .series-tag {
+      display: inline-block; font-size: 0.72rem; color: #666; background: #fff;
+      border: 1px solid #e0e0e0; border-radius: 999px; padding: 0.25rem 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 700; color: #111; line-height: 1.35; margin-bottom: 0.45rem; }
+    .subtitle { font-size: 0.95rem; color: #2563eb; font-weight: 500; }
+    .entry-label { font-size: 0.78rem; color: #888; margin-bottom: 1rem; }
+    .cards-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+    .card-item { display: flex; flex-direction: column; gap: 0.5rem; }
+    .card-label { font-size: 0.75rem; font-weight: 600; color: #555; }
+    .card-label span { color: #2563eb; margin-right: 0.35rem; }
+    .card-frame { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+    .card-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+    .card-frame.has-image img { display: block; }
+    .card-frame.has-image .card-fallback { display: none; }
+    .card-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+      padding: 1.5rem 1.25rem; background: #fff; overflow: hidden; }
+    .card-fallback.cover { justify-content: center; background: linear-gradient(165deg, #fafafa, #f5f5f5); }
+    .page-num { position: absolute; bottom: 1rem; right: 1.1rem; font-size: 0.68rem; color: #bbb; }
+    .cover-line1 { font-size: 1.25rem; font-weight: 700; color: #2563eb; margin-bottom: 0.65rem; }
+    .cover-line2 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; }
+    .card-body { font-size: 0.88rem; line-height: 1.65; color: #222; display: flex; flex-direction: column; gap: 0.55rem; }
+    .card-body p { margin: 0; }
+    .flow-arrow { color: #2563eb; font-weight: 500; }
+    code { font-family: Consolas, monospace; font-size: 0.82em; background: #f3f4f6; padding: 0.1em 0.35em; border-radius: 3px; color: #c2410c; }
+    .caption-section { margin-top: 1.75rem; padding: 1.1rem; background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; }
+    .caption-section h2 { font-size: 0.78rem; color: #888; margin-bottom: 0.65rem; }
+    .caption-section p { font-size: 0.85rem; line-height: 1.75; color: #333; }
+    .footer-note { margin-top: 1.5rem; text-align: center; font-size: 0.68rem; color: #aaa; }</style>
+</head>
+<body>
+  <div class="preview-wrap">
+    <header class="header">
+      <div class="series-tag">一个人做产品 · 图文 08</div>
+      <h1>为什么第一天别做太复杂？</h1>
+      <p class="subtitle">为什么个人项目不要一开始就做复杂？</p>
+    </header>
+    <section class="entry-group">
+      <p class="entry-label">主题包：网站上线基础设施 · 7 张卡片</p>
+      <div class="cards-grid">
+        <article class="card-item">
+          <p class="card-label"><span>01</span>图 1｜封面</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_01.png" alt="图 1｜封面">
+            <div class="card-fallback cover">
+              <div class="card-body"><p class="cover-line1">为什么个人项目</p><p class="cover-line2">第一天别做太复杂？</p></div>
+              <span class="page-num">01 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>02</span>图 2｜目标澄清</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_02.png" alt="图 2｜目标澄清">
+            <div class="card-fallback">
+              <div class="card-body"><p>第一款的核心目标是验证，不是架构秀。</p>
+                <p>功能齐全不等于验证成功——很多时候只是让自己忙起来。</p></div>
+              <span class="page-num">02 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>03</span>图 3｜开关：登录</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_03.png" alt="图 3｜开关：登录">
+            <div class="card-fallback">
+              <div class="card-body"><p>「加个登录」看起来是一个功能，实际上是注册、找回密码、安全、隐私合规和后续运营的一整套系统。</p>
+                <p>mytool 若还没证明有人要用，账号体系可以先不开。</p></div>
+              <span class="page-num">03 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>04</span>图 4｜开关：支付</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_04.png" alt="图 4｜开关：支付">
+            <div class="card-fallback">
+              <div class="card-body"><p>支付牵涉主体资质、商户号、接口对接与合规。</p>
+                <p>个人第一款常被建议：先验证需求，再接入支付——与「个人小程序通常无法微信支付」是同一类硬边界。</p></div>
+              <span class="page-num">04 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>05</span>图 5｜开关：后台与多端</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_05.png" alt="图 5｜开关：后台与多端">
+            <div class="card-fallback">
+              <div class="card-body"><p>后台管理、消息推送、多端同步——每多开一个「系统」，就多一类 bug、运维和合规。</p>
+                <p>一个人做产品，时间比功能清单更稀缺。</p></div>
+              <span class="page-num">05 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>06</span>图 6｜mytool 示例</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_06.png" alt="图 6｜mytool 示例">
+            <div class="card-fallback">
+              <div class="card-body"><p>第一天建议范围：<code>mytool.com</code> 介绍页（示例）+ 等待名单表单（示例）。</p>
+                <p>别第一天就堆登录、支付、管理后台、小程序、App 五件套。</p>
+                <p>有证据再加开关。</p></div>
+              <span class="page-num">06 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>07</span>图 7｜收束</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_08_07.png" alt="图 7｜收束">
+            <div class="card-fallback">
+              <div class="card-body"><p>复杂度开关一个一个开，别一口气全开。</p>
+                <p>mytool 先跑通单点闭环，验证有人要，再考虑加重形态和加系统。</p>
+                <p>第一款是探路，不是盖楼。</p></div>
+              <span class="page-num">07 / 07</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="caption-section"><h2>Caption</h2><p>场景：mytool 功能清单写了两页——先圈出「要验证什么」，其余标成后续开关。静态落地页复杂度通常低于带登录支付后台的完整产品（对齐主题包 01 静态站边界）。个人开发者视角整理，非法律建议。#个人开发者 #MVP #独立开发</p></section>
+    <p class="footer-note">小红书图文预览 · 08_插图/images/card_08_01–07.png</p>
+  </div>
+  <script>
+    document.querySelectorAll('.card-frame img').forEach(img => {
+      const onLoad = () => { if (img.naturalWidth > 0) img.parentElement.classList.add('has-image'); };
+      img.addEventListener('load', onLoad);
+      img.addEventListener('error', () => { img.style.display = 'none'; });
+      if (img.complete && img.naturalWidth > 0) onLoad();
+    });
+  </script>
+</body>
+</html>

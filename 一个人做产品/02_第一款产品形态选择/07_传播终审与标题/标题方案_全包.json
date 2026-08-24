@@ -1,0 +1,53 @@
+{
+  "theme_pack": "02_第一款产品形态选择",
+  "entries": {
+    "01": {
+      "work_title": "网页适合什么产品？",
+      "note_title": "第一款产品，该先做网页吗？",
+      "cover_line1": "网页适合什么产品？",
+      "cover_line2": "第一款该做网页吗？"
+    },
+    "02": {
+      "work_title": "小程序适合什么产品？",
+      "note_title": "第一款产品，要做小程序吗？",
+      "cover_line1": "小程序适合什么产品？",
+      "cover_line2": "要做微信小程序吗？"
+    },
+    "03": {
+      "work_title": "公众号适合什么产品？",
+      "note_title": "个人产品，开公众号有用吗？",
+      "cover_line1": "公众号适合什么产品？",
+      "cover_line2": "开公众号有用吗？"
+    },
+    "04": {
+      "work_title": "App 适合什么产品？",
+      "note_title": "第一款产品，要不要做 App？",
+      "cover_line1": "App 适合什么产品？",
+      "cover_line2": "要不要做 App？"
+    },
+    "05": {
+      "work_title": "第一款产品，先做网页还是小程序？",
+      "note_title": "第一款产品，先做网页还是小程序？",
+      "cover_line1": "第一款产品",
+      "cover_line2": "先做网页还是小程序？"
+    },
+    "06": {
+      "work_title": "为什么很多个人项目不适合一开始做 App？",
+      "note_title": "为什么不适合一开始做 App？",
+      "cover_line1": "为什么个人项目",
+      "cover_line2": "不适合一开始做 App？"
+    },
+    "07": {
+      "work_title": "表单工具能不能先验证需求？",
+      "note_title": "能不能先用表单验证需求？",
+      "cover_line1": "能不能先用表单",
+      "cover_line2": "验证需求？"
+    },
+    "08": {
+      "work_title": "为什么个人项目不要一开始就做复杂？",
+      "note_title": "为什么第一天别做太复杂？",
+      "cover_line1": "为什么个人项目",
+      "cover_line2": "第一天别做太复杂？"
+    }
+  }
+}

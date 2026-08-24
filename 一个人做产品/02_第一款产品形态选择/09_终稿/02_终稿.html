@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第一款产品，要做小程序吗？</title>
+  <style>    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body {
+      font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", sans-serif;
+      background: linear-gradient(180deg, #f0f2f5 0%, #e8eaed 100%);
+      color: #1a1a1a; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh;
+    }
+    .preview-wrap { max-width: 420px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    .header { text-align: center; margin-bottom: 1.75rem; }
+    .series-tag {
+      display: inline-block; font-size: 0.72rem; color: #666; background: #fff;
+      border: 1px solid #e0e0e0; border-radius: 999px; padding: 0.25rem 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+    h1 { font-size: 1.35rem; font-weight: 700; color: #111; line-height: 1.35; margin-bottom: 0.45rem; }
+    .subtitle { font-size: 0.95rem; color: #2563eb; font-weight: 500; }
+    .entry-label { font-size: 0.78rem; color: #888; margin-bottom: 1rem; }
+    .cards-grid { display: flex; flex-direction: column; gap: 1.25rem; }
+    .card-item { display: flex; flex-direction: column; gap: 0.5rem; }
+    .card-label { font-size: 0.75rem; font-weight: 600; color: #555; }
+    .card-label span { color: #2563eb; margin-right: 0.35rem; }
+    .card-frame { position: relative; width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: #fff; }
+    .card-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: none; }
+    .card-frame.has-image img { display: block; }
+    .card-frame.has-image .card-fallback { display: none; }
+    .card-fallback { position: absolute; inset: 0; display: flex; flex-direction: column;
+      padding: 1.5rem 1.25rem; background: #fff; overflow: hidden; }
+    .card-fallback.cover { justify-content: center; background: linear-gradient(165deg, #fafafa, #f5f5f5); }
+    .page-num { position: absolute; bottom: 1rem; right: 1.1rem; font-size: 0.68rem; color: #bbb; }
+    .cover-line1 { font-size: 1.25rem; font-weight: 700; color: #2563eb; margin-bottom: 0.65rem; }
+    .cover-line2 { font-size: 1.05rem; font-weight: 600; color: #1a1a1a; }
+    .card-body { font-size: 0.88rem; line-height: 1.65; color: #222; display: flex; flex-direction: column; gap: 0.55rem; }
+    .card-body p { margin: 0; }
+    .flow-arrow { color: #2563eb; font-weight: 500; }
+    code { font-family: Consolas, monospace; font-size: 0.82em; background: #f3f4f6; padding: 0.1em 0.35em; border-radius: 3px; color: #c2410c; }
+    .caption-section { margin-top: 1.75rem; padding: 1.1rem; background: #fff; border-radius: 10px; border: 1px solid #e8e8e8; }
+    .caption-section h2 { font-size: 0.78rem; color: #888; margin-bottom: 0.65rem; }
+    .caption-section p { font-size: 0.85rem; line-height: 1.75; color: #333; }
+    .footer-note { margin-top: 1.5rem; text-align: center; font-size: 0.68rem; color: #aaa; }</style>
+</head>
+<body>
+  <div class="preview-wrap">
+    <header class="header">
+      <div class="series-tag">一个人做产品 · 图文 02</div>
+      <h1>第一款产品，要做小程序吗？</h1>
+      <p class="subtitle">小程序适合什么产品？</p>
+    </header>
+    <section class="entry-group">
+      <p class="entry-label">主题包：网站上线基础设施 · 7 张卡片</p>
+      <div class="cards-grid">
+        <article class="card-item">
+          <p class="card-label"><span>01</span>图 1｜封面</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_01.png" alt="图 1｜封面">
+            <div class="card-fallback cover">
+              <div class="card-body"><p class="cover-line1">小程序适合什么产品？</p><p class="cover-line2">要做微信小程序吗？</p></div>
+              <span class="page-num">01 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>02</span>图 2｜破误解</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_02.png" alt="图 2｜破误解">
+            <div class="card-fallback">
+              <div class="card-body"><p>很多人以为注册小程序、写完代码就等于上线了。</p>
+                <p>实际上传代码后还要提交审核，通过后还要手动点发布——不是保存即上线。</p></div>
+              <span class="page-num">02 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>03</span>图 3｜是什么</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_03.png" alt="图 3｜是什么">
+            <div class="card-fallback">
+              <div class="card-body"><p>小程序是在微信里打开、不用单独安装的轻量应用。</p>
+                <p>用户通过搜索、扫码、分享就能打开「mytool」小程序（示例），无需先去应用商店下载。</p></div>
+              <span class="page-num">03 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>04</span>图 4｜适合什么</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_04.png" alt="图 4｜适合什么">
+            <div class="card-fallback">
+              <div class="card-body"><p>适合：目标用户主要在微信里、需要分享传播、要用微信登录/消息等开放能力、功能在开放类目内的产品。</p>
+                <p>mytool 若靠微信群、朋友圈扩散，小程序触达路径往往更顺。</p></div>
+              <span class="page-num">04 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>05</span>图 5｜不太适合</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_05.png" alt="图 5｜不太适合">
+            <div class="card-fallback">
+              <div class="card-body"><p>不太适合：必须独立于微信运行、个人主体做不了的目标类目、想频繁改功能却不想每次等审核的场景。</p>
+                <p>别硬把「必须脱离微信」的产品塞进小程序壳里。</p></div>
+              <span class="page-num">05 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>06</span>图 6｜个人注意</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_06.png" alt="图 6｜个人注意">
+            <div class="card-fallback">
+              <div class="card-body"><p>个人可以注册小程序，但暂不支持微信认证，因此通常无法使用微信支付。</p>
+                <p>做 mytool 前，须查官方「个人主体小程序开放的服务类目」——类目会调整，以提交时后台为准。</p></div>
+              <span class="page-num">06 / 07</span>
+            </div>
+          </div>
+        </article>
+        <article class="card-item">
+          <p class="card-label"><span>07</span>图 7｜收束</p>
+          <div class="card-frame">
+            <img src="../08_插图/images/card_02_07.png" alt="图 7｜收束">
+            <div class="card-fallback">
+              <div class="card-body"><p>小程序是「微信内触达」方式，附带审核发版和主体限制。</p>
+                <p>选型前先对场景，再对硬边界。</p>
+                <p>它和网页不是谁更高级，而是用户在哪、成本在哪。</p></div>
+              <span class="page-num">07 / 07</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="caption-section"><h2>Caption</h2><p>场景：mytool 用户都在微信群里——小程序值得考虑，但先确认个人类目能不能做、要不要收款。上传→审核→发布是固定流程。个人开发者视角整理，非法律建议。#个人开发者 #微信小程序 #产品选型</p></section>
+    <p class="footer-note">小红书图文预览 · 08_插图/images/card_02_01–07.png</p>
+  </div>
+  <script>
+    document.querySelectorAll('.card-frame img').forEach(img => {
+      const onLoad = () => { if (img.naturalWidth > 0) img.parentElement.classList.add('has-image'); };
+      img.addEventListener('load', onLoad);
+      img.addEventListener('error', () => { img.style.display = 'none'; });
+      if (img.complete && img.naturalWidth > 0) onLoad();
+    });
+  </script>
+</body>
+</html>

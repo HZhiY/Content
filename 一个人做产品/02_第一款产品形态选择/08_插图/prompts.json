@@ -1,0 +1,476 @@
+{
+  "article_id": "01-10",
+  "article_entry": "网站上线基础设施全包",
+  "series": "一个人做产品",
+  "theme_pack": "01_网站上线基础设施",
+  "images": [
+    {
+      "id": "card_01_01",
+      "filename": "card_01_01.png",
+      "position": "图文01 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "网页适合什么产品？ / 第一款该做网页吗？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「网页适合什么产品？」 on first line in blue accent, second line 「第一款该做网页吗？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_02",
+      "filename": "card_01_02.png",
+      "position": "图文01 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人以为「做网站 = 必须买服务器跑数据库」。\n其实 `mytool.com` 若只是介绍页和等待名单，可以只是一组页面文件，不一定要一上来全栈。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为「做网站 = 必须买服务器跑数据库」。 newline 其实 `mytool.com` 若只是介绍页和等待名单，可以只是一组页面文件，不一定要一上来全栈。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_03",
+      "filename": "card_01_03.png",
+      "position": "图文01 / 图 3｜是什么",
+      "function": "图 3｜是什么",
+      "description_cn": "网页就是「通过链接在浏览器里打开的页面」。\n它不绑死在微信里——手机浏览器、PC、App 内嵌页都能打开 `https://mytool.com`（示例）。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 网页就是「通过链接在浏览器里打开的页面」。 newline 它不绑死在微信里——手机浏览器、PC、App 内嵌页都能打开 `https://mytool.com`（示例）。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_04",
+      "filename": "card_01_04.png",
+      "position": "图文01 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：`mytool.com` 产品介绍、文档站、作品集、活动页、等待名单。\n只要「发个链接就能看」，网页通常都在考虑范围内。\n第一款验证想法时，静态网页往往成本低、迭代快。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：`mytool.com` 产品介绍、文档站、作品集、活动页、等待名单。 newline 只要「发个链接就能看」，网页通常都在考虑范围内。 newline 第一款验证想法时，静态网页往往成本低、迭代快。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_05",
+      "filename": "card_01_05.png",
+      "position": "图文01 / 图 5｜不太适合",
+      "function": "图 5｜不太适合",
+      "description_cn": "不太适合：强依赖手机系统能力（蓝牙、后台任务等）、复杂离线交互、需要应用商店分发信任背书的场景。\n若 mytool 核心是「每天深度使用 + 系统级权限」，可能要重新评估形态。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不太适合：强依赖手机系统能力（蓝牙、后台任务等）、复杂离线交互、需要应用商店分发信任背书的场景。 newline 若 mytool 核心是「每天深度使用 + 系统级权限」，可能要重新评估形态。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_06",
+      "filename": "card_01_06.png",
+      "position": "图文01 / 图 6｜个人注意",
+      "function": "图 6｜个人注意",
+      "description_cn": "网页改完部署，通常就能生效，不用等微信或应用商店审核。\n但违规内容仍可能被平台或托管方处置，不是「零监管」。\n若 `mytool.com` 解析到内地服务器，通常还涉及 ICP 备案（详见主题包 01）。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 网页改完部署，通常就能生效，不用等微信或应用商店审核。 newline 但违规内容仍可能被平台或托管方处置，不是「零监管」。 newline 若 `mytool.com` 解析到内地服务器，通常还涉及 ICP 备案（详见主题包 01）。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_01_07",
+      "filename": "card_01_07.png",
+      "position": "图文01 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "网页解决的是「链接触达」。\nmytool 第一天只是落地页，网页完全合理。\n形态不是高级程度，是触达方式 + 成本的组合。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 网页解决的是「链接触达」。 newline mytool 第一天只是落地页，网页完全合理。 newline 形态不是高级程度，是触达方式 + 成本的组合。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_01",
+      "filename": "card_02_01.png",
+      "position": "图文02 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "小程序适合什么产品？ / 要做微信小程序吗？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「小程序适合什么产品？」 on first line in blue accent, second line 「要做微信小程序吗？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_02",
+      "filename": "card_02_02.png",
+      "position": "图文02 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人以为注册小程序、写完代码就等于上线了。\n实际上传代码后还要提交审核，通过后还要手动点发布——不是保存即上线。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为注册小程序、写完代码就等于上线了。 newline 实际上传代码后还要提交审核，通过后还要手动点发布——不是保存即上线。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_03",
+      "filename": "card_02_03.png",
+      "position": "图文02 / 图 3｜是什么",
+      "function": "图 3｜是什么",
+      "description_cn": "小程序是在微信里打开、不用单独安装的轻量应用。\n用户通过搜索、扫码、分享就能打开「mytool」小程序（示例），无需先去应用商店下载。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 小程序是在微信里打开、不用单独安装的轻量应用。 newline 用户通过搜索、扫码、分享就能打开「mytool」小程序（示例），无需先去应用商店下载。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_04",
+      "filename": "card_02_04.png",
+      "position": "图文02 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：目标用户主要在微信里、需要分享传播、要用微信登录/消息等开放能力、功能在开放类目内的产品。\nmytool 若靠微信群、朋友圈扩散，小程序触达路径往往更顺。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：目标用户主要在微信里、需要分享传播、要用微信登录/消息等开放能力、功能在开放类目内的产品。 newline mytool 若靠微信群、朋友圈扩散，小程序触达路径往往更顺。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_05",
+      "filename": "card_02_05.png",
+      "position": "图文02 / 图 5｜不太适合",
+      "function": "图 5｜不太适合",
+      "description_cn": "不太适合：必须独立于微信运行、个人主体做不了的目标类目、想频繁改功能却不想每次等审核的场景。\n别硬把「必须脱离微信」的产品塞进小程序壳里。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不太适合：必须独立于微信运行、个人主体做不了的目标类目、想频繁改功能却不想每次等审核的场景。 newline 别硬把「必须脱离微信」的产品塞进小程序壳里。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_06",
+      "filename": "card_02_06.png",
+      "position": "图文02 / 图 6｜个人注意",
+      "function": "图 6｜个人注意",
+      "description_cn": "个人可以注册小程序，但暂不支持微信认证，因此通常无法使用微信支付。\n做 mytool 前，须查官方「个人主体小程序开放的服务类目」——类目会调整，以提交时后台为准。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 个人可以注册小程序，但暂不支持微信认证，因此通常无法使用微信支付。 newline 做 mytool 前，须查官方「个人主体小程序开放的服务类目」——类目会调整，以提交时后台为准。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_02_07",
+      "filename": "card_02_07.png",
+      "position": "图文02 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "小程序是「微信内触达」方式，附带审核发版和主体限制。\n选型前先对场景，再对硬边界。\n它和网页不是谁更高级，而是用户在哪、成本在哪。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 小程序是「微信内触达」方式，附带审核发版和主体限制。 newline 选型前先对场景，再对硬边界。 newline 它和网页不是谁更高级，而是用户在哪、成本在哪。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_01",
+      "filename": "card_03_01.png",
+      "position": "图文03 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "公众号适合什么产品？ / 开公众号有用吗？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「公众号适合什么产品？」 on first line in blue accent, second line 「开公众号有用吗？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_02",
+      "filename": "card_03_02.png",
+      "position": "图文03 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人把公众号当成「免费版小程序」或「产品本体」。\n公众号更偏内容和读者关系——能力边界与小程序、网页各不同，不能互相替代。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人把公众号当成「免费版小程序」或「产品本体」。 newline 公众号更偏内容和读者关系——能力边界与小程序、网页各不同，不能互相替代。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_03",
+      "filename": "card_03_03.png",
+      "position": "图文03 / 图 3｜是什么",
+      "function": "图 3｜是什么",
+      "description_cn": "公众号分订阅号、服务号等类型，选定后无法更改。\n订阅号偏资讯传播、个人常选；服务号偏业务通知，传统上更偏企业。\n个人也可经「服务号助手」注册服务号，但通常无法微信认证，支付等能力受限。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 公众号分订阅号、服务号等类型，选定后无法更改。 newline 订阅号偏资讯传播、个人常选；服务号偏业务通知，传统上更偏企业。 newline 个人也可经「服务号助手」注册服务号，但通常无法微信认证，支付等能力受限。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_04",
+      "filename": "card_03_04.png",
+      "position": "图文03 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：用内容建立信任、发活动通知、把读者导到 `mytool.com`、小程序或报名表单。\nmytool 若需要「持续写文章 + 偶尔推更新」，公众号常是获客层，不是交互层。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：用内容建立信任、发活动通知、把读者导到 `mytool.com`、小程序或报名表单。 newline mytool 若需要「持续写文章 + 偶尔推更新」，公众号常是获客层，不是交互层。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_05",
+      "filename": "card_03_05.png",
+      "position": "图文03 / 图 5｜不太适合",
+      "function": "图 5｜不太适合",
+      "description_cn": "不太适合：复杂工具交互、完整账户体系与交易闭环——且只押在订阅号能力上的产品。\n复杂功能仍要落到网页、小程序或 App 上承载。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不太适合：复杂工具交互、完整账户体系与交易闭环——且只押在订阅号能力上的产品。 newline 复杂功能仍要落到网页、小程序或 App 上承载。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_03_06",
+      "filename": "card_03_06.png",
+      "position": "图文03 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "公众号解决「内容和粉丝触达」，很少单独承担完整产品。\nmytool 可以「公众号引流 + 落地页转化」，但别指望公众号替代产品本身。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 公众号解决「内容和粉丝触达」，很少单独承担完整产品。 newline mytool 可以「公众号引流 + 落地页转化」，但别指望公众号替代产品本身。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_01",
+      "filename": "card_04_01.png",
+      "position": "图文04 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "App 适合什么产品？ / 要不要做 App？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「App 适合什么产品？」 on first line in blue accent, second line 「要不要做 App？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_02",
+      "filename": "card_04_02.png",
+      "position": "图文04 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "很多人以为「做产品 = 做 App」，或「自己手机上能跑 = 能上架给大家下载」。\n免费 Apple 开发者账户可自测，但不能通过 App Store 向公众分发——这是两回事。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 很多人以为「做产品 = 做 App」，或「自己手机上能跑 = 能上架给大家下载」。 newline 免费 Apple 开发者账户可自测，但不能通过 App Store 向公众分发——这是两回事。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_03",
+      "filename": "card_04_03.png",
+      "position": "图文04 / 图 3｜是什么",
+      "function": "图 3｜是什么",
+      "description_cn": "App 是装在 Android/iOS 系统里的应用，用户通常从应用商店或安装包获取。\n它能调用更深系统能力（相机、蓝牙、后台任务等），开发和合规也更重。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: App 是装在 Android/iOS 系统里的应用，用户通常从应用商店或安装包获取。 newline 它能调用更深系统能力（相机、蓝牙、后台任务等），开发和合规也更重。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_04",
+      "filename": "card_04_04.png",
+      "position": "图文04 / 图 4｜适合什么",
+      "function": "图 4｜适合什么",
+      "description_cn": "适合：高频使用、强依赖系统能力、需要应用商店信任背书、有明确商业化与持续维护能力的场景。\nmytool 若已验证「用户每天都离不开」，App 才进入现实讨论。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 适合：高频使用、强依赖系统能力、需要应用商店信任背书、有明确商业化与持续维护能力的场景。 newline mytool 若已验证「用户每天都离不开」，App 才进入现实讨论。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_05",
+      "filename": "card_04_05.png",
+      "position": "图文04 / 图 5｜不太适合",
+      "function": "图 5｜不太适合",
+      "description_cn": "不太适合：仅验证需求、低频小工具、预算有限、用户主要在微信生态内的第一款。\n这些条件常指向网页、小程序或表单等更轻路径。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 不太适合：仅验证需求、低频小工具、预算有限、用户主要在微信生态内的第一款。 newline 这些条件常指向网页、小程序或表单等更轻路径。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_04_06",
+      "filename": "card_04_06.png",
+      "position": "图文04 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "App 不是「更正规」，而是「更重」的触达方式。\nmytool 若在验证期，App 往往把账号费、双端和商店审核成本前置。\n确定值得重投入后再考虑，不是默认第一站。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: App 不是「更正规」，而是「更重」的触达方式。 newline mytool 若在验证期，App 往往把账号费、双端和商店审核成本前置。 newline 确定值得重投入后再考虑，不是默认第一站。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_01",
+      "filename": "card_05_01.png",
+      "position": "图文05 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "第一款产品 / 先做网页还是小程序？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「第一款产品」 on first line in blue accent, second line 「先做网页还是小程序？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_02",
+      "filename": "card_05_02.png",
+      "position": "图文05 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "别直接问「哪个更好」——网上一边倒的答案，往往忽视你的用户场景和国内个人主体限制。\n形态选择是触达方式 + 成本的权衡，不是等级排行。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 别直接问「哪个更好」——网上一边倒的答案，往往忽视你的用户场景和国内个人主体限制。 newline 形态选择是触达方式 + 成本的权衡，不是等级排行。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_03",
+      "filename": "card_05_03.png",
+      "position": "图文05 / 图 3｜四问之一：用户在哪",
+      "function": "图 3｜四问之一：用户在哪",
+      "description_cn": "用户主要从链接、搜索引擎、朋友圈外链来？\n`mytool.com` 网页更顺。\n用户主要在微信里搜索、扫码、群分享？\n「mytool」小程序（示例）触达更顺。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 用户主要从链接、搜索引擎、朋友圈外链来？ newline `mytool.com` 网页更顺。 newline 用户主要在微信里搜索、扫码、群分享？ newline 「mytool」小程序（示例）触达更顺。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_04",
+      "filename": "card_05_04.png",
+      "position": "图文05 / 图 4｜四问之二：要多快试错",
+      "function": "图 4｜四问之二：要多快试错",
+      "description_cn": "网页内容更新通常自行部署即可。\n小程序每次发版要提交审核、通过后手动发布。\nmytool 若还在高频改文案和功能，网页往往更灵活。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 网页内容更新通常自行部署即可。 newline 小程序每次发版要提交审核、通过后手动发布。 newline mytool 若还在高频改文案和功能，网页往往更灵活。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_05",
+      "filename": "card_05_05.png",
+      "position": "图文05 / 图 5｜四问之三：要不要微信支付",
+      "function": "图 5｜四问之三：要不要微信支付",
+      "description_cn": "第一款若要收款闭环，支付能力是硬边界。\n个人主体小程序通常无法使用微信支付；企业认证等是另一条路径。\nmytool 若第一天就要在微信里收款，选型前先把主体和资质想清楚。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一款若要收款闭环，支付能力是硬边界。 newline 个人主体小程序通常无法使用微信支付；企业认证等是另一条路径。 newline mytool 若第一天就要在微信里收款，选型前先把主体和资质想清楚。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_06",
+      "filename": "card_05_06.png",
+      "position": "图文05 / 图 6｜四问之四：能不能等审核",
+      "function": "图 6｜四问之四：能不能等审核",
+      "description_cn": "能接受「改一版 → 等审核 → 再发布」的节奏，再优先小程序。\n若希望改完尽快让人看到，网页通常更少一道平台发版关。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 能接受「改一版 → 等审核 → 再发布」的节奏，再优先小程序。 newline 若希望改完尽快让人看到，网页通常更少一道平台发版关。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_05_07",
+      "filename": "card_05_07.png",
+      "position": "图文05 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "答完四问，答案自然浮现——但没有标准答案。\nmytool 第一款的核心是验证「有没有人要」，形态服务于验证，不是反过来。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 答完四问，答案自然浮现——但没有标准答案。 newline mytool 第一款的核心是验证「有没有人要」，形态服务于验证，不是反过来。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_01",
+      "filename": "card_06_01.png",
+      "position": "图文06 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "为什么个人项目 / 不适合一开始做 App？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「为什么个人项目」 on first line in blue accent, second line 「不适合一开始做 App？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_02",
+      "filename": "card_06_02.png",
+      "position": "图文06 / 图 2｜破误解",
+      "function": "图 2｜破误解",
+      "description_cn": "这句话不是「个人永远不要做 App」。\n意思是：第一款若目标是验证有没有人要，App 往往把重成本提前了——阶段不匹配，不是选型错误一辈子。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 这句话不是「个人永远不要做 App」。 newline 意思是：第一款若目标是验证有没有人要，App 往往把重成本提前了——阶段不匹配，不是选型错误一辈子。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_03",
+      "filename": "card_06_03.png",
+      "position": "图文06 / 图 3｜成本前置",
+      "function": "图 3｜成本前置",
+      "description_cn": "要在 App Store 公开发布 iOS 应用，通常须加入付费开发者计划（目前常见约 ¥688/年，以 Apple 页面为准）。\nAndroid 侧上架 Google Play，常见一次性注册费 25 美元（以 Google 帮助中心为准",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 要在 App Store 公开发布 iOS 应用，通常须加入付费开发者计划（目前常见约 ¥688/年，以 Apple 页面为准）。 newline Android 侧上架 Google Play，常见一次性注册费 25 美元（以 Google 帮助中心为准）。 newline mytool 还没验证需求，就先付上架门票。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_04",
+      "filename": "card_06_04.png",
+      "position": "图文06 / 图 4｜双端成本",
+      "function": "图 4｜双端成本",
+      "description_cn": "做 App 通常要考虑 iOS 和 Android 两端，或选用跨端框架——都比单一网页或小程序更重。\n一个人维护双端发版、适配和 bug，时间也是产品成本。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 做 App 通常要考虑 iOS 和 Android 两端，或选用跨端框架——都比单一网页或小程序更重。 newline 一个人维护双端发版、适配和 bug，时间也是产品成本。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_05",
+      "filename": "card_06_05.png",
+      "position": "图文06 / 图 5｜分发与审核",
+      "function": "图 5｜分发与审核",
+      "description_cn": "让用户安装 App，比发 `mytool.com` 链接或扫码打开小程序难得多。\n商店审核存在不确定性，周期因平台与版本而异——验证期经不起多轮等待。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 让用户安装 App，比发 `mytool.com` 链接或扫码打开小程序难得多。 newline 商店审核存在不确定性，周期因平台与版本而异——验证期经不起多轮等待。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_06_06",
+      "filename": "card_06_06.png",
+      "position": "图文06 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "小程序也有限制，但 App 把账号费、双端、商店审核和安装门槛捆在一起，对第一款验证通常更重。\nmytool 先搞清楚有没有人要，再考虑把产品装进应用商店。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 小程序也有限制，但 App 把账号费、双端、商店审核和安装门槛捆在一起，对第一款验证通常更重。 newline mytool 先搞清楚有没有人要，再考虑把产品装进应用商店。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_01",
+      "filename": "card_07_01.png",
+      "position": "图文07 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "能不能先用表单 / 验证需求？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「能不能先用表单」 on first line in blue accent, second line 「验证需求？」 in black. Generous whitespace, page number 「01 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_02",
+      "filename": "card_07_02.png",
+      "position": "图文07 / 图 2｜MVP 是什么",
+      "function": "图 2｜MVP 是什么",
+      "description_cn": "MVP（最简可行产品）的目标不是功能做全，而是用最小投入验证「这个假设成不成立」。\n验证需求，不一定先写完整软件。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: MVP（最简可行产品）的目标不是功能做全，而是用最小投入验证「这个假设成不成立」。 newline 验证需求，不一定先写完整软件。. Page number 「02 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_03",
+      "filename": "card_07_03.png",
+      "position": "图文07 / 图 3｜能验证什么",
+      "function": "图 3｜能验证什么",
+      "description_cn": "表单/问卷适合收集报名、预约、意向、反馈。\nmytool 可以放一版「加入等待名单」——看有没有人愿意填、留邮箱、选付费档位。\n这能验证「意愿」，成本低、上线快。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 表单/问卷适合收集报名、预约、意向、反馈。 newline mytool 可以放一版「加入等待名单」——看有没有人愿意填、留邮箱、选付费档位。 newline 这能验证「意愿」，成本低、上线快。. Page number 「03 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_04",
+      "filename": "card_07_04.png",
+      "position": "图文07 / 图 4｜不能验证什么",
+      "function": "图 4｜不能验证什么",
+      "description_cn": "表单不能替代：真实使用行为、复杂交互体验、长期留存、完整交易闭环。\n若 mytool 要验证「用户会不会每天用某个复杂功能」，只有表单通常不够。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 表单不能替代：真实使用行为、复杂交互体验、长期留存、完整交易闭环。 newline 若 mytool 要验证「用户会不会每天用某个复杂功能」，只有表单通常不够。. Page number 「04 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_05",
+      "filename": "card_07_05.png",
+      "position": "图文07 / 图 5｜mytool 示例",
+      "function": "图 5｜mytool 示例",
+      "description_cn": "第一天：`mytool.com` 落地页（示例）+ 腾讯问卷/金数据等表单链接（示例）。\n有人填、有人留联系方式，再决定做网页版、小程序还是更重形态。\n表单是低成本实验，不是偷懒借口。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一天：`mytool.com` 落地页（示例）+ 腾讯问卷/金数据等表单链接（示例）。 newline 有人填、有人留联系方式，再决定做网页版、小程序还是更重形态。 newline 表单是低成本实验，不是偷懒借口。. Page number 「05 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_07_06",
+      "filename": "card_07_06.png",
+      "position": "图文07 / 图 6｜收束",
+      "function": "图 6｜收束",
+      "description_cn": "先用表单验证「有没有人要」，比一上来堆登录、支付、后台更划算。\n但别指望填个表就等于创业成功——它只回答意愿，不回答产品好不好用。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 先用表单验证「有没有人要」，比一上来堆登录、支付、后台更划算。 newline 但别指望填个表就等于创业成功——它只回答意愿，不回答产品好不好用。. Page number 「06 / 06」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_01",
+      "filename": "card_08_01.png",
+      "position": "图文08 / 图 1｜封面",
+      "function": "图 1｜封面",
+      "description_cn": "为什么个人项目 / 第一天别做太复杂？",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Large bold Chinese text exactly: 「为什么个人项目」 on first line in blue accent, second line 「第一天别做太复杂？」 in black. Generous whitespace, page number 「01 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_02",
+      "filename": "card_08_02.png",
+      "position": "图文08 / 图 2｜目标澄清",
+      "function": "图 2｜目标澄清",
+      "description_cn": "第一款的核心目标是验证，不是架构秀。\n功能齐全不等于验证成功——很多时候只是让自己忙起来。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一款的核心目标是验证，不是架构秀。 newline 功能齐全不等于验证成功——很多时候只是让自己忙起来。. Page number 「02 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_03",
+      "filename": "card_08_03.png",
+      "position": "图文08 / 图 3｜开关：登录",
+      "function": "图 3｜开关：登录",
+      "description_cn": "「加个登录」看起来是一个功能，实际上是注册、找回密码、安全、隐私合规和后续运营的一整套系统。\nmytool 若还没证明有人要用，账号体系可以先不开。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 「加个登录」看起来是一个功能，实际上是注册、找回密码、安全、隐私合规和后续运营的一整套系统。 newline mytool 若还没证明有人要用，账号体系可以先不开。. Page number 「03 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_04",
+      "filename": "card_08_04.png",
+      "position": "图文08 / 图 4｜开关：支付",
+      "function": "图 4｜开关：支付",
+      "description_cn": "支付牵涉主体资质、商户号、接口对接与合规。\n个人第一款常被建议：先验证需求，再接入支付——与「个人小程序通常无法微信支付」是同一类硬边界。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 支付牵涉主体资质、商户号、接口对接与合规。 newline 个人第一款常被建议：先验证需求，再接入支付——与「个人小程序通常无法微信支付」是同一类硬边界。. Page number 「04 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_05",
+      "filename": "card_08_05.png",
+      "position": "图文08 / 图 5｜开关：后台与多端",
+      "function": "图 5｜开关：后台与多端",
+      "description_cn": "后台管理、消息推送、多端同步——每多开一个「系统」，就多一类 bug、运维和合规。\n一个人做产品，时间比功能清单更稀缺。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 后台管理、消息推送、多端同步——每多开一个「系统」，就多一类 bug、运维和合规。 newline 一个人做产品，时间比功能清单更稀缺。. Page number 「05 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_06",
+      "filename": "card_08_06.png",
+      "position": "图文08 / 图 6｜mytool 示例",
+      "function": "图 6｜mytool 示例",
+      "description_cn": "第一天建议范围：`mytool.com` 介绍页（示例）+ 等待名单表单（示例）。\n别第一天就堆登录、支付、管理后台、小程序、App 五件套。\n有证据再加开关。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 第一天建议范围：`mytool.com` 介绍页（示例）+ 等待名单表单（示例）。 newline 别第一天就堆登录、支付、管理后台、小程序、App 五件套。 newline 有证据再加开关。. Page number 「06 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    },
+    {
+      "id": "card_08_07",
+      "filename": "card_08_07.png",
+      "position": "图文08 / 图 7｜收束",
+      "function": "图 7｜收束",
+      "description_cn": "复杂度开关一个一个开，别一口气全开。\nmytool 先跑通单点闭环，验证有人要，再考虑加重形态和加系统。\n第一款是探路，不是盖楼。",
+      "prompt": "Vertical 3:4 note card, off-white or cream background, minimalist product-doc aesthetic, NOT a marketing poster. Black body text, blue accent on titles, orange for example labels. Clean sans-serif, mobile-friendly. No photos, no stickers, no training-course aesthetics. Chinese text exactly: 复杂度开关一个一个开，别一口气全开。 newline mytool 先跑通单点闭环，验证有人要，再考虑加重形态和加系统。 newline 第一款是探路，不是盖楼。. Page number 「07 / 07」 bottom-right.",
+      "aspect_ratio": "3:4"
+    }
+  ]
+}
