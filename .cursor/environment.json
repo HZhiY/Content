@@ -1,0 +1,4 @@
+{
+  "name": "头条深度文章项目",
+  "install": "python3 --version && ([ -f .env ] || cp .env.example .env)"
+}
